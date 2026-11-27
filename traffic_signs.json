@@ -14,7 +14,38 @@
     "pedestrian_zone": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Hokousha Senyou\"><circle cx=\"75\" cy=\"75\" r=\"64\" fill=\"#1d4ed8\" stroke=\"#ffffff\" stroke-width=\"4\"/><circle cx=\"75\" cy=\"36\" r=\"9\" fill=\"#ffffff\"/><path d=\"M74 48 L64 78 L52 108 M76 50 L90 78 L98 108 M74 52 L56 72 M76 52 L96 68\" stroke=\"#ffffff\" stroke-width=\"8\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
     "no_u_turn": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tenkai Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"64\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"14\"/><path d=\"M92 105 L92 60 A18 18 0 0 0 56 60 L56 88\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"11\" stroke-linecap=\"round\"/><polygon points=\"56,104 43,84 69,84\" fill=\"#1e3a8a\"/><line x1=\"30\" y1=\"30\" x2=\"120\" y2=\"120\" stroke=\"#dc2626\" stroke-width=\"13\"/></svg>",
     "speed_limit_40": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Saikou Sokudo 40\"><circle cx=\"75\" cy=\"75\" r=\"64\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"14\"/><text x=\"75\" y=\"92\" text-anchor=\"middle\" fill=\"#1e3a8a\" font-family=\"Inter, sans-serif\" font-weight=\"900\" font-size=\"48\">40</text></svg>",
-    "no_overtaking": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Oikoshi Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"64\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"14\"/><rect x=\"82\" y=\"62\" width=\"24\" height=\"32\" rx=\"4\" fill=\"#1e3a8a\"/><rect x=\"85\" y=\"54\" width=\"18\" height=\"12\" rx=\"3\" fill=\"#1e3a8a\"/><rect x=\"44\" y=\"62\" width=\"24\" height=\"32\" rx=\"4\" fill=\"#dc2626\"/><rect x=\"47\" y=\"54\" width=\"18\" height=\"12\" rx=\"3\" fill=\"#dc2626\"/><path d=\"M94 46 Q72 30 56 46\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><polygon points=\"51,51 54,41 62,48\" fill=\"#dc2626\"/></svg>"
+    "no_overtaking": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Oikoshi Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"64\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"14\"/><rect x=\"82\" y=\"62\" width=\"24\" height=\"32\" rx=\"4\" fill=\"#1e3a8a\"/><rect x=\"85\" y=\"54\" width=\"18\" height=\"12\" rx=\"3\" fill=\"#1e3a8a\"/><rect x=\"44\" y=\"62\" width=\"24\" height=\"32\" rx=\"4\" fill=\"#dc2626\"/><rect x=\"47\" y=\"54\" width=\"18\" height=\"12\" rx=\"3\" fill=\"#dc2626\"/><path d=\"M94 46 Q72 30 56 46\" fill=\"none\" stroke=\"#dc2626\" stroke-width=\"4\"/><polygon points=\"51,51 54,41 62,48\" fill=\"#dc2626\"/></svg>",
+    "road_closed": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><line x1=\"24\" y1=\"48\" x2=\"126\" y2=\"102\" stroke=\"#dc2626\" stroke-width=\"12\"/><line x1=\"126\" y1=\"48\" x2=\"24\" y2=\"102\" stroke=\"#dc2626\" stroke-width=\"12\"/><text x=\"75\" y=\"116\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"17\" fill=\"#1e3a8a\" text-anchor=\"middle\" letter-spacing=\"1\">通行止</text></svg>",
+    "no_vehicles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Sharyo Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"13\"/></svg>",
+    "no_cars_except_motorcycles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Nirin no Jidosha Igai no Jidosha Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><path d=\"M52 68 L58 55 L92 55 L98 68 Z\" fill=\"#1e3a8a\"/><rect x=\"45\" y=\"68\" width=\"60\" height=\"18\" rx=\"4\" fill=\"#1e3a8a\"/><rect x=\"58\" y=\"58\" width=\"34\" height=\"10\" rx=\"2\" fill=\"#ffffff\"/><circle cx=\"56\" cy=\"88\" r=\"7\" fill=\"#1e3a8a\"/><circle cx=\"94\" cy=\"88\" r=\"7\" fill=\"#1e3a8a\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_large_trucks": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Ogata Kamotsu Jidosha Nado Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><rect x=\"42\" y=\"54\" width=\"42\" height=\"28\" rx=\"2\" fill=\"#1e3a8a\"/><path d=\"M86 60 L100 60 L106 72 L106 82 L86 82 Z\" fill=\"#1e3a8a\"/><rect x=\"90\" y=\"63\" width=\"10\" height=\"8\" fill=\"#ffffff\"/><circle cx=\"52\" cy=\"86\" r=\"6\" fill=\"#1e3a8a\"/><circle cx=\"66\" cy=\"86\" r=\"6\" fill=\"#1e3a8a\"/><circle cx=\"96\" cy=\"86\" r=\"6\" fill=\"#1e3a8a\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_trucks_over_weight": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tokutei no Saidai Sekisairyo Ijo no Kamotsu Jidosha Tsukodome\"><circle cx=\"75\" cy=\"58\" r=\"50\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"75\" cy=\"58\" r=\"42\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"10\"/><rect x=\"50\" y=\"42\" width=\"30\" height=\"20\" rx=\"2\" fill=\"#1e3a8a\"/><path d=\"M82 47 L92 47 L96 55 L96 62 L82 62 Z\" fill=\"#1e3a8a\"/><circle cx=\"58\" cy=\"65\" r=\"4.5\" fill=\"#1e3a8a\"/><circle cx=\"68\" cy=\"65\" r=\"4.5\" fill=\"#1e3a8a\"/><circle cx=\"89\" cy=\"65\" r=\"4.5\" fill=\"#1e3a8a\"/><line x1=\"45\" y1=\"28\" x2=\"105\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"10\"/><rect x=\"42\" y=\"114\" width=\"66\" height=\"28\" rx=\"3\" fill=\"#ffffff\" stroke=\"#1e3a8a\" stroke-width=\"2.5\"/><text x=\"75\" y=\"133\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\">積 3 t</text></svg>",
+    "no_motorcycles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Nirin no Jidosha Gendokitsukijitensha Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><circle cx=\"54\" cy=\"88\" r=\"11\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4.5\"/><circle cx=\"96\" cy=\"88\" r=\"11\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4.5\"/><path d=\"M54 88 L68 72 L86 72 L96 88 M64 72 L58 62 M84 72 L80 58 L74 58\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_large_buses": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Ogata Joyo Jidosha Nado Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><rect x=\"42\" y=\"56\" width=\"66\" height=\"26\" rx=\"4\" fill=\"#1e3a8a\"/><rect x=\"47\" y=\"60\" width=\"12\" height=\"9\" rx=\"1\" fill=\"#ffffff\"/><rect x=\"62\" y=\"60\" width=\"12\" height=\"9\" rx=\"1\" fill=\"#ffffff\"/><rect x=\"77\" y=\"60\" width=\"12\" height=\"9\" rx=\"1\" fill=\"#ffffff\"/><rect x=\"92\" y=\"60\" width=\"11\" height=\"9\" rx=\"1\" fill=\"#ffffff\"/><circle cx=\"55\" cy=\"86\" r=\"6\" fill=\"#1e3a8a\"/><circle cx=\"95\" cy=\"86\" r=\"6\" fill=\"#1e3a8a\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_bicycles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Jitensha Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><circle cx=\"53\" cy=\"88\" r=\"11\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4\"/><circle cx=\"97\" cy=\"88\" r=\"11\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4\"/><path d=\"M53 88 L68 70 L86 70 L73 88 Z M68 70 L64 62 L59 62 M86 70 L97 88 M86 70 L83 60 L89 60\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_combined_vehicles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Sharyo Kumiawase Tsukodome\"><circle cx=\"75\" cy=\"58\" r=\"50\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"75\" cy=\"58\" r=\"42\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"10\"/><line x1=\"45\" y1=\"28\" x2=\"105\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"10\"/><rect x=\"42\" y=\"114\" width=\"66\" height=\"28\" rx=\"3\" fill=\"#ffffff\" stroke=\"#1e3a8a\" stroke-width=\"2.5\"/><text x=\"75\" y=\"133\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\">自・原</text></svg>",
+    "no_pillion_riding": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Ogata Jido Nirinsha Oyobi Futsu Jido Nirinsha Futari Nori Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><circle cx=\"52\" cy=\"92\" r=\"10\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4\"/><circle cx=\"98\" cy=\"92\" r=\"10\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4\"/><path d=\"M52 92 L66 78 L88 78 L98 92\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"4.5\"/><circle cx=\"80\" cy=\"54\" r=\"5.5\" fill=\"#1e3a8a\"/><path d=\"M80 61 L80 76 L88 86\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"5\" stroke-linecap=\"round\"/><circle cx=\"63\" cy=\"56\" r=\"5.5\" fill=\"#1e3a8a\"/><path d=\"M63 63 L63 77 L56 87\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "snow_chains_required": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tire Chain o Toritsuketeinai Sharyo Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"62\" fill=\"#1d4ed8\"/><ellipse cx=\"75\" cy=\"75\" rx=\"26\" ry=\"42\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"12\"/><path d=\"M52 52 L98 62 M49 70 L101 80 M52 88 L98 98 M98 52 L52 62 M101 70 L49 80 M98 88 L52 98\" stroke=\"#1d4ed8\" stroke-width=\"3.5\"/></svg>",
+    "designated_directions": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Shitei Hokogai Shinko Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"62\" fill=\"#1d4ed8\"/><path d=\"M75 112 L75 38 M42 66 L108 66\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"11\" stroke-linecap=\"round\"/><polygon points=\"75,24 62,44 88,44\" fill=\"#ffffff\"/><polygon points=\"28,66 48,53 48,79\" fill=\"#ffffff\"/><polygon points=\"122,66 102,53 102,79\" fill=\"#ffffff\"/></svg>",
+    "no_vehicle_crossing": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Sharyo Odan Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><path d=\"M102 96 L102 68 Q102 56 90 56 L54 56\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"11\" stroke-linecap=\"round\"/><polygon points=\"38,56 58,43 58,69\" fill=\"#1e3a8a\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_overtaking_cross_center": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Oikoshi no Tame no Migigawa Bubun wa Hamidashi Tsuko Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><line x1=\"84\" y1=\"104\" x2=\"84\" y2=\"58\" stroke=\"#1e3a8a\" stroke-width=\"10\" stroke-linecap=\"round\"/><polygon points=\"84,42 72,60 96,60\" fill=\"#1e3a8a\"/><path d=\"M62 104 L62 84 Q62 72 72 62 L80 54\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"9\" stroke-linecap=\"round\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "no_overtaking_strict": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Oikoshi Kinshi\"><circle cx=\"75\" cy=\"58\" r=\"50\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"75\" cy=\"58\" r=\"42\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"10\"/><line x1=\"82\" y1=\"80\" x2=\"82\" y2=\"46\" stroke=\"#1e3a8a\" stroke-width=\"8\" stroke-linecap=\"round\"/><polygon points=\"82,34 73,48 91,48\" fill=\"#1e3a8a\"/><path d=\"M64 80 L64 64 Q64 54 72 48\" fill=\"none\" stroke=\"#1e3a8a\" stroke-width=\"7\" stroke-linecap=\"round\"/><line x1=\"45\" y1=\"28\" x2=\"105\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"10\"/><rect x=\"30\" y=\"114\" width=\"90\" height=\"26\" rx=\"3\" fill=\"#ffffff\" stroke=\"#1e3a8a\" stroke-width=\"2.5\"/><text x=\"75\" y=\"132\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"13\" fill=\"#1e3a8a\" text-anchor=\"middle\" letter-spacing=\"1\">追越し禁止</text></svg>",
+    "no_parking_stopping_time": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Chuteisha Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#1d4ed8\" stroke=\"#dc2626\" stroke-width=\"14\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"13\"/><line x1=\"117\" y1=\"33\" x2=\"33\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"75\" y=\"23\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#ffffff\" text-anchor=\"middle\">8-20</text></svg>",
+    "no_parking_time": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Chusha Kinshi\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#1d4ed8\" stroke=\"#dc2626\" stroke-width=\"14\"/><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"75\" y=\"23\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"11\" fill=\"#ffffff\" text-anchor=\"middle\">8-20</text></svg>",
+    "parking_clearance": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Chusha Yochi\"><circle cx=\"75\" cy=\"58\" r=\"50\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"75\" cy=\"58\" r=\"42\" fill=\"#1d4ed8\" stroke=\"#dc2626\" stroke-width=\"11\"/><line x1=\"45\" y1=\"28\" x2=\"105\" y2=\"88\" stroke=\"#dc2626\" stroke-width=\"10\"/><text x=\"75\" y=\"19\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"9\" fill=\"#ffffff\" text-anchor=\"middle\">8-20</text><rect x=\"24\" y=\"114\" width=\"102\" height=\"26\" rx=\"3\" fill=\"#ffffff\" stroke=\"#1e3a8a\" stroke-width=\"2.5\"/><text x=\"75\" y=\"132\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"12\" fill=\"#1e3a8a\" text-anchor=\"middle\">駐車余地6m</text></svg>",
+    "no_hazardous_materials": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Kikenbutsu Sekisai Sharyo Tsukodome\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"75\" y=\"84\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"26\" fill=\"#1e3a8a\" text-anchor=\"middle\" letter-spacing=\"1\">危険物</text><line x1=\"33\" y1=\"33\" x2=\"117\" y2=\"117\" stroke=\"#dc2626\" stroke-width=\"12\"/></svg>",
+    "weight_limit": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Juryo Seigen\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"71\" y=\"91\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"44\" fill=\"#1e3a8a\" text-anchor=\"middle\">5.5</text><text x=\"107\" y=\"63\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"20\" fill=\"#1e3a8a\" text-anchor=\"middle\">t</text></svg>",
+    "height_limit": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Takasa Seigen\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><polygon points=\"75,26 67,37 83,37\" fill=\"#1e3a8a\"/><polygon points=\"75,124 67,113 83,113\" fill=\"#1e3a8a\"/><text x=\"71\" y=\"90\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"40\" fill=\"#1e3a8a\" text-anchor=\"middle\">3.3</text><text x=\"107\" y=\"75\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"18\" fill=\"#1e3a8a\" text-anchor=\"middle\">m</text></svg>",
+    "width_limit": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Saidaihaba\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><polygon points=\"26,75 37,67 37,83\" fill=\"#1e3a8a\"/><polygon points=\"124,75 113,67 113,83\" fill=\"#1e3a8a\"/><text x=\"73\" y=\"91\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"40\" fill=\"#1e3a8a\" text-anchor=\"middle\">2.2</text><text x=\"75\" y=\"52\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"17\" fill=\"#1e3a8a\" text-anchor=\"middle\">m</text></svg>",
+    "speed_limit_50": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Saikou Sokudo\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"75\" y=\"93\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"52\" fill=\"#1e3a8a\" text-anchor=\"middle\">50</text></svg>",
+    "speed_limit_specific_vehicles": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tokutei no Shurui no Sharyo no Saiko Sokudo\"><circle cx=\"75\" cy=\"58\" r=\"50\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><circle cx=\"75\" cy=\"58\" r=\"42\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"10\"/><text x=\"75\" y=\"72\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"40\" fill=\"#1e3a8a\" text-anchor=\"middle\">50</text><rect x=\"32\" y=\"114\" width=\"86\" height=\"26\" rx=\"3\" fill=\"#ffffff\" stroke=\"#1e3a8a\" stroke-width=\"2.5\"/><text x=\"75\" y=\"132\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"14\" fill=\"#1e3a8a\" text-anchor=\"middle\" letter-spacing=\"6\">大貨</text></svg>",
+    "minimum_speed": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Saitei Sokudo\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"58\" fill=\"#ffffff\" stroke=\"#dc2626\" stroke-width=\"13\"/><text x=\"75\" y=\"91\" font-family=\"sans-serif\" font-weight=\"bold\" font-size=\"50\" fill=\"#1e3a8a\" text-anchor=\"middle\">50</text><line x1=\"46\" y1=\"102\" x2=\"104\" y2=\"102\" stroke=\"#1e3a8a\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg>",
+    "motor_vehicles_only": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Jidosha Senyo\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"62\" fill=\"#1d4ed8\"/><path d=\"M46 66 L55 48 L95 48 L104 66 Z\" fill=\"#ffffff\"/><rect x=\"40\" y=\"65\" width=\"70\" height=\"24\" rx=\"5\" fill=\"#ffffff\"/><rect x=\"55\" y=\"52\" width=\"40\" height=\"13\" rx=\"2\" fill=\"#1d4ed8\"/><circle cx=\"53\" cy=\"77\" r=\"5\" fill=\"#1d4ed8\"/><circle cx=\"97\" cy=\"77\" r=\"5\" fill=\"#1d4ed8\"/><rect x=\"45\" y=\"89\" width=\"11\" height=\"9\" rx=\"2\" fill=\"#ffffff\"/><rect x=\"94\" y=\"89\" width=\"11\" height=\"9\" rx=\"2\" fill=\"#ffffff\"/></svg>",
+    "bicycles_only": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Jitensha Senyo\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"62\" fill=\"#1d4ed8\"/><circle cx=\"48\" cy=\"88\" r=\"13\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"4.5\"/><circle cx=\"102\" cy=\"88\" r=\"13\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"4.5\"/><path d=\"M48 88 L66 66 L88 66 L72 88 Z M66 66 L61 56 L55 56 M88 66 L102 88 M88 66 L84 54 L92 54\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "bicycles_and_pedestrians_only": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Jitensha Oyobi Hokosha Senyo\"><circle cx=\"75\" cy=\"75\" r=\"68\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><circle cx=\"75\" cy=\"75\" r=\"62\" fill=\"#1d4ed8\"/><circle cx=\"56\" cy=\"42\" r=\"6\" fill=\"#ffffff\"/><path d=\"M56 50 L56 68 L48 82 M56 68 L64 82 M46 58 L56 54 L66 60\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"4.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"90\" cy=\"54\" r=\"5\" fill=\"#ffffff\"/><path d=\"M90 61 L90 73 L84 82 M90 73 L96 82 M83 66 L97 66\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"50\" cy=\"104\" r=\"10\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3.5\"/><circle cx=\"96\" cy=\"104\" r=\"10\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3.5\"/><path d=\"M50 104 L65 89 L84 89 L71 104 Z M65 89 L61 82 M84 89 L96 104 M84 89 L81 80 L87 80\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "bicycle_one_way": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Jitensha no Ippo Tsuko\"><rect x=\"42\" y=\"12\" width=\"66\" height=\"126\" rx=\"4\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><rect x=\"47\" y=\"17\" width=\"56\" height=\"116\" rx=\"2\" fill=\"#1d4ed8\"/><polygon points=\"75,26 57,48 67,48 67,76 83,76 83,48 93,48\" fill=\"#ffffff\"/><circle cx=\"60\" cy=\"108\" r=\"8\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3\"/><circle cx=\"90\" cy=\"108\" r=\"8\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3\"/><path d=\"M60 108 L70 96 L82 96 L73 108 Z M70 96 L67 90 M82 96 L90 108 M82 96 L80 89 L85 89\" fill=\"none\" stroke=\"#ffffff\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+    "vehicle_lane_designation": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Sharyo Tsuko Kubun\"><rect x=\"12\" y=\"42\" width=\"126\" height=\"66\" rx=\"4\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><rect x=\"17\" y=\"47\" width=\"116\" height=\"56\" rx=\"2\" fill=\"#1d4ed8\"/><line x1=\"75\" y1=\"47\" x2=\"75\" y2=\"103\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><polygon points=\"46,56 35,71 42,71 42,94 50,94 50,71 57,71\" fill=\"#ffffff\"/><polygon points=\"104,56 93,71 100,71 100,94 108,94 108,71 115,71\" fill=\"#ffffff\"/></svg>",
+    "specific_vehicle_lane_designation": "<svg viewBox=\"0 0 150 150\" class=\"w-36 h-36 drop-shadow-sm\" aria-label=\"Tokutei no Shashu no Sharyo no Tsuko Kubun\"><rect x=\"12\" y=\"36\" width=\"126\" height=\"78\" rx=\"4\" fill=\"#ffffff\" stroke=\"#1d4ed8\" stroke-width=\"3\"/><rect x=\"17\" y=\"41\" width=\"116\" height=\"68\" rx=\"2\" fill=\"#1d4ed8\"/><line x1=\"56\" y1=\"41\" x2=\"56\" y2=\"109\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><line x1=\"94\" y1=\"41\" x2=\"94\" y2=\"109\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-dasharray=\"5,4\"/><polygon points=\"36,52 27,65 33,65 33,96 39,96 39,65 45,65\" fill=\"#ffffff\"/><rect x=\"64\" y=\"62\" width=\"16\" height=\"16\" rx=\"1\" fill=\"#ffffff\"/><path d=\"M81 66 L87 66 L89 72 L89 78 L81 78 Z\" fill=\"#ffffff\"/><circle cx=\"68\" cy=\"81\" r=\"2.5\" fill=\"#ffffff\"/><circle cx=\"85\" cy=\"81\" r=\"2.5\" fill=\"#ffffff\"/><line x1=\"113\" y1=\"54\" x2=\"113\" y2=\"96\" stroke=\"#ffffff\" stroke-width=\"2\" stroke-dasharray=\"4,4\"/></svg>"
   },
   "signs": [
     {
@@ -90,14 +121,6 @@
       "svgKey": "pedestrian_zone"
     },
     {
-      "id": "no_u_turn",
-      "kanji": "転回禁止",
-      "hiragana": "てんかいきんし",
-      "arti": "Dilarang Putar Balik (U-Turn)",
-      "desc": "Kendaraan dilarang melakukan putar balik (U-turn) di area rambu ini.",
-      "svgKey": "no_u_turn"
-    },
-    {
       "id": "speed_limit_40",
       "kanji": "最高速度（40km/h）",
       "hiragana": "さいこうそくど",
@@ -112,6 +135,278 @@
       "arti": "Dilarang Menyalip Melewati Garis Tengah",
       "desc": "Dilarang melewati garis tengah jalan ke jalur kanan untuk menyalip kendaraan lain.",
       "svgKey": "no_overtaking"
+    },
+    {
+      "id": "road_closed",
+      "kanji": "通行止め",
+      "hiragana": "つうこうどめ",
+      "arti": "Jalan Ditutup (Dilarang Melintas)",
+      "desc": "Semua pengguna jalan (pejalan kaki, mobil, sepeda motor, maupun trem) dilarang melintas.",
+      "svgKey": "road_closed"
+    },
+    {
+      "id": "no_vehicles",
+      "kanji": "車両通行止め",
+      "hiragana": "しゃりょうつうこうどめ",
+      "arti": "Kendaraan Dilarang Melintas",
+      "desc": "Semua jenis kendaraan (mobil, sepeda motor, sepeda, dan gerobak/kendaraan ringan) dilarang melintas, kecuali pejalan kaki.",
+      "svgKey": "no_vehicles"
+    },
+    {
+      "id": "no_cars_except_motorcycles",
+      "kanji": "二輪の自動車以外の自動車通行止め",
+      "hiragana": "にりんのじどうしゃいがいのじどうしゃつうこうどめ",
+      "arti": "Kendaraan Roda Empat/Lebih Dilarang Melintas",
+      "desc": "Mobil dan kendaraan bermotor lainnya dilarang melintas, kecuali sepeda motor besar (oogata) dan sepeda motor biasa (futsuu).",
+      "svgKey": "no_cars_except_motorcycles"
+    },
+    {
+      "id": "no_large_trucks",
+      "kanji": "大型貨物自動車等通行止め",
+      "hiragana": "おおがたかもつじどうしゃとうつうこうどめ",
+      "arti": "Truk Barang Besar Dilarang Melintas",
+      "desc": "Truk barang berukuran besar, truk barang sedang tertentu, dan kendaraan khusus berukuran besar dilarang melintas.",
+      "svgKey": "no_large_trucks"
+    },
+    {
+      "id": "no_trucks_over_weight",
+      "kanji": "特定の最大積載量以上の貨物自動車等通行止め",
+      "hiragana": "とくていのさいだいせきさいりょういじょうのかもつじどうしゃとうつうこうどめ",
+      "arti": "Truk Melebihi Kapasitas Muatan Dilarang Melintas",
+      "desc": "Truk barang dan kendaraan khusus berukuran besar dengan daya angkut melebihi batas pada rambu tambahan dilarang melintas.",
+      "svgKey": "no_trucks_over_weight"
+    },
+    {
+      "id": "no_motorcycles",
+      "kanji": "二輪の自動車・原動機付自転車通行止め",
+      "hiragana": "にりんのじどうしゃ・げんどうきつきじてんしゃつうこうどめ",
+      "arti": "Sepeda Motor & Moped Dilarang Melintas",
+      "desc": "Sepeda motor besar, sepeda motor biasa, dan sepeda motor bermesin kecil (gentsuki) dilarang melintas.",
+      "svgKey": "no_motorcycles"
+    },
+    {
+      "id": "no_large_buses",
+      "kanji": "大型乗用自動車等通行止め",
+      "hiragana": "おおがたじょうようじどうしゃとうつうこうどめ",
+      "arti": "Bus Penumpang Besar Dilarang Melintas",
+      "desc": "Bus atau mobil penumpang berukuran besar serta mobil penumpang ukuran sedang tertentu dilarang melintas.",
+      "svgKey": "no_large_buses"
+    },
+    {
+      "id": "no_bicycles",
+      "kanji": "自転車通行止め",
+      "hiragana": "じてんしゃつうこうどめ",
+      "arti": "Sepeda Dilarang Melintas",
+      "desc": "Sepeda dilarang melintas di jalur atau jalan ini.",
+      "svgKey": "no_bicycles"
+    },
+    {
+      "id": "no_combined_vehicles",
+      "kanji": "車両（組み合わせ）通行止め",
+      "hiragana": "しゃりょう（くみあわせ）つうこうどめ",
+      "arti": "Kombinasi Kendaraan Tertentu Dilarang Melintas",
+      "desc": "Jenis kendaraan yang tertera pada papan tambahan di bawah rambu (seperti mobil, motor, dan moped) dilarang melintas.",
+      "svgKey": "no_combined_vehicles"
+    },
+    {
+      "id": "no_pillion_riding",
+      "kanji": "大型自動二輪車及び普通自動二輪車二人乗り禁止",
+      "hiragana": "おおがたじどうにりんしゃおよびふつうじどうにりんしゃふたり乗りきんし",
+      "arti": "Sepeda Motor Dilarang Berboncengan",
+      "desc": "Sepeda motor besar dan sepeda motor biasa dilarang membawa penumpang selain pengemudi (kecuali motor dengan sespan/sidecar).",
+      "svgKey": "no_pillion_riding"
+    },
+    {
+      "id": "snow_chains_required",
+      "kanji": "タイヤチェーンを取り付けていない車両通行止め",
+      "hiragana": "たいやちぇーんをとりつけていないしゃりょうつうこうどめ",
+      "arti": "Wajib Menggunakan Rantai Ban",
+      "desc": "Kendaraan yang tidak memasang rantai salju pada bannya dilarang melintas.",
+      "svgKey": "snow_chains_required"
+    },
+    {
+      "id": "designated_directions",
+      "kanji": "指定方向外進行禁止",
+      "hiragana": "していほうこうがいしんこうきんし",
+      "arti": "Dilarang Melaju Selain Arah Panah",
+      "desc": "Kendaraan hanya diperbolehkan melaju mengikuti arah panah putih dan dilarang berbelok atau menuju arah lainnya.",
+      "svgKey": "designated_directions"
+    },
+    {
+      "id": "no_vehicle_crossing",
+      "kanji": "車両横断禁止",
+      "hiragana": "しゃりょうおうだんきんし",
+      "arti": "Kendaraan Dilarang Menyeberang",
+      "desc": "Kendaraan dilarang memotong jalur untuk menyeberang ke sisi kanan jalan, kecuali saat masuk atau keluar tempat yang menghadap sisi kiri jalan.",
+      "svgKey": "no_vehicle_crossing"
+    },
+    {
+      "id": "no_u_turn",
+      "kanji": "転回禁止",
+      "hiragana": "てんかいきんし",
+      "arti": "Dilarang Putar Balik (U-Turn)",
+      "desc": "Kendaraan dilarang memutar balik arah (U-turn) di area rambu ini.",
+      "svgKey": "no_u_turn"
+    },
+    {
+      "id": "no_overtaking_cross_center",
+      "kanji": "追越しのための右側部分はみ出し通行禁止",
+      "hiragana": "おいこしのためのみぎがわぶぶんはみだしつうこうきんし",
+      "arti": "Dilarang Menyalip Melewati Garis Tengah",
+      "desc": "Dilarang melewati garis tengah jalan ke jalur kanan untuk menyalip kendaraan lain (menyalip tanpa melewati garis tengah diperbolehkan).",
+      "svgKey": "no_overtaking_cross_center"
+    },
+    {
+      "id": "no_overtaking_strict",
+      "kanji": "追い越し禁止",
+      "hiragana": "おいこしきんし",
+      "arti": "Dilarang Menyalip",
+      "desc": "Kendaraan dilarang keras mendahului atau menyalip kendaraan lain di depannya, meskipun tanpa melewati garis tengah jalan.",
+      "svgKey": "no_overtaking_strict"
+    },
+    {
+      "id": "no_parking_stopping_time",
+      "kanji": "駐停車禁止",
+      "hiragana": "ちゅうていしゃきんし",
+      "arti": "Dilarang Parkir dan Berhenti",
+      "desc": "Kendaraan dilarang parkir maupun berhenti (termasuk menaikturunkan penumpang atau barang). Angka di atas menunjukkan jam berlaku larangan.",
+      "svgKey": "no_parking_stopping_time"
+    },
+    {
+      "id": "no_parking_time",
+      "kanji": "駐車禁止",
+      "hiragana": "ちゅうしゃきんし",
+      "arti": "Dilarang Parkir",
+      "desc": "Kendaraan dilarang parkir (berhenti sebentar maksimal 5 menit untuk bongkar muat atau menaikturunkan penumpang diperbolehkan).",
+      "svgKey": "no_parking_time"
+    },
+    {
+      "id": "parking_clearance",
+      "kanji": "駐車余地",
+      "hiragana": "ちゅうしゃよち",
+      "arti": "Batas Ruang Kosong Parkir",
+      "desc": "Dilarang parkir di sisi jalan apabila tidak menyisakan ruang kosong di sisi kanan kendaraan selebar angka yang tertera pada rambu tambahan (misal 6m).",
+      "svgKey": "parking_clearance"
+    },
+    {
+      "id": "no_hazardous_materials",
+      "kanji": "危険物積載車両通行止め",
+      "hiragana": "きけんぶつせきさいしゃりょうつうこうどめ",
+      "arti": "Kendaraan Bermuatan Bahan Berbahaya Dilarang Melintas",
+      "desc": "Kendaraan yang mengangkut bahan mudah meledak, bahan beracun, bubuk mesiu, atau barang berbahaya lainnya dilarang melintas.",
+      "svgKey": "no_hazardous_materials"
+    },
+    {
+      "id": "weight_limit",
+      "kanji": "重量制限",
+      "hiragana": "じゅうりょうせいげん",
+      "arti": "Batas Berat Maksimal",
+      "desc": "Kendaraan dengan berat total (termasuk muatan dan penumpang) melebihi angka yang tertera dilarang melintas.",
+      "svgKey": "weight_limit"
+    },
+    {
+      "id": "height_limit",
+      "kanji": "高さ制限",
+      "hiragana": "たかさせいげん",
+      "arti": "Batas Tinggi Maksimal",
+      "desc": "Kendaraan dengan tinggi dari permukaan tanah (termasuk muatan di atasnya) melebihi angka yang tertera dilarang melintas.",
+      "svgKey": "height_limit"
+    },
+    {
+      "id": "width_limit",
+      "kanji": "最大幅",
+      "hiragana": "さいだいはば",
+      "arti": "Batas Lebar Maksimal",
+      "desc": "Kendaraan dengan lebar (termasuk muatan yang diangkut) melebihi angka yang tertera dilarang melintas.",
+      "svgKey": "width_limit"
+    },
+    {
+      "id": "speed_limit_50",
+      "kanji": "最高速度",
+      "hiragana": "さいこうそくど",
+      "arti": "Batas Kecepatan Maksimal",
+      "desc": "Kendaraan dan trem dilarang melaju melebihi batas kecepatan maksimal (dalam km/jam) yang tertera pada rambu.",
+      "svgKey": "speed_limit_50"
+    },
+    {
+      "id": "speed_limit_specific_vehicles",
+      "kanji": "特定の種類の車両の最高速度",
+      "hiragana": "とくていのしゅるいのしゃりょうのさいこうそくど",
+      "arti": "Batas Kecepatan Maksimal Kendaraan Tertentu",
+      "desc": "Jenis kendaraan yang ditunjukkan pada papan tambahan di bawah rambu (seperti truk barang besar/大貨) dilarang melaju melebihi kecepatan tersebut.",
+      "svgKey": "speed_limit_specific_vehicles"
+    },
+    {
+      "id": "speed_limit_specific_vehicles",
+      "kanji": "特定の種類の車両の最高速度",
+      "hiragana": "とくていのしゅるいのしゃりょうのさいこうそくど",
+      "arti": "Batas Kecepatan Maksimal Kendaraan Tertentu",
+      "desc": "Jenis kendaraan yang ditunjukkan pada papan tambahan di bawah rambu (seperti truk barang besar/大貨) dilarang melaju melebihi kecepatan tersebut.",
+      "svgKey": "speed_limit_specific_vehicles"
+    },
+    {
+      "id": "minimum_speed",
+      "kanji": "最低速度",
+      "hiragana": "さいていそくど",
+      "arti": "Batas Kecepatan Minimal",
+      "desc": "Kendaraan bermotor wajib melaju dengan kecepatan minimal sesuai angka yang tertera (ditandai garis biru di bawah angka).",
+      "svgKey": "minimum_speed"
+    },
+    {
+      "id": "motor_vehicles_only",
+      "kanji": "自動車専用",
+      "hiragana": "じどうしゃせんよう",
+      "arti": "Jalan Khusus Kendaraan Bermotor",
+      "desc": "Menunjukkan bahwa jalan tersebut merupakan jalan tol nasional atau jalan khusus kendaraan bermotor (pejalan kaki, sepeda, dan moped dilarang masuk).",
+      "svgKey": "motor_vehicles_only"
+    },
+    {
+      "id": "bicycles_only",
+      "kanji": "自転車専用",
+      "hiragana": "じてんしゃせんよう",
+      "arti": "Jalur Khusus Sepeda",
+      "desc": "Jalur ini dikhususkan untuk sepeda biasa; pejalan kaki dan kendaraan selain sepeda biasa dilarang melintas.",
+      "svgKey": "bicycles_only"
+    },
+    {
+      "id": "bicycles_and_pedestrians_only",
+      "kanji": "自転車及び歩行者専用",
+      "hiragana": "じてんしゃおよびほこうしゃせんよう",
+      "arti": "Jalur Khusus Sepeda dan Pejalan Kaki",
+      "desc": "Jalur ini dikhususkan bagi pejalan kaki dan sepeda biasa; kendaraan bermotor maupun sepeda khusus lainnya dilarang melintas.",
+      "svgKey": "bicycles_and_pedestrians_only"
+    },
+    {
+      "id": "one_way",
+      "kanji": "一方通行",
+      "hiragana": "いっぽうつうこう",
+      "arti": "Jalan Satu Arah",
+      "desc": "Kendaraan hanya diperbolehkan melaju mengikuti arah panah pada rambu dan dilarang bergerak ke arah sebaliknya.",
+      "svgKey": "one_way"
+    },
+    {
+      "id": "bicycle_one_way",
+      "kanji": "自転車の一方通行",
+      "hiragana": "じてんしゃのいっぽうつうこう",
+      "arti": "Jalan Satu Arah Khusus Sepeda",
+      "desc": "Sepeda hanya diperbolehkan melaju mengikuti arah panah pada rambu dan dilarang melawan arah.",
+      "svgKey": "bicycle_one_way"
+    },
+    {
+      "id": "vehicle_lane_designation",
+      "kanji": "車両通行区分",
+      "hiragana": "しゃりょうつうこうくぶん",
+      "arti": "Pembagian Lajur Kendaraan",
+      "desc": "Kendaraan wajib mengikuti pembagian lajur lalu lintas berdasarkan jenis kendaraan sesuai yang tertera pada papan tanda.",
+      "svgKey": "vehicle_lane_designation"
+    },
+    {
+      "id": "specific_vehicle_lane_designation",
+      "kanji": "特定の車種の車両の通行区分",
+      "hiragana": "とくていのしゃしゅのしゃりょうのつうこうくぶん",
+      "arti": "Pembagian Lajur Jenis Kendaraan Tertentu",
+      "desc": "Menunjukkan lajur khusus yang wajib dilalui oleh jenis kendaraan tertentu (seperti truk barang besar) pada jalan dengan 3 lajur atau lebih searah.",
+      "svgKey": "specific_vehicle_lane_designation"
     }
   ]
 }
