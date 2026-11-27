@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulasi Latihan Soal Gaimen Kirikae (外免切替) Jepang</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background-color: #f1f5f9;
+      color: #0f172a;
+    }
+    .jp-text {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      line-height: 2.25;
+    }
+    ruby rt {
+      font-size: 0.62em;
+      color: #2563eb;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .hide-furigana ruby rt {
+      display: none;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #e2e8f0;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- TOP NAVBAR -->
+  <header class="bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-900 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div class="flex items-center gap-3 cursor-pointer" onclick="navigateTo('home')">
+        <div class="w-11 h-11 rounded-xl bg-white/15 backdrop-blur border border-white/25 flex items-center justify-center shrink-0 shadow-inner">
+          <!-- Japanese Beginner Driver Mark (Shoshinsha / Wakaba) SVG -->
+          <svg viewBox="0 0 64 64" class="w-7 h-7" aria-label="Wakaba Mark">
+            <path d="M32 14 L14 4 L14 44 L32 58 Z" fill="#22c55e" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 14 L50 4 L50 44 L32 58 Z" fill="#eab308" stroke="#ffffff" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="text-base sm:text-lg font-extrabold tracking-tight leading-tight">
+              Simulasi Latihan Soal Gaimen Kirikae (<span class="font-normal">外免切替</span>) Jepang
+            </h1>
+            <span class="text-[11px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-200 border border-amber-300/30">
+              CBT Jepang
+            </span>
+          </div>
+          <p class="text-xs text-blue-100 mt-0.5">
+            Latihan Ujian Pengetahuan Lalu Lintas (知識確認 - Chishiki Kakunin) — Format SSW Driver & Menkyo Jepang
+          </p>
+        </div>
+      </div>
+
+      <!-- Top Navigation Tabs -->
+      <nav class="flex items-center gap-2 self-start sm:self-auto">
+        <button id="nav-home-btn" onclick="navigateTo('home')" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-blue-900 shadow-sm transition cursor-pointer">
+          🏠 Beranda Ujian
+        </button>
+        <button id="nav-dict-btn" onclick="navigateTo('dictionary')" class="px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-800/70 hover:bg-blue-700 text-white border border-blue-600/50 transition cursor-pointer">
+          📖 Kamus Kotoba & Rambu
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT AREA -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ==================== VIEW 1: HOME / MODE SELECTION ==================== -->
+    <section id="view-home" class="space-y-6">
+      <!-- Info Banner -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div class="space-y-2 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200">
+              <span>🇯🇵 Standar Ujian Konversi SIM Jepang Terbaru (Menkyo Center / NPA)</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+              Persiapkan Diri Menghadapi Tes Tertulis <span class="text-blue-700">Chishiki Kakunin (知識確認)</span>
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Berdasarkan standar terbaru Kepolisian Jepang (NPA) untuk konversi SIM asing ke SIM Jepang (<strong>Gaimen Kirikae / 外免切替</strong>), ujian pengetahuan aturan lalu lintas terdiri dari <strong>50 soal Benar/Salah (○/×)</strong> dengan syarat kelulusan minimal <strong>45 benar dari 50 soal (90%)</strong>. Anda dapat memilih bahasa pengantar ujian (<strong>日本語 / English / Bahasa Indonesia</strong>) layaknya mesin CBT di Menkyo Center.
+            </p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 shrink-0 min-w-[270px]">
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Info Standar Kelulusan Terbaru</div>
+            <ul class="space-y-1.5 text-xs sm:text-sm text-slate-700">
+              <li class="flex items-center justify-between gap-4">
+                <span>Ambang Lulus (合格ライン):</span>
+                <span class="font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">≥ 45 / 50 (90%)</span>
+              </li>
+              <li class="flex items-center justify-between gap-4">
+                <span>Bank Soal Tersedia:</span>
+                <span class="font-bold text-blue-700" id="total-bank-count">50 Soal Autentik</span>
+              </li>
+              <li class="flex items-center justify-between gap-4">
+                <span>Pilihan Bahasa CBT:</span>
+                <span class="font-medium text-slate-800">日本語 / EN / ID</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Exam Language Selector on Home -->
+        <div class="mt-5 pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-700">Pilih Bahasa Tampilan Soal Ujian (試験言語の選択):</div>
+            <p class="text-xs text-slate-500">Selama mengerjakan soal ujian, hanya 1 bahasa terpilih yang muncul. Semua 3 bahasa (JP + EN + ID) akan tampil lengkap saat pembahasan.</p>
+          </div>
+          <div class="inline-flex p-1 rounded-xl bg-slate-100 border border-slate-200 self-start sm:self-auto" role="group" aria-label="Pilih Bahasa Ujian">
+            <button type="button" onclick="setExamLanguage('jp')" data-lang-btn="jp" class="lang-select-btn px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer bg-blue-600 text-white shadow-xs">
+              🇯🇵 日本語 (Jepang)
+            </button>
+            <button type="button" onclick="setExamLanguage('en')" data-lang-btn="en" class="lang-select-btn px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer text-slate-700 hover:text-slate-900">
+              🇬🇧 English
+            </button>
+            <button type="button" onclick="setExamLanguage('id')" data-lang-btn="id" class="lang-select-btn px-3.5 py-2 rounded-lg text-xs font-bold transition cursor-pointer text-slate-700 hover:text-slate-900">
+              🇮🇩 Indonesia
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mode Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Mode 1: Resmi Gaimen Kirikae -->
+        <div class="bg-white rounded-2xl shadow-sm border-2 border-blue-200 hover:border-blue-500 transition p-6 flex flex-col justify-between relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-blue-600 text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl">
+            STANDAR RESMI NPA
+          </div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center text-2xl mb-4">
+              ⏱️
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Mode Ujian Resmi Gaimen Kirikae</h3>
+            <p class="text-xs font-semibold text-blue-700 mt-1">50 Soal Benar / Salah (○ / ×) • Waktu 30 Menit</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Simulasi standar resmi <em>Chishiki Kakunin</em> terbaru di Menkyo Center Jepang. Terdiri dari <strong>50 soal ○/×</strong> dengan syarat lulus minimal <strong>45 benar dari 50 soal (90%)</strong> dalam bahasa yang Anda pilih.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <button onclick="startExam('official')" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-[0.99] text-white font-semibold text-sm shadow-sm transition cursor-pointer">
+              Mulai Ujian Resmi (50 Soal) →
+            </button>
+          </div>
+        </div>
+
+        <!-- Mode 2: Latihan Lengkap SSW & Menkyo -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-indigo-500 transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-2xl mb-4">
+              🚛
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Mode Latihan Lengkap (SSW & Menkyo)</h3>
+            <p class="text-xs font-semibold text-indigo-700 mt-1">50 Soal Campuran (○/× & Studi Kasus) • 35 Menit</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Paket latihan komprehensif mencakup seluruh <strong>50 soal</strong> gabungan Benar/Salah (○/×) dan Pilihan Ganda studi kasus rambu lalu lintas, perlintasan kereta, jalan tol, & prediksi bahaya (target lulus ≥ 45/50).
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <button onclick="startExam('full')" class="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white font-semibold text-sm shadow-sm transition cursor-pointer">
+              Mulai Latihan Lengkap (50 Soal) →
+            </button>
+          </div>
+        </div>
+
+        <!-- Mode 3: Mode Belajar -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-emerald-500 transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-2xl mb-4">
+              📚
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Mode Belajar & Hafalan 3 Bahasa</h3>
+            <p class="text-xs font-semibold text-emerald-700 mt-1">50 Soal • Tanpa Timer + Pembahasan 3 Bahasa</p>
+            <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+              Belajar santai tanpa batas waktu. Jawab soal dalam bahasa pilihan Anda, lalu lihat langsung <strong>terjemahan lengkap Jepang + English + Indonesia</strong>, pembahasan hukum, & Kotoba kunci.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100">
+            <button onclick="startExam('study')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-semibold text-sm shadow-sm transition cursor-pointer">
+              Mulai Mode Belajar (50 Soal) →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Preview of Japanese Road Signs -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">Rambu Lalu Lintas Jepang yang Sering Keluar di Ujian</h3>
+            <p class="text-xs text-slate-500">Pelajari bentuk, warna, dan arti rambu wajib sebelum memulai simulasi CBT.</p>
+          </div>
+          <button onclick="navigateTo('dictionary')" class="text-xs font-semibold text-blue-600 hover:text-blue-800 underline self-start sm:self-auto cursor-pointer">
+            Lihat Semua Rambu & Kotoba →
+          </button>
+        </div>
+        <div id="home-signs-preview" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: CBT EXAM INTERFACE ==================== -->
+    <section id="view-exam" class="hidden space-y-4">
+      <!-- Top Control & Timer Bar -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-3.5 sm:px-5 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-3">
+          <span id="exam-mode-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800">
+            Mode Ujian Resmi
+          </span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-600">
+            Soal <span id="current-q-num" class="text-slate-900 font-bold">1</span> dari <span id="total-q-num" class="text-slate-900 font-bold">50</span>
+          </span>
+        </div>
+
+        <!-- CBT Language Switcher & Furigana Toggle -->
+        <div class="flex items-center flex-wrap gap-2">
+          <div class="inline-flex p-0.5 rounded-xl bg-slate-100 border border-slate-200" role="group" aria-label="Ganti Bahasa CBT">
+            <button type="button" onclick="setExamLanguage('jp')" data-lang-btn="jp" class="lang-select-btn px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer bg-blue-600 text-white">
+              日本語
+            </button>
+            <button type="button" onclick="setExamLanguage('en')" data-lang-btn="en" class="lang-select-btn px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer text-slate-700">
+              English
+            </button>
+            <button type="button" onclick="setExamLanguage('id')" data-lang-btn="id" class="lang-select-btn px-2.5 py-1 rounded-lg text-xs font-bold transition cursor-pointer text-slate-700">
+              Indonesia
+            </button>
+          </div>
+
+          <label id="furigana-toggle-wrapper" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200/70 text-xs font-medium text-slate-700 cursor-pointer select-none">
+            <input type="checkbox" id="toggle-furigana" checked onchange="toggleLanguageHelpers()" class="rounded text-blue-600 focus:ring-blue-500" />
+            <span>Furigana (ふりがな)</span>
+          </label>
+        </div>
+
+        <!-- Timer Display -->
+        <div id="timer-box" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900 text-white font-mono text-sm font-bold shadow-sm">
+          <span>⏱️</span>
+          <span id="timer-display">30:00</span>
+        </div>
+      </div>
+
+      <!-- Main CBT Split Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        <!-- Left/Main Question Card (8 cols) -->
+        <div class="lg:col-span-8 space-y-4">
+          <div id="question-container" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-7">
+            <!-- Category & Type Tag -->
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
+              <span id="q-category" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700">
+                Kategori: Rambu Lalu Lintas
+              </span>
+              <div class="flex items-center gap-2">
+                <span id="q-active-lang-pill" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+                  Bahasa Soal: 日本語
+                </span>
+                <span id="q-type-label" class="text-xs font-bold text-blue-700">
+                  Benar / Salah (○ / ×)
+                </span>
+              </div>
+            </div>
+
+            <!-- Illustration SVG Container (if any) -->
+            <div id="q-illustration-wrapper" class="hidden mb-5 flex flex-col items-center justify-center bg-slate-50 border border-slate-200/80 rounded-2xl p-4">
+              <div id="q-illustration-svg" class="w-full max-w-[260px] flex justify-center"></div>
+              <p id="q-illustration-caption" class="text-xs text-slate-500 mt-2 font-medium text-center"></p>
+            </div>
+
+            <!-- Single Active Language Question Text during Exam -->
+            <div class="mb-6">
+              <div id="q-text-active" class="text-lg sm:text-xl font-bold text-slate-900 leading-relaxed">
+                <!-- Populated by JS based on selected examLanguage -->
+              </div>
+            </div>
+
+            <!-- Options List -->
+            <div id="q-options" class="space-y-3">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Instant Explanation Box (Visible in Study Mode after answering: shows ALL 3 languages!) -->
+            <div id="study-feedback-box" class="hidden mt-6 pt-5 border-t border-slate-200 space-y-4">
+              <div id="study-status-banner" class="p-3.5 rounded-xl font-bold text-sm flex items-center gap-2">
+                <!-- Populated by JS -->
+              </div>
+
+              <!-- Full Trilingual Translation Box -->
+              <div class="bg-indigo-50/60 rounded-xl p-4 border border-indigo-200 space-y-2.5">
+                <div class="text-xs font-bold uppercase tracking-wider text-indigo-800">
+                  Terjemahan Lengkap Soal (日本語 ・ English ・ Bahasa Indonesia):
+                </div>
+                <div id="study-all-translations" class="space-y-2 text-sm">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+
+              <div class="bg-slate-50 rounded-xl p-4 border border-slate-200 space-y-2">
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Pembahasan Aturan Jepang:</div>
+                <p id="study-explanation-text" class="text-sm text-slate-700 leading-relaxed"></p>
+              </div>
+
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Kosakata Kunci (単語 / Kotoba):</div>
+                <div id="study-kotoba-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Action Buttons -->
+          <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex flex-wrap items-center justify-between gap-3">
+            <button id="btn-prev" onclick="prevQuestion()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:pointer-events-none text-slate-800 font-semibold text-xs sm:text-sm transition cursor-pointer">
+              ← Sebelumnya
+            </button>
+
+            <button id="btn-flag" onclick="toggleFlag()" class="px-4 py-2.5 rounded-xl border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-800 font-semibold text-xs sm:text-sm transition cursor-pointer">
+              🚩 Tandai Ragu-ragu
+            </button>
+
+            <div class="flex items-center gap-2">
+              <button id="btn-next" onclick="nextQuestion()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-sm transition cursor-pointer">
+                Selanjutnya →
+              </button>
+              <button id="btn-finish" onclick="openConfirmFinishModal()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm shadow-sm transition cursor-pointer">
+                Selesai & Nilai ✓
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sidebar: Question Number Navigator (4 cols) -->
+        <aside class="lg:col-span-4 bg-white rounded-2xl shadow-sm border border-slate-200 p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <h3 class="text-sm font-bold text-slate-900">Navigasi Nomor Soal</h3>
+            <span id="answered-counter" class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">
+              0 / 50 Terjawab
+            </span>
+          </div>
+
+          <!-- Grid of numbers (scrollable for 50 items on small screens) -->
+          <div id="question-nav-grid" class="grid grid-cols-5 sm:grid-cols-10 lg:grid-cols-5 gap-1.5 max-h-[340px] overflow-y-auto p-1">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Legend -->
+          <div class="pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-md bg-blue-600 inline-block"></span>
+              <span>Sudah Dijawab</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-md bg-amber-400 inline-block"></span>
+              <span>Ragu-ragu</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-md bg-slate-100 border border-slate-300 inline-block"></span>
+              <span>Belum Dijawab</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-4 h-4 rounded-md ring-2 ring-slate-900 bg-white inline-block"></span>
+              <span>Soal Aktif</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="openConfirmFinishModal()" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm transition cursor-pointer">
+              Kumpulkan Jawaban & Lihat Skor
+            </button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: RESULTS & REVIEW ==================== -->
+    <section id="view-result" class="hidden space-y-6">
+      <!-- Score Summary Hero Card -->
+      <div id="result-hero-card" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-3 text-center md:text-left">
+            <div id="result-badge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-extrabold">
+              <!-- Populated by JS -->
+            </div>
+            <h2 id="result-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              <!-- Populated by JS -->
+            </h2>
+            <p id="result-subtitle" class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+              <!-- Populated by JS -->
+            </p>
+            <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+              <button onclick="retryCurrentMode()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-sm transition cursor-pointer">
+                🔄 Ulangi Simulasi Ini
+              </button>
+              <button onclick="navigateTo('home')" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm transition cursor-pointer">
+                🏠 Pilih Mode Lain
+              </button>
+            </div>
+          </div>
+
+          <!-- Score Circle / Stats -->
+          <div class="flex items-center gap-5 bg-slate-50 border border-slate-200 rounded-2xl p-5 shrink-0">
+            <div class="text-center">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Skor Anda</div>
+              <div id="result-percentage" class="text-4xl sm:text-5xl font-black text-blue-700 mt-1">90%</div>
+              <div id="result-passing-req" class="text-xs font-semibold text-slate-600 mt-1">Syarat Lulus: ≥ 45 / 50 (90%)</div>
+            </div>
+            <div class="h-16 w-px bg-slate-200"></div>
+            <div class="space-y-1.5 text-sm">
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-slate-600">Benar (正解):</span>
+                <span id="result-correct-count" class="font-bold text-emerald-600">45</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-slate-600">Salah (不正解):</span>
+                <span id="result-wrong-count" class="font-bold text-rose-600">5</span>
+              </div>
+              <div class="flex items-center justify-between gap-4">
+                <span class="text-slate-600">Total Soal:</span>
+                <span id="result-total-count" class="font-bold text-slate-900">50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review Filter Bar -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Pembahasan Lengkap 3 Bahasa & Kotoba Kunci</h3>
+          <p class="text-xs text-slate-500">Menampilkan teks asli Jepang (日本語), terjemahan English, dan Bahasa Indonesia untuk setiap soal.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterReview('all')" id="rev-filter-all" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-white cursor-pointer">
+            Semua Soal
+          </button>
+          <button onclick="filterReview('wrong')" id="rev-filter-wrong" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer">
+            Hanya Jawaban Salah
+          </button>
+          <button onclick="filterReview('correct')" id="rev-filter-correct" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer">
+            Hanya Jawaban Benar
+          </button>
+        </div>
+      </div>
+
+      <!-- Review List -->
+      <div id="review-list-container" class="space-y-4">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: KOTOBA & TRAFFIC SIGNS DICTIONARY ==================== -->
+    <section id="view-dictionary" class="hidden space-y-6">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Kamus Kotoba & Rambu Lalu Lintas Jepang (交通用語・標識)</h2>
+            <p class="text-sm text-slate-600 mt-1">
+              Rangkuman istilah penting ujian <em>Gaimen Kirikae</em> dan <em>SSW Driver</em> lengkap dengan Kanji, cara baca Hiragana, dan artinya.
+            </p>
+          </div>
+          <div class="w-full md:w-80 relative">
+            <input
+              type="text"
+              id="kotoba-search-input"
+              oninput="renderDictionary()"
+              placeholder="Cari kanji, hiragana, atau arti..."
+              class="w-full pl-4 pr-10 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              type="button"
+              id="clear-search-btn"
+              onclick="clearDictionarySearch()"
+              class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 text-xs font-bold cursor-pointer"
+              title="Hapus pencarian"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Traffic Signs Reference Grid -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
+        <h3 class="text-base sm:text-lg font-bold text-slate-900">1. Rambu Lalu Lintas Utama Jepang (道路標識 - Douro Hyoushiki)</h3>
+        <div id="dict-signs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- Kotoba Vocabulary Table -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900">2. Daftar Kosakata Wajib Ujian Tertulis (単語リスト)</h3>
+          <span id="kotoba-count-label" class="text-xs font-semibold text-slate-500">Menampilkan semua kosakata</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50 text-xs font-bold uppercase text-slate-600">
+                <th class="py-3 px-4 rounded-tl-xl">Kanji / Istilah Jepang</th>
+                <th class="py-3 px-4">Cara Baca (Hiragana)</th>
+                <th class="py-3 px-4">Arti Bahasa Indonesia</th>
+                <th class="py-3 px-4 rounded-tr-xl">Kategori</th>
+              </tr>
+            </thead>
+            <tbody id="kotoba-table-body" class="divide-y divide-slate-100 text-sm">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CUSTOM CONFIRMATION MODAL (No browser alert/confirm used) -->
+  <div id="confirm-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl border border-slate-200 space-y-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xl font-bold shrink-0">
+          !
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Kumpulkan Jawaban Sekarang?</h3>
+          <p class="text-xs text-slate-500">Pastikan Anda telah memeriksa kembali jawaban Anda.</p>
+        </div>
+      </div>
+      <p id="confirm-modal-message" class="text-sm text-slate-600 leading-relaxed">
+        Anda telah menjawab X dari Y soal.
+      </p>
+      <div class="flex items-center justify-end gap-2.5 pt-2">
+        <button onclick="closeConfirmFinishModal()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm transition cursor-pointer">
+          Kembali ke Soal
+        </button>
+        <button onclick="finishExam()" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm shadow-sm transition cursor-pointer">
+          Ya, Selesai & Nilai
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 mt-10 py-5 text-center text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4">
+      Simulasi Latihan Soal <strong>Gaimen Kirikae (外免切替)</strong> & <strong>Chishiki Kakunin (知識確認)</strong> — Berdasarkan Aturan Lalu Lintas Jepang (道路交通法).
+    </div>
+  </footer>
+
+  <script>
+    // =========================================================================
+    // 1. SVG ILLUSTRATIONS FOR JAPANESE TRAFFIC SIGNS & SITUATIONS
+    // =========================================================================
+    const SVG_ILLUSTRATIONS = {
+      stop: `
+        <svg viewBox="0 0 160 150" class="w-36 h-36 drop-shadow-sm" aria-label="Ichiji Teishi">
+          <!-- Inverted red triangle with white border -->
+          <polygon points="80,142 12,18 148,18" fill="#dc2626" stroke="#ffffff" stroke-width="5" stroke-linejoin="round"/>
+          <polygon points="80,142 12,18 148,18" fill="none" stroke="#dc2626" stroke-width="2" stroke-linejoin="round"/>
+          <text x="80" y="54" text-anchor="middle" fill="#ffffff" font-family="Noto Sans JP, sans-serif" font-weight="800" font-size="22">止まれ</text>
+          <text x="80" y="76" text-anchor="middle" fill="#ffffff" font-family="Inter, sans-serif" font-weight="700" font-size="13" letter-spacing="1">STOP</text>
+        </svg>
+      `,
+      no_entry: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Sharyou Shinnyuu Kinshi">
+          <circle cx="75" cy="75" r="64" fill="#dc2626" stroke="#ffffff" stroke-width="4"/>
+          <rect x="24" y="61" width="102" height="28" rx="4" fill="#ffffff"/>
+        </svg>
+      `,
+      no_parking_stopping: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Chuuteisha Kinshi">
+          <circle cx="75" cy="75" r="64" fill="#1d4ed8" stroke="#dc2626" stroke-width="14"/>
+          <line x1="30" y1="30" x2="120" y2="120" stroke="#dc2626" stroke-width="14"/>
+          <line x1="120" y1="30" x2="30" y2="120" stroke="#dc2626" stroke-width="14"/>
+          <circle cx="75" cy="75" r="65" fill="none" stroke="#ffffff" stroke-width="2"/>
+        </svg>
+      `,
+      no_parking: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Chuusha Kinshi">
+          <circle cx="75" cy="75" r="64" fill="#1d4ed8" stroke="#dc2626" stroke-width="14"/>
+          <line x1="30" y1="30" x2="120" y2="120" stroke="#dc2626" stroke-width="14"/>
+          <circle cx="75" cy="75" r="65" fill="none" stroke="#ffffff" stroke-width="2"/>
+        </svg>
+      `,
+      slow_down: `
+        <svg viewBox="0 0 160 150" class="w-36 h-36 drop-shadow-sm" aria-label="Jokou">
+          <polygon points="80,142 12,18 148,18" fill="#ffffff" stroke="#dc2626" stroke-width="14" stroke-linejoin="round"/>
+          <text x="80" y="62" text-anchor="middle" fill="#1e3a8a" font-family="Noto Sans JP, sans-serif" font-weight="800" font-size="25">徐行</text>
+        </svg>
+      `,
+      crosswalk: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Oudanhodou">
+          <polygon points="75,8 142,75 75,142 8,75" fill="#1d4ed8" stroke="#ffffff" stroke-width="4" stroke-linejoin="round"/>
+          <!-- Crosswalk stripes -->
+          <rect x="44" y="102" width="62" height="6" fill="#ffffff"/>
+          <rect x="38" y="90" width="74" height="6" fill="#ffffff"/>
+          <!-- Pedestrian silhouette -->
+          <circle cx="76" cy="40" r="7" fill="#ffffff"/>
+          <path d="M74 50 L66 70 L56 86 M76 52 L88 68 L94 86 M75 50 L62 62 M76 52 L89 60" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none"/>
+        </svg>
+      `,
+      railroad: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Fumikiri Ari">
+          <polygon points="75,8 142,75 75,142 8,75" fill="#facc15" stroke="#1e293b" stroke-width="5" stroke-linejoin="round"/>
+          <!-- Train silhouette -->
+          <rect x="52" y="45" width="46" height="44" rx="6" fill="#0f172a"/>
+          <rect x="58" y="52" width="14" height="12" rx="2" fill="#facc15"/>
+          <rect x="78" y="52" width="14" height="12" rx="2" fill="#facc15"/>
+          <circle cx="62" cy="78" r="3.5" fill="#facc15"/>
+          <circle cx="88" cy="78" r="3.5" fill="#facc15"/>
+          <!-- Rails -->
+          <line x1="48" y1="104" x2="60" y2="89" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+          <line x1="102" y1="104" x2="90" y2="89" stroke="#0f172a" stroke-width="5" stroke-linecap="round"/>
+          <line x1="46" y1="98" x2="104" y2="98" stroke="#0f172a" stroke-width="4"/>
+        </svg>
+      `,
+      one_way: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Ippou Tsuukou">
+          <rect x="25" y="15" width="100" height="120" rx="10" fill="#1d4ed8" stroke="#ffffff" stroke-width="4"/>
+          <polygon points="75,30 102,65 86,65 86,118 64,118 64,65 48,65" fill="#ffffff"/>
+        </svg>
+      `,
+      flashing_red: `
+        <svg viewBox="0 0 220 110" class="w-48 h-24 drop-shadow-sm" aria-label="Akairo Tenmetsu Shingou">
+          <rect x="15" y="20" width="190" height="70" rx="35" fill="#1e293b" stroke="#94a3b8" stroke-width="3"/>
+          <circle cx="55" cy="55" r="22" fill="#334155"/>
+          <circle cx="110" cy="55" r="22" fill="#334155"/>
+          <circle cx="165" cy="55" r="22" fill="#ef4444"/>
+          <!-- Flashing rays -->
+          <line x1="165" y1="22" x2="165" y2="12" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+          <line x1="192" y1="32" x2="200" y2="25" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+          <line x1="196" y1="55" x2="206" y2="55" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+          <line x1="138" y1="32" x2="130" y2="25" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      `,
+      flashing_yellow: `
+        <svg viewBox="0 0 220 110" class="w-48 h-24 drop-shadow-sm" aria-label="Kiiro Tenmetsu Shingou">
+          <rect x="15" y="20" width="190" height="70" rx="35" fill="#1e293b" stroke="#94a3b8" stroke-width="3"/>
+          <circle cx="55" cy="55" r="22" fill="#334155"/>
+          <circle cx="110" cy="55" r="22" fill="#eab308"/>
+          <circle cx="165" cy="55" r="22" fill="#334155"/>
+          <!-- Flashing rays -->
+          <line x1="110" y1="22" x2="110" y2="12" stroke="#eab308" stroke-width="3" stroke-linecap="round"/>
+          <line x1="135" y1="30" x2="143" y2="23" stroke="#eab308" stroke-width="3" stroke-linecap="round"/>
+          <line x1="85" y1="30" x2="77" y2="23" stroke="#eab308" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      `,
+      green_arrow: `
+        <svg viewBox="0 0 220 130" class="w-48 h-28 drop-shadow-sm" aria-label="Red Light with Right Green Arrow">
+          <rect x="15" y="12" width="190" height="62" rx="31" fill="#1e293b" stroke="#94a3b8" stroke-width="3"/>
+          <circle cx="55" cy="43" r="19" fill="#334155"/>
+          <circle cx="110" cy="43" r="19" fill="#334155"/>
+          <circle cx="165" cy="43" r="19" fill="#ef4444"/>
+          <!-- Sub arrow housing -->
+          <rect x="138" y="76" width="54" height="44" rx="10" fill="#1e293b" stroke="#94a3b8" stroke-width="2.5"/>
+          <polygon points="182,98 167,85 167,93 148,93 148,103 167,103 167,111" fill="#22c55e"/>
+        </svg>
+      `,
+      left_turn_blindspot: `
+        <svg viewBox="0 0 240 160" class="w-56 h-36 drop-shadow-sm" aria-label="Left Turn Blindspot Situation">
+          <!-- Road Intersection -->
+          <rect x="0" y="0" width="240" height="160" fill="#475569"/>
+          <!-- Sidewalk / Corner -->
+          <path d="M0,0 L75,0 L75,45 Q75,65 55,65 L0,65 Z" fill="#cbd5e1"/>
+          <path d="M165,0 L240,0 L240,65 L185,65 Q165,65 165,45 Z" fill="#cbd5e1"/>
+          <path d="M0,115 L55,115 Q75,115 75,135 L75,160 L0,160 Z" fill="#cbd5e1"/>
+          <path d="M165,160 L165,135 Q165,115 185,115 L240,115 L240,160 Z" fill="#cbd5e1"/>
+          <!-- Center line (Japan Left Side Traffic) -->
+          <line x1="120" y1="0" x2="120" y2="160" stroke="#facc15" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <!-- Car on left lane turning left -->
+          <rect x="85" y="95" width="24" height="42" rx="5" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5"/>
+          <!-- Left turn path arrow -->
+          <path d="M97,95 Q97,80 65,80" fill="none" stroke="#38bdf8" stroke-width="3" stroke-dasharray="4,3"/>
+          <polygon points="60,80 68,75 68,85" fill="#38bdf8"/>
+          <!-- Bicycle/Scooter coming from behind on left edge -->
+          <circle cx="79" cy="138" r="5" fill="#f97316" stroke="#ffffff" stroke-width="1.5"/>
+          <line x1="79" y1="132" x2="79" y2="112" stroke="#f97316" stroke-width="2.5"/>
+          <polygon points="79,107 75,114 83,114" fill="#f97316"/>
+        </svg>
+      `,
+      pedestrian_zone: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Hokousha Senyou">
+          <circle cx="75" cy="75" r="64" fill="#1d4ed8" stroke="#ffffff" stroke-width="4"/>
+          <circle cx="75" cy="36" r="9" fill="#ffffff"/>
+          <path d="M74 48 L64 78 L52 108 M76 50 L90 78 L98 108 M74 52 L56 72 M76 52 L96 68" stroke="#ffffff" stroke-width="8" stroke-linecap="round" fill="none"/>
+        </svg>
+      `,
+      no_u_turn: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Tenkai Kinshi">
+          <circle cx="75" cy="75" r="64" fill="#ffffff" stroke="#dc2626" stroke-width="14"/>
+          <path d="M92 105 L92 60 A18 18 0 0 0 56 60 L56 88" fill="none" stroke="#1e3a8a" stroke-width="11" stroke-linecap="round"/>
+          <polygon points="56,104 43,84 69,84" fill="#1e3a8a"/>
+          <line x1="30" y1="30" x2="120" y2="120" stroke="#dc2626" stroke-width="13"/>
+        </svg>
+      `,
+      speed_limit_40: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Saikou Sokudo 40">
+          <circle cx="75" cy="75" r="64" fill="#ffffff" stroke="#dc2626" stroke-width="14"/>
+          <text x="75" y="92" text-anchor="middle" fill="#1e3a8a" font-family="Inter, sans-serif" font-weight="900" font-size="48">40</text>
+        </svg>
+      `,
+      no_overtaking: `
+        <svg viewBox="0 0 150 150" class="w-36 h-36 drop-shadow-sm" aria-label="Oikoshi Kinshi">
+          <circle cx="75" cy="75" r="64" fill="#ffffff" stroke="#dc2626" stroke-width="14"/>
+          <!-- Right car (black/navy) -->
+          <rect x="82" y="62" width="24" height="32" rx="4" fill="#1e3a8a"/>
+          <rect x="85" y="54" width="18" height="12" rx="3" fill="#1e3a8a"/>
+          <!-- Left overtaking car (red) -->
+          <rect x="44" y="62" width="24" height="32" rx="4" fill="#dc2626"/>
+          <rect x="47" y="54" width="18" height="12" rx="3" fill="#dc2626"/>
+          <!-- Arrow -->
+          <path d="M94 46 Q72 30 56 46" fill="none" stroke="#dc2626" stroke-width="4"/>
+          <polygon points="51,51 54,41 62,48" fill="#dc2626"/>
+        </svg>
+      `
+    };
+
+    // =========================================================================
+    // 2. TRAFFIC SIGNS & KOTOBA REFERENCE DATA
+    // =========================================================================
+    const TRAFFIC_SIGNS_DATA = [
+      {
+        id: 'stop',
+        kanji: '一時停止',
+        hiragana: 'いちじていし',
+        arti: 'Berhenti Sejenak (STOP)',
+        desc: 'Wajib menghentikan kendaraan sepenuhnya sebelum garis berhenti (停止線) dan memastikan keamanan kanan-kiri.',
+        svgKey: 'stop'
+      },
+      {
+        id: 'no_entry',
+        kanji: '車両進入禁止',
+        hiragana: 'しゃりょうしんにゅうきんし',
+        arti: 'Kendaraan Dilarang Masuk',
+        desc: 'Biasanya dipasang di ujung jalan satu arah (一方通行). Semua kendaraan dilarang masuk dari arah rambu ini.',
+        svgKey: 'no_entry'
+      },
+      {
+        id: 'no_parking_stopping',
+        kanji: '駐停車禁止',
+        hiragana: 'ちゅうていしゃきんし',
+        arti: 'Dilarang Parkir & Berhenti',
+        desc: 'Kendaraan dilarang parkir maupun berhenti sejenak (kecuali berhenti karena lampu merah atau menghindari bahaya).',
+        svgKey: 'no_parking_stopping'
+      },
+      {
+        id: 'no_parking',
+        kanji: '駐車禁止',
+        hiragana: 'ちゅうしゃきんし',
+        arti: 'Dilarang Parkir',
+        desc: 'Dilarang memarkir kendaraan, tetapi diperbolehkan berhenti sebentar (停車) untuk menaikkan/menurunkan penumpang.',
+        svgKey: 'no_parking'
+      },
+      {
+        id: 'slow_down',
+        kanji: '徐行',
+        hiragana: 'じょこう',
+        arti: 'Pelan-pelan (Kecepatan Sangat Rendah)',
+        desc: 'Wajib melaju sangat pelan sehingga kendaraan dapat langsung berhenti seketika jika terjadi bahaya (sekitar ≤ 10 km/jam).',
+        svgKey: 'slow_down'
+      },
+      {
+        id: 'crosswalk',
+        kanji: '横断歩道',
+        hiragana: 'おうだんほどう',
+        arti: 'Penyeberangan Pejalan Kaki (Zebra Cross)',
+        desc: 'Menunjukkan adanya zebra cross. Pejalan kaki memiliki prioritas mutlak.',
+        svgKey: 'crosswalk'
+      },
+      {
+        id: 'railroad',
+        kanji: '踏切あり',
+        hiragana: 'ふみきりあり',
+        arti: 'Ada Perlintasan Kereta Api',
+        desc: 'Peringatan bahwa di depan terdapat perlintasan kereta api. Wajib berhenti sejenak sebelum perlintasan.',
+        svgKey: 'railroad'
+      },
+      {
+        id: 'one_way',
+        kanji: '一方通行',
+        hiragana: 'いっぽうつうこう',
+        arti: 'Jalan Satu Arah',
+        desc: 'Kendaraan hanya boleh melaju searah dengan tanda panah putih.',
+        svgKey: 'one_way'
+      },
+      {
+        id: 'pedestrian_zone',
+        kanji: '歩行者専用',
+        hiragana: 'ほこうしゃせんよう',
+        arti: 'Khusus Pejalan Kaki',
+        desc: 'Jalan ini khusus untuk pejalan kaki. Kendaraan bermotor dilarang masuk.',
+        svgKey: 'pedestrian_zone'
+      },
+      {
+        id: 'no_u_turn',
+        kanji: '転回禁止',
+        hiragana: 'てんかいきんし',
+        arti: 'Dilarang Putar Balik (U-Turn)',
+        desc: 'Kendaraan dilarang melakukan putar balik (U-turn) di area rambu ini.',
+        svgKey: 'no_u_turn'
+      },
+      {
+        id: 'speed_limit_40',
+        kanji: '最高速度（40km/h）',
+        hiragana: 'さいこうそくど',
+        arti: 'Batas Kecepatan Maksimum 40 km/jam',
+        desc: 'Kendaraan tidak boleh melaju melebihi angka batas kecepatan yang tertera pada rambu.',
+        svgKey: 'speed_limit_40'
+      },
+      {
+        id: 'no_overtaking',
+        kanji: '追越しのための右側部分はみ出し通行禁止',
+        hiragana: 'おいこしきんし',
+        arti: 'Dilarang Menyalip Melewati Garis Tengah',
+        desc: 'Dilarang melewati garis tengah jalan ke jalur kanan untuk menyalip kendaraan lain.',
+        svgKey: 'no_overtaking'
+      }
+    ];
+
+    const KOTOBA_LIST = [
+      { kanji: '一時停止', hiragana: 'いちじていし', arti: 'Berhenti sejenak sepenuhnya (roda berhenti total)', category: 'Aturan Dasar' },
+      { kanji: '徐行', hiragana: 'じょこう', arti: 'Melaju sangat pelan (bisa berhenti seketika)', category: 'Aturan Dasar' },
+      { kanji: '左側通行', hiragana: 'ひだりがわつうこう', arti: 'Lalu lintas jalur kiri (aturan jalan di Jepang)', category: 'Aturan Dasar' },
+      { kanji: '横断歩道', hiragana: 'おうだんほどう', arti: 'Zebra cross / penyeberangan pejalan kaki', category: 'Jalan & Pejalan Kaki' },
+      { kanji: '歩行者優先', hiragana: 'ほこうしゃゆうせん', arti: 'Prioritas pejalan kaki', category: 'Jalan & Pejalan Kaki' },
+      { kanji: '踏切', hiragana: 'ふみきり', arti: 'Perlintasan kereta api', category: 'Perlintasan' },
+      { kanji: '遮断機', hiragana: 'しゃだんき', arti: 'Palang pintu perlintasan kereta', category: 'Perlintasan' },
+      { kanji: '緊急自動車', hiragana: 'きんきゅうじどうしゃ', arti: 'Kendaraan darurat (ambulans, pemadam, polisi)', category: 'Kendaraan Khusus' },
+      { kanji: '飲酒運転', hiragana: 'いんしゅうんてん', arti: 'Mengemudi di bawah pengaruh alkohol (Dilarang keras)', category: 'Larangan Keras' },
+      { kanji: '携帯電話', hiragana: 'けいたいでんわ', arti: 'Telepon genggam / ponsel (dilarang dipegang saat menyetir)', category: 'Larangan Keras' },
+      { kanji: '法定速度', hiragana: 'ほうていそくど', arti: 'Batas kecepatan hukum (60 km/jam jalan umum, 100 km/jam tol)', category: 'Kecepatan' },
+      { kanji: '高速道路', hiragana: 'こうそくどうろ', arti: 'Jalan tol / jalan bebas hambatan', category: 'Jalan Tol' },
+      { kanji: '路側帯', hiragana: 'ろそくたい', arti: 'Bahu jalan / jalur tepi jalan', category: 'Jalan & Pejalan Kaki' },
+      { kanji: '死角', hiragana: 'しかく', arti: 'Titik buta (blind spot)', category: 'Keselamatan' },
+      { kanji: '巻き込み事故', hiragana: 'まきこみじこ', arti: 'Kecelakaan menyerempet motor/sepeda saat belok kiri', category: 'Keselamatan' },
+      { kanji: '車間距離', hiragana: 'しゃかんきょり', arti: 'Jarak aman antar kendaraan', category: 'Keselamatan' },
+      { kanji: '赤色点滅信号', hiragana: 'あかいろてんめつしんごう', arti: 'Lampu lalu lintas merah berkedip (sama dengan STOP)', category: 'Lampu Lalu Lintas' },
+      { kanji: '黄色点滅信号', hiragana: 'きいろてんめつしんごう', arti: 'Lampu lalu lintas kuning berkedip (waspada & hati-hati)', category: 'Lampu Lalu Lintas' },
+      { kanji: '路線バス優先通行帯', hiragana: 'ろせんバスゆうせんつうこうたい', arti: 'Lajur prioritas bus umum', category: 'Lajur Jalan' },
+      { kanji: '停止表示器材', hiragana: 'ていしひょうじきざい', arti: 'Segitiga pengaman darurat (wajib dipasang di jalan tol)', category: 'Jalan Tol' },
+      { kanji: '二段階右折', hiragana: 'にだんかいうせつ', arti: 'Belok kanan dua tahap (khusus motor ≤ 50cc / Gentsuki)', category: 'Sepeda & Motor' },
+      { kanji: '初心者マーク', hiragana: 'しょしんしゃマーク', arti: 'Stiker pengemudi pemula (wajib 1 tahun pertama)', category: 'Aturan SIM' },
+      { kanji: 'ハイドロプレーニング現象', hiragana: 'ハイドロプレーニングげんしょう', arti: 'Aquaplaning / ban mengambang di atas genangan air', category: 'Cuaca & Malam' },
+      { kanji: '蒸発現象', hiragana: 'じょうはつげんしょう', arti: 'Fenomena pejalan kaki tidak terlihat akibat silau lampu lawan', category: 'Cuaca & Malam' }
+    ];
+
+    // =========================================================================
+    // 3. QUESTION BANK (50 AUTHENTIC TRILINGUAL QUESTIONS: JP + EN + ID)
+    // =========================================================================
+    const QUESTION_BANK = [
+      {
+        id: 1,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'stop',
+        svgCaption: 'Rambu Lalu Lintas Jepang (一時停止 / STOP)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>周囲<rt>しゅうい</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>や<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいなければ、<ruby>徐行<rt>じょこう</rt></ruby>して<ruby>通過<rt>つうか</rt></ruby>してもよい。',
+        enText: 'At a place with this sign, if there are no cars or pedestrians around, you may pass through by slowing down (jokou) without coming to a complete stop.',
+        idText: 'Di tempat yang terdapat rambu ini, jika di sekitar tidak ada mobil maupun pejalan kaki, pengemudi boleh melintas hanya dengan melaju pelan (徐行 / jokou) tanpa berhenti.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Rambu segitiga terbalik merah bertuliskan「止まれ」adalah rambu <strong>一時停止 (Ichiji Teishi / Berhenti Sejenak)</strong>. Pengemudi wajib menghentikan roda kendaraan sepenuhnya (0 km/jam) tepat sebelum garis berhenti (停止線) dan memastikan keamanan kanan-kiri, meskipun tidak ada kendaraan atau pejalan kaki di sekitar.',
+        kotoba: [
+          { kanji: '一時停止', hiragana: 'いちじていし', arti: 'Berhenti sejenak sepenuhnya' },
+          { kanji: '徐行', hiragana: 'じょこう', arti: 'Melaju sangat pelan' },
+          { kanji: '通過', hiragana: 'つうか', arti: 'Melintas / melewati' }
+        ]
+      },
+      {
+        id: 2,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'no_entry',
+        svgCaption: 'Rambu Lalu Lintas Jepang (車両進入禁止)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>には、<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>き、<ruby>自動車<rt>じどうしゃ</rt></ruby>や<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>は<ruby>進入<rt>しんにゅう</rt></ruby>できない。',
+        enText: 'On a road with this sign, automobiles and motorized bicycles (mopeds) are prohibited from entering, except bicycles when indicated.',
+        idText: 'Pada jalan yang memiliki rambu ini, kecuali sepeda (jika ada papan tambahan), mobil dan motor dilarang masuk.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran merah dengan garis putih horizontal di tengah adalah <strong>車両進入禁止 (Sharyou Shinnyuu Kinshi / Kendaraan Dilarang Masuk)</strong>, yang biasanya dipasang di ujung jalan keluar dari jalan satu arah (一方通行). Kendaraan bermotor dilarang keras masuk dari arah ini.',
+        kotoba: [
+          { kanji: '車両進入禁止', hiragana: 'しゃりょうしんにゅうきんし', arti: 'Kendaraan dilarang masuk' },
+          { kanji: '原動機付自転車', hiragana: 'げんどうきつきじてんしゃ', arti: 'Sepeda motor kecil (≤ 50cc / Gentsuki)' },
+          { kanji: '進入', hiragana: 'しんにゅう', arti: 'Memasuki (jalur/area)' }
+        ]
+      },
+      {
+        id: 3,
+        type: 'tf',
+        category: 'Prioritas Pejalan Kaki (歩行者優先)',
+        svgKey: 'crosswalk',
+        svgCaption: 'Rambu Zebra Cross (横断歩道)',
+        jpHtml: '<ruby>信号機<rt>しんごうき</rt></ruby>のない<ruby>横断歩道<rt>おうだんほどう</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいたとき、<ruby>横断<rt>おうだん</rt></ruby>しようとしている<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいる<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>横断歩道<rt>おうだんほどう</rt></ruby>の<ruby>直前<rt>ちょくぜん</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>しなければならない。',
+        enText: 'When approaching a pedestrian crosswalk without traffic lights, if there is a pedestrian about to cross, you must come to a complete stop just before the crosswalk.',
+        idText: 'Ketika mendekati zebra cross tanpa lampu lalu lintas, jika terdapat pejalan kaki yang hendak menyeberang, pengemudi wajib berhenti sejenak tepat sebelum zebra cross.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di Jepang, aturan <strong>歩行者優先 (Prioritas Pejalan Kaki)</strong> ditegakkan sangat ketat. Jika ada pejalan kaki yang sedang menyeberang atau bersiap menyeberang di zebra cross tanpa lampu lalu lintas, pengemudi wajib berhenti tepat sebelum garis zebra cross untuk memberi jalan.',
+        kotoba: [
+          { kanji: '横断歩道', hiragana: 'おうだんほどう', arti: 'Zebra cross / penyeberangan' },
+          { kanji: '歩行者', hiragana: 'ほこうしゃ', arti: 'Pejalan kaki' },
+          { kanji: '直前', hiragana: 'ちょくぜん', arti: 'Tepat sebelum' }
+        ]
+      },
+      {
+        id: 4,
+        type: 'tf',
+        category: 'Perlintasan Kereta Api (踏切)',
+        svgKey: 'railroad',
+        svgCaption: 'Rambu Perlintasan Kereta Api (踏切あり)',
+        jpHtml: '<ruby>踏切<rt>ふみきり</rt></ruby>を<ruby>通過<rt>つうか</rt></ruby>するときは、<ruby>信号機<rt>しんごうき</rt></ruby>が<ruby>青色<rt>あおいろ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>う<ruby>場合<rt>ばあい</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>き、<ruby>必<rt>かなら</rt></ruby>ず<ruby>踏切<rt>ふみきり</rt></ruby>の<ruby>直前<rt>ちょくぜん</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>し、<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確<rt>たし</rt></ruby>かめなければならない。',
+        enText: 'When crossing a railroad crossing, except when following a green traffic light, you must always stop just before the crossing and check for safety.',
+        idText: 'Saat melewati perlintasan kereta api, kecuali jika mengikuti lampu lalu lintas yang menyala hijau, pengemudi wajib berhenti sejenak tepat sebelum perlintasan dan memastikan keamanan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di Jepang, meskipun palang kereta terbuka dan alarm tidak berbunyi, pengemudi <strong>wajib berhenti sejenak (一時停止)</strong> sebelum perlintasan kereta api, mendengarkan suara kereta, serta menengok kanan-kiri sebelum melintas (kecuali jika ada lampu lalu lintas khusus perlintasan yang menyala hijau).',
+        kotoba: [
+          { kanji: '踏切', hiragana: 'ふみきり', arti: 'Perlintasan kereta api' },
+          { kanji: '信号機', hiragana: 'しんごうき', arti: 'Lampu lalu lintas' },
+          { kanji: '確かめる', hiragana: 'たしかめる', arti: 'Memastikan / mengecek' }
+        ]
+      },
+      {
+        id: 5,
+        type: 'tf',
+        category: 'Lampu Lalu Lintas (信号)',
+        svgKey: 'flashing_red',
+        svgCaption: 'Lampu Lalu Lintas Merah Berkedip (赤色点滅信号)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>対面<rt>たいめん</rt></ruby>する<ruby>信号機<rt>しんごうき</rt></ruby>が<ruby>赤色<rt>あかいろ</rt></ruby>の<ruby>点滅<rt>てんめつ</rt></ruby>をしているときは、<ruby>他<rt>ほか</rt></ruby>の<ruby>交通<rt>こうつう</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>しながら<ruby>徐行<rt>じょこう</rt></ruby>して<ruby>進<rt>すす</rt></ruby>むことができる。',
+        enText: 'When the traffic light facing you at an intersection is flashing red, you may proceed slowly (jokou) without stopping while paying attention to other traffic.',
+        idText: 'Ketika lampu lalu lintas yang menghadap kita di persimpangan berkedip merah (赤色点滅), kendaraan boleh terus melaju pelan (徐行) sambil memperhatikan lalu lintas lain.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Lampu <strong>merah berkedip (赤色点滅信号)</strong> memiliki arti yang sama dengan rambu <strong>一時停止 (Berhenti Sejenak / STOP)</strong>! Pengemudi wajib berhenti total di garis berhenti, memastikan keamanan, barulah boleh melintas.',
+        kotoba: [
+          { kanji: '赤色点滅', hiragana: 'あかいろてんめつ', arti: 'Kedipan warna merah' },
+          { kanji: '交差点', hiragana: 'こうさてん', arti: 'Persimpangan jalan' },
+          { kanji: '対面', hiragana: 'たいめん', arti: 'Menghadap (lampu sinyal)' }
+        ]
+      },
+      {
+        id: 6,
+        type: 'tf',
+        category: 'Kendaraan Darurat (緊急自動車)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>やその<ruby>付近<rt>ふきん</rt></ruby>で<ruby>緊急自動車<rt>きんきゅうじどうしゃ</rt></ruby>が<ruby>接近<rt>せっきん</rt></ruby>してきたときは、<ruby>交差点<rt>こうさてん</rt></ruby>を<ruby>避<rt>さ</rt></ruby>けて<ruby>道路<rt>どうろ</rt></ruby>の<ruby>左側<rt>ひだりがわ</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>り、<ruby>一時停止<rt>いちじていし</rt></ruby>しなければならない。',
+        enText: 'When an emergency vehicle approaches at or near an intersection, you must avoid the intersection, pull over to the left side of the road, and come to a complete stop.',
+        idText: 'Ketika kendaraan darurat (ambulans/pemadam kebakaran) mendekat di persimpangan atau di dekatnya, pengemudi harus menghindari persimpangan, menepi ke sisi kiri jalan, dan berhenti sejenak.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Jika kendaraan darurat (緊急自動車) mendekat di sekitar persimpangan, Anda dilarang berhenti di tengah persimpangan; keluarlah/hindari area persimpangan, menepi ke sisi kiri jalan, dan <strong>berhenti sejenak (一時停止)</strong> hingga kendaraan darurat lewat.',
+        kotoba: [
+          { kanji: '緊急自動車', hiragana: 'きんきゅうじどうしゃ', arti: 'Kendaraan darurat' },
+          { kanji: '接近', hiragana: 'せっきん', arti: 'Mendekat' },
+          { kanji: '左側', hiragana: 'ひだりがわ', arti: 'Sisi kiri' }
+        ]
+      },
+      {
+        id: 7,
+        type: 'tf',
+        category: 'Larangan Keras (飲酒運転)',
+        jpHtml: 'お<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んだ<ruby>後<rt>あと</rt></ruby>でも、<ruby>少量<rt>しょうりょう</rt></ruby>であれば<ruby>酔<rt>よ</rt></ruby>いを感じていないので、<ruby>自動車<rt>じどうしゃ</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>してもよい。',
+        enText: 'Even after drinking alcohol, if the amount is small and you do not feel intoxicated, it is permissible to drive a car.',
+        idText: 'Meskipun setelah minum minuman beralkohol, jika jumlahnya sedikit dan tidak merasa mabuk, pengemudi boleh mengendarai mobil.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Jepang menerapkan kebijakan <strong>Zero Tolerance</strong> terhadap <strong>飲酒運転 (Mengemudi di bawah pengaruh alkohol)</strong>. Berapa pun jumlah alkohol yang diminum, mengemudi adalah pelanggaran pidana berat dengan sanksi pencabutan SIM, denda besar, dan hukuman penjara.',
+        kotoba: [
+          { kanji: '飲酒運転', hiragana: 'いんしゅうんてん', arti: 'Mengemudi sambil mabuk/minum alkohol' },
+          { kanji: '少量', hiragana: 'しょうりょう', arti: 'Jumlah sedikit' },
+          { kanji: '運転', hiragana: 'うんてん', arti: 'Mengemudi' }
+        ]
+      },
+      {
+        id: 8,
+        type: 'tf',
+        category: 'Aturan Pengoperasian (携帯電話)',
+        jpHtml: '<ruby>自動車<rt>じどうしゃ</rt></ruby>の<ruby>運転中<rt>うんてんちゅう</rt></ruby>は、<ruby>信号待<rt>しんごうま</rt></ruby>ちなどで<ruby>車<rt>くるま</rt></ruby>が<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>停止<rt>ていし</rt></ruby>している<ruby>間<rt>あいだ</rt></ruby>であれば、<ruby>携帯電話<rt>けいたいでんわ</rt></ruby>を<ruby>手<rt>て</rt></ruby>に<ruby>持<rt>も</rt></ruby>って<ruby>通話<rt>つうわ</rt></ruby>してもよい。',
+        enText: 'While operating a car, as long as the vehicle is completely stopped (such as waiting at a red traffic light), you are legally permitted to hold a mobile phone in your hand to make a call.',
+        idText: 'Saat mengemudikan mobil, selama mobil berhenti total seperti saat menunggu lampu merah, pengemudi boleh memegang ponsel di tangan untuk menelepon.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Berdasarkan Undang-Undang Lalu Lintas Jalan Jepang (道路交通法), larangan memegang ponsel atau menatap layar (ながら運転) berlaku <strong>saat kendaraan sedang berjalan</strong>. Ketika kendaraan berhenti total (seperti saat menunggu lampu merah), penggunaan ponsel tidak termasuk pelanggaran hukum.',
+        kotoba: [
+          { kanji: '信号待ち', hiragana: 'しんごうまち', arti: 'Menunggu lampu lalu lintas' },
+          { kanji: '完全に停止', hiragana: 'かんぜんにていし', arti: 'Berhenti sepenuhnya / total' },
+          { kanji: '携帯電話', hiragana: 'けいたいでんわ', arti: 'Telepon genggam / HP' }
+        ]
+      },
+      {
+        id: 9,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'no_parking_stopping',
+        svgCaption: 'Rambu Dilarang Parkir & Berhenti (駐停車禁止)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>人<rt>ひと</rt></ruby>の<ruby>乗<rt>の</rt></ruby>り<ruby>降<rt>お</rt></ruby>りのために<ruby>車<rt>くるま</rt></ruby>を<ruby>止<rt>と</rt></ruby>めることも<ruby>禁止<rt>きんし</rt></ruby>されている。',
+        enText: 'At a location with this sign, stopping a vehicle even briefly to pick up or drop off passengers is prohibited.',
+        idText: 'Di tempat yang terdapat rambu ini, menghentikan mobil sekadar untuk menaikkan atau menurunkan penumpang pun dilarang.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru dengan garis silang merah (×) adalah <strong>駐停車禁止 (Chuuteisha Kinshi / Dilarang Parkir dan Berhenti)</strong>. Baik parkir maupun berhenti sebentar untuk menaikkan/menurunkan orang dilarang (kecuali berhenti karena lampu merah atau menghindari bahaya).',
+        kotoba: [
+          { kanji: '駐停車禁止', hiragana: 'ちゅうていしゃきんし', arti: 'Dilarang parkir dan berhenti' },
+          { kanji: '乗り降り', hiragana: 'のりおり', arti: 'Naik dan turun (kendaraan)' },
+          { kanji: '禁止', hiragana: 'きんし', arti: 'Larangan / dilarang' }
+        ]
+      },
+      {
+        id: 10,
+        type: 'tf',
+        category: 'Batas Kecepatan (法定速度)',
+        jpHtml: '<ruby>標識<rt>ひょうしき</rt></ruby>や<ruby>標示<rt>ひょうじ</rt></ruby>によって<ruby>最高速度<rt>さいこうそくど</rt></ruby>が<ruby>指定<rt>してい</rt></ruby>されていない<ruby>一般道路<rt>いっぱんどうろ</rt></ruby>では、<ruby>普通自動車<rt>ふつうじどうしゃ</rt></ruby>の<ruby>法定速度<rt>ほうていそくど</rt></ruby>は<ruby>時速<rt>じそく</rt></ruby>60キロメートルである。',
+        enText: 'On general roads where the maximum speed limit is not specified by signs or road markings, the statutory speed limit for regular passenger cars is 60 km/h.',
+        idText: 'Di jalan umum yang batas kecepatan maksimumnya tidak ditentukan oleh rambu atau marka jalan, batas kecepatan hukum (法定速度) untuk mobil penumpang biasa adalah 60 km/jam.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di Jepang, batas kecepatan hukum (法定速度) untuk mobil biasa (普通自動車) dan motor (>50cc) di jalan umum tanpa rambu batas kecepatan adalah <strong>60 km/jam</strong> (sedangkan untuk Gentsuki ≤50cc adalah 30 km/jam).',
+        kotoba: [
+          { kanji: '最高速度', hiragana: 'さいこうそくど', arti: 'Kecepatan maksimum' },
+          { kanji: '一般道路', hiragana: 'いっぱんどうろ', arti: 'Jalan umum (non-tol)' },
+          { kanji: '法定速度', hiragana: 'ほうていそくど', arti: 'Batas kecepatan menurut hukum' }
+        ]
+      },
+      {
+        id: 11,
+        type: 'tf',
+        category: 'Lampu Lalu Lintas (信号)',
+        svgKey: 'green_arrow',
+        svgCaption: 'Lampu Merah dengan Panah Hijau ke Kanan (右折矢印信号)',
+        jpHtml: '<ruby>赤色<rt>あかいろ</rt></ruby>の<ruby>灯火<rt>とうか</rt></ruby>と<ruby>同時<rt>どうじ</rt></ruby>に<ruby>右向<rt>みぎむ</rt></ruby>きの<ruby>青色<rt>あおいろ</rt></ruby>の<ruby>矢印<rt>やじるし</rt></ruby>が<ruby>点灯<rt>てんとう</rt></ruby>しているときは、<ruby>自動車<rt>じどうしゃ</rt></ruby>は<ruby>右折<rt>うせつ</rt></ruby>することができるが、<ruby>転回<rt>てんかい</rt></ruby>（Uターン）はできない。',
+        enText: 'When a green right-turn arrow is lit together with a red traffic light, cars may turn right, but making a U-turn (tenkai) is prohibited.',
+        idText: 'Ketika lampu merah menyala bersamaan dengan panah hijau ke arah kanan, mobil dapat berbelok ke kanan, tetapi tidak diperbolehkan melakukan putar balik (U-turn).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Ketika panah hijau ke kanan menyala (右折矢印), mobil diperbolehkan berbelok ke kanan <strong>DAN juga diperbolehkan melakukan U-turn (転回)</strong>, kecuali jika terdapat rambu larangan putar balik (転回禁止) di persimpangan tersebut.',
+        kotoba: [
+          { kanji: '矢印', hiragana: 'やじるし', arti: 'Tanda panah' },
+          { kanji: '右折', hiragana: 'うせつ', arti: 'Belok kanan' },
+          { kanji: '転回', hiragana: 'てんかい', arti: 'Putar balik (U-turn)' }
+        ]
+      },
+      {
+        id: 12,
+        type: 'tf',
+        category: 'Jalan Tol (高速道路)',
+        jpHtml: '<ruby>高速道路<rt>こうそくどうろ</rt></ruby>で<ruby>目的<rt>もくてき</rt></ruby>のインターチェンジを<ruby>通<rt>とお</rt></ruby>り<ruby>過<rt>す</rt></ruby>ぎてしまった<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>後続車<rt>こうぞくしゃ</rt></ruby>がいなければ<ruby>路側帯<rt>ろそくたい</rt></ruby>を<ruby>後退<rt>こうたい</rt></ruby>して<ruby>戻<rt>もど</rt></ruby>ってもよい。',
+        enText: 'If you miss your intended exit interchange on an expressway, you may reverse along the road shoulder to go back as long as there are no vehicles behind you.',
+        idText: 'Jika di jalan tol Anda terlewat pintu keluar (interchange) tujuan, asalkan tidak ada kendaraan di belakang, Anda boleh mundur melalui bahu jalan untuk kembali.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Di jalan tol (高速道路), <strong>mundur (後退), memutar balik (転回), dan melintas di bahu jalan (路側帯) dilarang keras</strong>. Jika terlewat pintu keluar, tetap melaju hingga interchange berikutnya.',
+        kotoba: [
+          { kanji: '高速道路', hiragana: 'こうそくどうろ', arti: 'Jalan tol' },
+          { kanji: '路側帯', hiragana: 'ろそくたい', arti: 'Bahu jalan / jalur tepi' },
+          { kanji: '後退', hiragana: 'こうたい', arti: 'Mundur' }
+        ]
+      },
+      {
+        id: 13,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'slow_down',
+        svgCaption: 'Rambu Pelan-pelan (徐行)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>車<rt>くるま</rt></ruby>がすぐに<ruby>停止<rt>ていし</rt></ruby>できるような<ruby>速度<rt>そくど</rt></ruby>（<ruby>徐行<rt>じょこう</rt></ruby>）で<ruby>進行<rt>しんこう</rt></ruby>しなければならない。',
+        enText: 'At a place with this sign, you must proceed at a slow speed (jokou) that allows your vehicle to stop immediately.',
+        idText: 'Di tempat yang terdapat rambu ini, pengemudi harus melaju dengan kecepatan yang memungkinkan mobil berhenti seketika (徐行 / jokou).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu segitiga terbalik putih berbingkai merah dengan tulisan「徐行」berarti <strong>Jokou (Pelan-pelan)</strong>. Definisi hukum <em>Jokou</em> adalah melaju dengan kecepatan sangat rendah sehingga kendaraan dapat langsung berhenti seketika apabila terjadi bahaya (umumnya di bawah 10 km/jam).',
+        kotoba: [
+          { kanji: '徐行', hiragana: 'じょこう', arti: 'Melaju pelan-pelan (siap berhenti seketika)' },
+          { kanji: '速度', hiragana: 'そくど', arti: 'Kecepatan' },
+          { kanji: '進行', hiragana: 'しんこう', arti: 'Melaju / bergerak maju' }
+        ]
+      },
+      {
+        id: 14,
+        type: 'tf',
+        category: 'Aturan Jalur & Belok (通行区分・右左折)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>左折<rt>させつ</rt></ruby>するときは、あらかじめできるだけ<ruby>道路<rt>どうろ</rt></ruby>の<ruby>左側端<rt>ひだりがわはし</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>り、<ruby>徐行<rt>じょこう</rt></ruby>しながら<ruby>曲<rt>ま</rt></ruby>がらなければならない。',
+        enText: 'When turning left at an intersection, you must first keep as close as possible to the left edge of the road and turn slowly (jokou).',
+        idText: 'Ketika hendak berbelok ke kiri di persimpangan, pengemudi harus merapat sedekat mungkin ke sisi kiri jalan terlebih dahulu, lalu berbelok dengan kecepatan pelan (徐行).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Sekitar 30 meter sebelum persimpangan, nyalakan sein kiri, cek spion & titik buta (巻き込み確認), rapatkan mobil ke sisi kiri agar motor/sepeda tidak menyalip dari kiri, dan belok pelan (徐行).',
+        kotoba: [
+          { kanji: '左折', hiragana: 'させつ', arti: 'Belok kiri' },
+          { kanji: '左側端', hiragana: 'ひだりがわはし', arti: 'Tepi sisi kiri jalan' },
+          { kanji: '曲がる', hiragana: 'まがる', arti: 'Berbelok' }
+        ]
+      },
+      {
+        id: 15,
+        type: 'tf',
+        category: 'Lajur Bus Umum (路線バス優先通行帯)',
+        jpHtml: '<ruby>路線<rt>ろせん</rt></ruby>バス<ruby>優先<rt>ゆうせん</rt></ruby><ruby>通行帯<rt>つうこうたい</rt></ruby>を<ruby>通行<rt>つうこう</rt></ruby>しているとき、<ruby>後方<rt>こうほう</rt></ruby>から<ruby>路線<rt>ろせん</rt></ruby>バスが<ruby>接近<rt>せっきん</rt></ruby>してきたが、<ruby>混雑<rt>こんざつ</rt></ruby>していたのでそのまま<ruby>通行<rt>つうこう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けた。',
+        enText: 'While driving in a route bus priority lane, if a route bus approaches from behind, you may continue driving in that lane if the adjacent lane is congested.',
+        idText: 'Saat melaju di lajur prioritas bus umum (路線バス優先通行帯), bus umum mendekat dari belakang, namun karena jalan padat, pengemudi tetap terus melaju di lajur tersebut.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Di lajur prioritas bus (路線バス優先通行帯), kendaraan biasa <strong>wajib segera keluar dari lajur tersebut</strong> jika bus umum mendekat dari belakang. Jika jalan macet sehingga tidak bisa keluar saat bus mendekat, sejak awal dilarang masuk ke lajur ini.',
+        kotoba: [
+          { kanji: '路線バス', hiragana: 'ろせんバス', arti: 'Bus umum dalam kota' },
+          { kanji: '優先通行帯', hiragana: 'ゆうせんつうこうたい', arti: 'Lajur prioritas' },
+          { kanji: '混雑', hiragana: 'こんざつ', arti: 'Padat / macet' }
+        ]
+      },
+      {
+        id: 16,
+        type: 'tf',
+        category: 'Keselamatan Penumpang (シートベルト)',
+        jpHtml: '<ruby>一般道路<rt>いっぱんどうろ</rt></ruby>を<ruby>走行<rt>そうこう</rt></ruby>するときは、<ruby>運転席<rt>うんてんせき</rt></ruby>と<ruby>助手席<rt>じょしゅせき</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>はシートベルトを<ruby>着用<rt>ちゃくよう</rt></ruby>しなければならないが、<ruby>後部座席<rt>こうぶざせき</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>は<ruby>着用<rt>ちゃくよう</rt></ruby>しなくてもよい。',
+        enText: 'When driving on general roads, the driver and front-seat passenger must wear seatbelts, but rear-seat passengers do not need to wear them.',
+        idText: 'Saat berkendara di jalan umum, pengemudi dan penumpang kursi depan wajib memakai sabuk pengaman, tetapi penumpang kursi belakang tidak perlu memakainya.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Berdasarkan UU Lalu Lintas Jepang, <strong>seluruh kursi termasuk penumpang kursi belakang (後部座席) wajib mengenakan sabuk pengaman (シートベルト)</strong> baik di jalan tol maupun di jalan umum.',
+        kotoba: [
+          { kanji: '助手席', hiragana: 'じょしゅせき', arti: 'Kursi penumpang depan' },
+          { kanji: '後部座席', hiragana: 'こうぶざせき', arti: 'Kursi penumpang belakang' },
+          { kanji: '着用', hiragana: 'ちゃくよう', arti: 'Mengenakan / memakai' }
+        ]
+      },
+      {
+        id: 17,
+        type: 'tf',
+        category: 'Menyalip & Mendahului (追い越し禁止)',
+        jpHtml: '<ruby>横断歩道<rt>おうだんほどう</rt></ruby>やその<ruby>手前<rt>てまえ</rt></ruby>30メートル<ruby>以内<rt>いない</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>他<rt>ほか</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>を<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>したり、<ruby>追<rt>お</rt></ruby>い<ruby>抜<rt>ぬ</rt></ruby>いたりしてはならない。',
+        enText: 'On a pedestrian crosswalk or within 30 meters before it, you must not overtake (oikoshi) or pass (oinuki) other vehicles.',
+        idText: 'Di zebra cross maupun dalam jarak 30 meter sebelum zebra cross, pengemudi dilarang mendahului (追い越し) maupun menyalip (追い抜き) kendaraan lain.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di zebra cross dan 30 meter sebelumnya, baik <strong>追い越し (menyalip dengan pindah lajur)</strong> maupun <strong>追い抜き (mendahului tanpa pindah lajur)</strong> dilarang keras karena kendaraan di depan dapat menghalangi pandangan terhadap pejalan kaki yang sedang menyeberang.',
+        kotoba: [
+          { kanji: '手前', hiragana: 'てまえ', arti: 'Sebelum / di depan (jarak sebelum titik)' },
+          { kanji: '追い越し', hiragana: 'おいこし', arti: 'Menyalip (dengan pindah lajur)' },
+          { kanji: '追い抜き', hiragana: 'おいぬき', arti: 'Mendahului (tanpa pindah lajur)' }
+        ]
+      },
+      {
+        id: 18,
+        type: 'tf',
+        category: 'Bus Sekolah & Antar-Jemput (通学通園バス)',
+        jpHtml: '<ruby>児童<rt>じどう</rt></ruby>や<ruby>幼児<rt>ようじ</rt></ruby>の<ruby>乗<rt>の</rt></ruby>り<ruby>降<rt>お</rt></ruby>りのために<ruby>停車<rt>ていしゃ</rt></ruby>している<ruby>通学通園<rt>つうがくつうえん</rt></ruby>バスの<ruby>側方<rt>そくほう</rt></ruby>を<ruby>通過<rt>つうか</rt></ruby>するときは、<ruby>徐行<rt>じょこう</rt></ruby>して<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確<rt>たし</rt></ruby>かめなければならない。',
+        enText: 'When passing alongside a school or kindergarten bus that is stopped to pick up or drop off children, you must slow down (jokou) and check for safety.',
+        idText: 'Ketika melintas di samping bus sekolah/TK yang sedang berhenti untuk menaikkan atau menurunkan anak-anak, pengemudi wajib melaju pelan (徐行) dan memastikan keamanan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Anak-anak sering berlari menyeberang secara tiba-tiba dari depan atau belakang bus sekolah (通学通園バス). Oleh karena itu, pengemudi wajib melaju pelan (徐行 / jokou) dan siap berhenti seketika.',
+        kotoba: [
+          { kanji: '児童', hiragana: 'じどう', arti: 'Anak usia sekolah dasar' },
+          { kanji: '通学通園バス', hiragana: 'つうがくつうえんバス', arti: 'Bus antar-jemput sekolah/TK' },
+          { kanji: '側方', hiragana: 'そくほう', arti: 'Sisi samping' }
+        ]
+      },
+      {
+        id: 19,
+        type: 'tf',
+        category: 'Aturan Jalan Utama (左側通行)',
+        jpHtml: '<ruby>車両<rt>しゃりょう</rt></ruby>は、<ruby>道路<rt>どうろ</rt></ruby>の<ruby>中央<rt>ちゅうおう</rt></ruby>から<ruby>左<rt>ひだり</rt></ruby>の<ruby>部分<rt>ぶぶん</rt></ruby>を<ruby>通行<rt>つうこう</rt></ruby>しなければならないが、<ruby>見通<rt>みとお</rt></ruby>しのよい<ruby>上<rt>のぼ</rt></ruby>り<ruby>坂<rt>ざか</rt></ruby>の<ruby>頂上<rt>ちょうじょう</rt></ruby><ruby>付近<rt>ふきん</rt></ruby>では<ruby>右側<rt>みぎがわ</rt></ruby>にはみ出して<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>しをしてもよい。',
+        enText: 'Vehicles must keep to the left half of the road, except near the top of an uphill slope with good visibility where you may cross onto the right half to overtake.',
+        idText: 'Kendaraan wajib melaju di sisi kiri dari garis tengah jalan, namun di dekat puncak tanjakan yang pandangannya baik boleh melewati garis tengah ke kanan untuk menyalip.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Di dekat puncak tanjakan (上り坂の頂上付近) dan turunan curam (勾配の急な下り坂), <strong>menyalip (追い越し) dilarang keras</strong> tanpa pengecualian karena kendaraan dari arah berlawanan tidak terlihat sampai sangat dekat.',
+        kotoba: [
+          { kanji: '上り坂', hiragana: 'のぼりざか', arti: 'Jalan menanjak' },
+          { kanji: '頂上付近', hiragana: 'ちょうじょうふきん', arti: 'Dekat puncak (tanjakan)' },
+          { kanji: '見通し', hiragana: 'みとおし', arti: 'Jarak pandang / visibilitas' }
+        ]
+      },
+      {
+        id: 20,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'no_parking',
+        svgCaption: 'Rambu Dilarang Parkir (駐車禁止)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>駐車<rt>ちゅうしゃ</rt></ruby>は<ruby>禁止<rt>きんし</rt></ruby>されているが、5分<ruby>以内<rt>いない</rt></ruby>の<ruby>荷物<rt>にもつ</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>下<rt>お</rt></ruby>ろしや<ruby>人<rt>ひと</rt></ruby>の<ruby>乗<rt>の</rt></ruby>り<ruby>降<rt>お</rt></ruby>りのための<ruby>停車<rt>ていしゃ</rt></ruby>はできる。',
+        enText: 'At a place with this sign, parking is prohibited, but stopping (teisha) within 5 minutes for loading/unloading cargo or picking up/dropping off passengers is permitted.',
+        idText: 'Di tempat yang terdapat rambu ini, parkir dilarang, tetapi berhenti sebentar (停車) untuk bongkar muat barang maksimal 5 menit atau menaikkan/menurunkan penumpang diperbolehkan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru dengan <strong>satu garis miring merah (／)</strong> adalah <strong>駐車禁止 (Chuusha Kinshi / Dilarang Parkir)</strong>. Berhenti sejenak (停車) untuk naik-turun penumpang atau bongkar muat barang di bawah 5 menit tetap diperbolehkan.',
+        kotoba: [
+          { kanji: '駐車禁止', hiragana: 'ちゅうしゃきんし', arti: 'Dilarang parkir' },
+          { kanji: '停車', hiragana: 'ていしゃ', arti: 'Berhenti sementara (tidak parkir)' },
+          { kanji: '積み下ろし', hiragana: 'つみおろし', arti: 'Bongkar muat barang' }
+        ]
+      },
+      {
+        id: 21,
+        type: 'tf',
+        category: 'Hak Prioritas Persimpangan (交差点の優先関係)',
+        jpHtml: '<ruby>信号機<rt>しんごうき</rt></ruby>のない<ruby>道幅<rt>みちはば</rt></ruby>が<ruby>同<rt>おな</rt></ruby>じような<ruby>交差点<rt>こうさてん</rt></ruby>では、<ruby>左方<rt>さほう</rt></ruby>から<ruby>進行<rt>しんこう</rt></ruby>してくる<ruby>車両<rt>しゃりょう</rt></ruby>の<ruby>進行<rt>しんこう</rt></ruby>を<ruby>妨<rt>さまた</rt></ruby>げてはならない。',
+        enText: 'At an uncontrolled intersection of roads of similar width, you must not impede the progress of vehicles approaching from your left (left-side priority).',
+        idText: 'Di persimpangan tanpa lampu lalu lintas dengan lebar jalan yang sama, pengemudi tidak boleh menghalangi laju kendaraan yang datang dari arah kiri (prioritas kiri).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Karena Jepang menganut sistem lalu lintas jalur kiri (左側通行), pada persimpangan tanpa lampu lalu lintas dengan lebar jalan yang sama, <strong>kendaraan dari arah kiri memiliki prioritas (左方優先 / Sahou Yuusen)</strong>.',
+        kotoba: [
+          { kanji: '道幅', hiragana: 'みちはば', arti: 'Lebar jalan' },
+          { kanji: '左方優先', hiragana: 'さほうゆうせん', arti: 'Prioritas arah kiri' },
+          { kanji: '妨げる', hiragana: 'さまたげる', arti: 'Menghalangi / mengganggu' }
+        ]
+      },
+      {
+        id: 22,
+        type: 'tf',
+        category: 'Belok Kanan Persimpangan (右折時の優先)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>右折<rt>うせつ</rt></ruby>するときは、すでに<ruby>交差点<rt>こうさてん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>入<rt>はい</rt></ruby>っていれば、<ruby>直進<rt>ちょくしん</rt></ruby>してくる<ruby>対向車<rt>たいこうしゃ</rt></ruby>より<ruby>先<rt>さき</rt></ruby>に<ruby>右折<rt>うせつ</rt></ruby>してよい。',
+        enText: 'When turning right at an intersection, if you have already entered the intersection, you may turn right ahead of oncoming vehicles going straight.',
+        idText: 'Saat berbelok ke kanan di persimpangan, jika mobil sudah masuk ke tengah persimpangan, boleh belok kanan mendahului kendaraan dari arah berlawanan yang berjalan lurus.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Dalam aturan lalu lintas Jepang, <strong>kendaraan yang lurus (直進車) dan belok kiri (左折車) selalu lebih diprioritaskan daripada kendaraan yang belok kanan (右折車)</strong>. Jangan pernah memotong jalur kendaraan lurus dari arah lawan.',
+        kotoba: [
+          { kanji: '直進', hiragana: 'ちょくしん', arti: 'Melaju lurus' },
+          { kanji: '対向車', hiragana: 'たいこうしゃ', arti: 'Kendaraan dari arah berlawanan' },
+          { kanji: '右折', hiragana: 'うせつ', arti: 'Belok kanan' }
+        ]
+      },
+      {
+        id: 23,
+        type: 'tf',
+        category: 'Isyarat Sein (合図の時期)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>右折<rt>うせつ</rt></ruby>や<ruby>左折<rt>させつ</rt></ruby>をするときの<ruby>合図<rt>あいず</rt></ruby>（ウインカー）は、<ruby>交差点<rt>こうさてん</rt></ruby>の<ruby>手前<rt>てまえ</rt></ruby>30メートルの<ruby>地点<rt>ちてん</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>したときに行う。',
+        enText: 'When turning right or left at an intersection, you must activate your turn signal (blinker) when you reach a point 30 meters before the intersection.',
+        idText: 'Isyarat lampu sein saat hendak belok kanan atau kiri di persimpangan harus dinyalakan saat mencapai jarak 30 meter sebelum persimpangan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Waktu standar menyalakan lampu sein di Jepang: <strong>30 meter sebelum persimpangan</strong> untuk belok kanan/kiri, dan <strong>3 detik sebelum</strong> melakukan pindah lajur (進路変更).',
+        kotoba: [
+          { kanji: '合図', hiragana: 'あいず', arti: 'Isyarat / lampu sein' },
+          { kanji: '地点', hiragana: 'ちてん', arti: 'Titik / lokasi' },
+          { kanji: '進路変更', hiragana: 'しんろへんこう', arti: 'Pindah lajur' }
+        ]
+      },
+      {
+        id: 24,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'pedestrian_zone',
+        svgCaption: 'Rambu Khusus Pejalan Kaki (歩行者専用)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>は<ruby>歩行者<rt>ほこうしゃ</rt></ruby><ruby>専用<rt>せんよう</rt></ruby>であるため、<ruby>自動車<rt>じどうしゃ</rt></ruby>や<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>は<ruby>通行<rt>つうこう</rt></ruby>できない。',
+        enText: 'Because a road with this sign is exclusively for pedestrians, automobiles and motorized bicycles are prohibited from driving on it.',
+        idText: 'Karena jalan yang memiliki rambu ini khusus untuk pejalan kaki, mobil dan motor dilarang melintas di jalan tersebut.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru bergambar pejalan kaki adalah <strong>歩行者専用 (Hokousha Senyou / Khusus Pejalan Kaki)</strong>. Kendaraan bermotor dilarang masuk (kecuali kendaraan dengan izin khusus dari kepala kantor polisi setempat).',
+        kotoba: [
+          { kanji: '歩行者専用', hiragana: 'ほこうしゃせんよう', arti: 'Khusus pejalan kaki' },
+          { kanji: '通行', hiragana: 'つうこう', arti: 'Melintas / lalu lintas' }
+        ]
+      },
+      {
+        id: 25,
+        type: 'tf',
+        category: 'Kewajiban Menyalakan Lampu (灯火の義務)',
+        jpHtml: '<ruby>夜間<rt>やかん</rt></ruby>だけでなく、<ruby>昼間<rt>ひるま</rt></ruby>でもトンネルの<ruby>中<rt>なか</rt></ruby>や<ruby>濃霧<rt>のうむ</rt></ruby>などで<ruby>視界<rt>しかい</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いときは、前照灯（ヘッドライト）などを<ruby>点灯<rt>てんとう</rt></ruby>しなければならない。',
+        enText: 'Not only at night, even during the daytime when visibility is poor inside tunnels or in dense fog, you must turn on your headlights.',
+        idText: 'Tidak hanya pada malam hari, pada siang hari pun saat jarak pandang buruk seperti di dalam terowongan atau kabut tebal, lampu utama (headlight) wajib dinyalakan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Dalam aturan lalu lintas Jepang, lampu kendaraan wajib dinyalakan saat malam hari, di dalam terowongan (トンネル), serta saat kabut tebal (濃霧) atau hujan deras yang membatasi jarak pandang (di bawah 50 meter di jalan umum / 200 meter di tol).',
+        kotoba: [
+          { kanji: '濃霧', hiragana: 'のうむ', arti: 'Kabut tebal' },
+          { kanji: '視界', hiragana: 'しかい', arti: 'Jarak pandang' },
+          { kanji: '前照灯', hiragana: 'ぜんしょうとう', arti: 'Lampu utama depan (headlight)' }
+        ]
+      },
+      {
+        id: 26,
+        type: 'tf',
+        category: 'Keselamatan Anak & Lansia (初心運転者・高齢者保護)',
+        jpHtml: '<ruby>白<rt>しろ</rt></ruby>い<ruby>杖<rt>つえ</rt></ruby>を持った<ruby>目<rt>め</rt></ruby>の<ruby>不自由<rt>ふじゆう</rt></ruby>な<ruby>人<rt>ひと</rt></ruby>や、<ruby>幼児<rt>ようじ</rt></ruby>が<ruby>一人<rt>ひとり</rt></ruby>で<ruby>歩<rt>ある</rt></ruby>いているそばを<ruby>通<rt>とお</rt></ruby>るときは、<ruby>一時停止<rt>いちじていし</rt></ruby>するか<ruby>徐行<rt>じょこう</rt></ruby>しなければならない。',
+        enText: 'When passing near a visually impaired person carrying a white cane or a young child walking alone, you must either come to a complete stop or slow down (jokou).',
+        idText: 'Saat melintas di dekat penyandang tunanetra yang membawa tongkat putih atau anak kecil yang berjalan sendirian, pengemudi wajib berhenti sejenak atau melaju sangat pelan (徐行).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Undang-undang Jepang memberikan perlindungan khusus bagi penyandang tunanetra dengan tongkat putih (白い杖), lansia, dan anak-anak tanpa pendamping. Pengemudi wajib berhenti atau melaju pelan (徐行) agar mereka dapat melintas dengan aman.',
+        kotoba: [
+          { kanji: '白い杖', hiragana: 'しろいつえ', arti: 'Tongkat putih (tunanetra)' },
+          { kanji: '目の不自由な人', hiragana: 'めのふじゆうなひと', arti: 'Penyandang tunanetra' },
+          { kanji: '幼児', hiragana: 'ようじ', arti: 'Anak kecil / balita' }
+        ]
+      },
+      {
+        id: 27,
+        type: 'tf',
+        category: 'Sepeda & Jalur Sepeda (自転車の通行)',
+        jpHtml: '<ruby>自転車<rt>じてんしゃ</rt></ruby>は<ruby>軽車両<rt>けいしゃりょう</rt></ruby>であるため、<ruby>原則<rt>げんそく</rt></ruby>として<ruby>歩道<rt>ほどう</rt></ruby>と<ruby>車道<rt>しゃどう</rt></ruby>の<ruby>区別<rt>くべつ</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では<ruby>車道<rt>しゃどう</rt></ruby>の<ruby>左端<rt>ひだりはし</rt></ruby>を<ruby>通行<rt>つうこう</rt></ruby>する。',
+        enText: 'Because bicycles are classified as light vehicles (keisharyou), as a general rule on roads with separate sidewalks and roadways, they must ride along the left edge of the roadway.',
+        idText: 'Karena sepeda termasuk kendaraan ringan (軽車両), pada prinsipnya di jalan yang memisahkan trotoar dan jalan raya, sepeda melaju di tepi kiri jalan raya.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di Jepang, sepeda tergolong kendaraan ringan (軽車両) sehingga prinsip utamanya adalah berjalan di sisi kiri jalan raya (車道の左端). Oleh karena itu, pengemudi mobil harus selalu menjaga jarak aman di sisi kiri.',
+        kotoba: [
+          { kanji: '軽車両', hiragana: 'けいしゃりょう', arti: 'Kendaraan ringan (sepeda, gerobak)' },
+          { kanji: '車道', hiragana: 'しゃどう', arti: 'Jalan raya (untuk kendaraan)' },
+          { kanji: '歩道', hiragana: 'ほどう', arti: 'Trotoar (untuk pejalan kaki)' }
+        ]
+      },
+      {
+        id: 28,
+        type: 'tf',
+        category: 'Parkir & Berhenti (駐停車禁止場所)',
+        jpHtml: '<ruby>消火栓<rt>しょうかせん</rt></ruby>や<ruby>消防用<rt>しょうぼうよう</rt></ruby>防火水槽の<ruby>吸水口<rt>きゅうすいこう</rt></ruby>から5メートル<ruby>以内<rt>いない</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>駐車<rt>ちゅうしゃ</rt></ruby>も<ruby>停車<rt>ていしゃ</rt></ruby>もしてはならない。',
+        enText: 'Within 5 meters of a fire hydrant or firefighting water intake, neither parking nor stopping is permitted.',
+        idText: 'Dalam jarak 5 meter dari hidran pemadam kebakaran (消火栓), pengemudi dilarang parkir maupun berhenti.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Perhatikan perbedaan hukum di Jepang: area dalam jarak 5 meter dari hidran pemadam kebakaran (消火栓) adalah <strong>駐車禁止場所 (Dilarang Parkir saja)</strong>, bukan Dilarang Berhenti (駐停車禁止). Berhenti sebentar (停車) dengan pengemudi tetap di mobil masih diperbolehkan.',
+        kotoba: [
+          { kanji: '消火栓', hiragana: 'しょうかせん', arti: 'Hidran pemadam kebakaran' },
+          { kanji: '以内', hiragana: 'いない', arti: 'Dalam jarak / tidak lebih dari' }
+        ]
+      },
+      {
+        id: 29,
+        type: 'tf',
+        category: 'Jalan Tol (高速道路の速度)',
+        jpHtml: '<ruby>標識<rt>ひょうしき</rt></ruby>や<ruby>標示<rt>ひょうじ</rt></ruby>によって<ruby>速度<rt>そくど</rt></ruby>が<ruby>指定<rt>してい</rt></ruby>されていない<ruby>高速自動車国道<rt>こうそくじどうしゃこくどう</rt></ruby>の本線車道では、<ruby>普通自動車<rt>ふつうじどうしゃ</rt></ruby>の<ruby>最低速度<rt>さいていそくど</rt></ruby>は<ruby>時速<rt>じそく</rt></ruby>50キロメートルである。',
+        enText: 'On the main lanes of a national expressway where speed limits are not specified by signs, the minimum speed limit for regular passenger cars is 50 km/h.',
+        idText: 'Di jalur utama jalan tol nasional yang batas kecepatannya tidak ditentukan oleh rambu, batas kecepatan minimum (最低速度) untuk mobil biasa adalah 50 km/jam.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di jalur utama jalan tol nasional Jepang (高速自動車国道の本線車道), batas kecepatan maksimum hukum adalah <strong>100 km/jam</strong> dan batas kecepatan minimumnya adalah <strong>50 km/jam</strong> (kecuali saat macet atau cuaca buruk).',
+        kotoba: [
+          { kanji: '最低速度', hiragana: 'さいていそくど', arti: 'Kecepatan minimum' },
+          { kanji: '本線車道', hiragana: 'ほんせんしゃどう', arti: 'Jalur utama jalan tol' }
+        ]
+      },
+      {
+        id: 30,
+        type: 'tf',
+        category: 'Belok Kanan Dua Tahap (二段階右折)',
+        jpHtml: '<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>（50cc<ruby>以下<rt>いか</rt></ruby>）は、<ruby>片側<rt>かたがわ</rt></ruby>3<ruby>車線<rt>しゃせん</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>交通整理<rt>こうつうせいり</rt></ruby>の行われている<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>右折<rt>うせつ</rt></ruby>するときは、<ruby>原則<rt>げんそく</rt></ruby>として<ruby>二段階右折<rt>にだんかいうせつ</rt></ruby>をしなければならない。',
+        enText: 'Motorized bicycles (50cc or less) must, as a general rule, make a two-stage right turn (nidankai usetsu) when turning right at a signal-controlled intersection with three or more lanes in one direction.',
+        idText: 'Sepeda motor kecil (≤ 50cc / Gentsuki) pada prinsipnya wajib melakukan belok kanan dua tahap (二段階右折) saat berbelok kanan di persimpangan berlampu lalu lintas yang memiliki 3 lajur atau lebih searah.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Motor kecil ≤ 50cc (原付 / Gentsuki) wajib melakukan <strong>二段階右折 (Belok kanan dua tahap)</strong> pada persimpangan berlampu lalu lintas yang memiliki <strong>3 lajur atau lebih searah</strong>, atau jika terdapat rambu biru perintah 二段階右折.',
+        kotoba: [
+          { kanji: '二段階右折', hiragana: 'にだんかいうせつ', arti: 'Belok kanan dua tahap' },
+          { kanji: '片側3車線以上', hiragana: 'かたがわさんしゃせんいじょう', arti: '3 lajur atau lebih searah' }
+        ]
+      },
+      {
+        id: 31,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'no_u_turn',
+        svgCaption: 'Rambu Dilarang Putar Balik (転回禁止)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>転回<rt>てんかい</rt></ruby>（Uターン）は<ruby>禁止<rt>きんし</rt></ruby>されているが、<ruby>後退<rt>こうたい</rt></ruby>（バック）は<ruby>禁止<rt>きんし</rt></ruby>されていない。',
+        enText: 'At a location with this sign, making a U-turn (tenkai) is prohibited, but reversing (backing up) is not prohibited by this sign.',
+        idText: 'Di tempat yang terdapat rambu ini, putar balik (U-turn) dilarang, tetapi mundur (backing) tidak dilarang oleh rambu ini.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu ini adalah <strong>転回禁止 (Tenkai Kinshi / Dilarang Putar Balik)</strong>. Rambu ini melarang U-turn, namun tidak melarang mundur (後退) selama dilakukan dengan aman dan tidak mengganggu lalu lintas.',
+        kotoba: [
+          { kanji: '転回禁止', hiragana: 'てんかいきんし', arti: 'Dilarang putar balik (U-turn)' },
+          { kanji: '後退', hiragana: 'こうたい', arti: 'Mundur' }
+        ]
+      },
+      {
+        id: 32,
+        type: 'tf',
+        category: 'Pengemudi Pemula (初心運転者)',
+        jpHtml: '<ruby>普通自動車免許<rt>ふつうじどうしゃめんきょ</rt></ruby>を<ruby>受<rt>う</rt></ruby>けてから1<ruby>年<rt>ねん</rt></ruby>に<ruby>達<rt>たっ</rt></ruby>しない<ruby>人<rt>ひと</rt></ruby>は、<ruby>車<rt>くるま</rt></ruby>の<ruby>前後<rt>ぜんご</rt></ruby>の<ruby>定<rt>さだ</rt></ruby>められた<ruby>位置<rt>いち</rt></ruby>に<ruby>初心運転者<rt>しょしんうんてんしゃ</rt></ruby>標識（<ruby>若葉<rt>わかば</rt></ruby>マーク）をつけなければならない。',
+        enText: 'Drivers who have held a regular driver’s license for less than 1 year must display the Beginner Driver Mark (Wakaba mark) at the designated positions on the front and rear of their vehicle.',
+        idText: 'Pengemudi yang memiliki SIM mobil biasa kurang dari 1 tahun wajib menempelkan tanda pengemudi pemula (Wakaba mark) di posisi yang ditentukan pada bagian depan dan belakang mobil.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Pengemudi pemula (kurang dari 1 tahun sejak memperoleh SIM Jepang) wajib memasang stiker <strong>初心運転者標識 (Wakaba Mark)</strong> di depan dan belakang mobil. Pengemudi lain juga dilarang menyerempet atau memotong secara berbahaya mobil berstiker Wakaba.',
+        kotoba: [
+          { kanji: '初心運転者標識', hiragana: 'しょしんうんてんしゃひょうしき', arti: 'Tanda pengemudi pemula (Wakaba)' },
+          { kanji: '前後', hiragana: 'ぜんご', arti: 'Depan dan belakang' }
+        ]
+      },
+      {
+        id: 33,
+        type: 'tf',
+        category: 'Mengemudi saat Hujan (雨天時の運転)',
+        jpHtml: '<ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>に<ruby>高速<rt>こうそく</rt></ruby>で<ruby>走行<rt>そうこう</rt></ruby>すると、タイヤと<ruby>路面<rt>ろめん</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>に<ruby>水<rt>みず</rt></ruby>の<ruby>膜<rt>まく</rt></ruby>ができ、ハンドルやブレーキが<ruby>効<rt>き</rt></ruby>かなくなるハイドロプレーニング<ruby>現象<rt>げんしょう</rt></ruby>が<ruby>起<rt>お</rt></ruby>こりやすい。',
+        enText: 'When driving at high speed on a rainy day, a film of water forms between the tires and the road surface, making the hydroplaning phenomenon (loss of steering and braking control) likely to occur.',
+        idText: 'Saat berkendara dengan kecepatan tinggi pada hari hujan, lapisan air terbentuk di antara ban dan permukaan jalan sehingga mudah terjadi fenomena hydroplaning (setir dan rem tidak berfungsi).',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. <strong>ハイドロプレーニング現象 (Hydroplaning / Aquaplaning)</strong> terjadi saat ban yang aus atau melaju terlalu cepat di jalan tergenang air kehilangan kontak dengan aspal. Kurangi kecepatan saat hujan dan pastikan alur ban tidak gundul.',
+        kotoba: [
+          { kanji: '路面', hiragana: 'ろめん', arti: 'Permukaan jalan' },
+          { kanji: '水の膜', hiragana: 'みずのまく', arti: 'Lapisan / selaput air' },
+          { kanji: '現象', hiragana: 'げんしょう', arti: 'Fenomena' }
+        ]
+      },
+      {
+        id: 34,
+        type: 'tf',
+        category: 'Jarak Berhenti & Rem (停止距離)',
+        jpHtml: '<ruby>車<rt>くるま</rt></ruby>の<ruby>速度<rt>そくど</rt></ruby>が2<ruby>倍<rt>ばい</rt></ruby>になると、<ruby>ブレーキ<rt></rt></ruby>が<ruby>効<rt>き</rt></ruby>き<ruby>始<rt>はじ</rt></ruby>めてから<ruby>停止<rt>ていし</rt></ruby>するまでの<ruby>制動距離<rt>せいどうきょり</rt></ruby>も2<ruby>倍<rt>ばい</rt></ruby>になる。',
+        enText: 'When a vehicle’s speed doubles, the braking distance (seidou kyori) from the moment the brakes engage until the vehicle stops also doubles.',
+        idText: 'Ketika kecepatan mobil menjadi 2 kali lipat, jarak pengereman (制動距離) sejak rem mulai bekerja hingga mobil berhenti juga menjadi 2 kali lipat.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Ketika kecepatan menjadi <strong>2 kali lipat</strong>, energi kinetik meningkat 4 kali lipat sehingga <strong>jarak pengereman (制動距離) menjadi sekitar 4 kali lipat</strong> (bukan 2 kali lipat)!',
+        kotoba: [
+          { kanji: '制動距離', hiragana: 'せいどうきょり', arti: 'Jarak pengereman' },
+          { kanji: '空走距離', hiragana: 'くうそうきょり', arti: 'Jarak reaksi sebelum menginjak rem' },
+          { kanji: '停止距離', hiragana: 'ていしきょり', arti: 'Total jarak berhenti (空走 + 制動)' }
+        ]
+      },
+      {
+        id: 35,
+        type: 'tf',
+        category: 'Membuka Pintu Mobil (ドアの開閉)',
+        jpHtml: '<ruby>停車<rt>ていしゃ</rt></ruby>してドアを<ruby>開<rt>あ</rt></ruby>けるときは、<ruby>後方<rt>こうほう</rt></ruby>から<ruby>来<rt>く</rt></ruby>る<ruby>車<rt>くるま</rt></ruby>や<ruby>自転車<rt>じてんしゃ</rt></ruby>の<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確<rt>たし</rt></ruby>かめてから<ruby>開<rt>あ</rt></ruby>けなければならない。',
+        enText: 'When stopping and opening a car door, you must first check for the safety of vehicles and bicycles approaching from behind before opening it.',
+        idText: 'Saat berhenti dan hendak membuka pintu mobil, pengemudi wajib memastikan keamanan kendaraan atau sepeda yang datang dari belakang terlebih dahulu sebelum membukanya.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Membuka pintu secara mendadak tanpa melihat ke belakang sering menabrak pesepeda atau pengendara motor. Buka pintu sedikit terlebih dahulu setelah menengok ke belakang secara langsung (目視).',
+        kotoba: [
+          { kanji: '開閉', hiragana: 'かいへい', arti: 'Membuka dan menutup' },
+          { kanji: '後方', hiragana: 'こうほう', arti: 'Arah belakang' }
+        ]
+      },
+      {
+        id: 36,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'speed_limit_40',
+        svgCaption: 'Rambu Batas Kecepatan 40 km/jam (最高速度)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では、<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>（50cc<ruby>以下<rt>いか</rt></ruby>）も<ruby>時速<rt>じそく</rt></ruby>40キロメートルまで<ruby>出<rt>だ</rt></ruby>すことができる。',
+        enText: 'On a road with this sign, motorized bicycles (50cc or less) may also travel up to 40 km/h.',
+        idText: 'Di jalan yang terdapat rambu ini, sepeda motor kecil (≤ 50cc / Gentsuki) juga boleh melaju hingga kecepatan 40 km/jam.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Batas kecepatan hukum (法定速度) untuk sepeda motor kecil ≤ 50cc (原付) adalah <strong>30 km/jam</strong>. Meskipun rambu jalan bertuliskan 40 atau 50 km/jam, Gentsuki tetap tidak boleh melebihi 30 km/jam.',
+        kotoba: [
+          { kanji: '以下', hiragana: 'いか', arti: 'Kurang dari atau sama dengan (≤)' },
+          { kanji: '時速', hiragana: 'じそく', arti: 'Kecepatan per jam (km/h)' }
+        ]
+      },
+      {
+        id: 37,
+        type: 'tf',
+        category: 'Berkendara di Tikungan (カーブの通行)',
+        jpHtml: 'カーブに<ruby>差<rt>さ</rt></ruby>しかかるときは、カーブの<ruby>手前<rt>てまえ</rt></ruby>で<ruby>十分<rt>じゅうぶん</rt></ruby>に<ruby>速度<rt>そくど</rt></ruby>を<ruby>落<rt>お</rt></ruby>とし、カーブを<ruby>曲<rt>ま</rt></ruby>がり<ruby>終<rt>お</rt></ruby>わる<ruby>直前<rt>ちょくぜん</rt></ruby>から<ruby>少<rt>すこ</rt></ruby>しずつ<ruby>加速<rt>かそく</rt></ruby>していくのが<ruby>安全<rt>あんぜん</rt></ruby>である。',
+        enText: 'When approaching a curve, it is safe to sufficiently reduce your speed before entering the curve and gradually accelerate just as you finish exiting the curve.',
+        idText: 'Saat mendekati tikungan, cara yang aman adalah mengurangi kecepatan secukupnya sebelum masuk tikungan, lalu berakselerasi perlahan menjelang keluar dari tikungan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Mengerem mendadak di tengah tikungan dapat menyebabkan selip atau terlempar keluar jalur akibat gaya sentrifugal. Selalu perlambat kendaraan <strong>sebelum masuk tikungan (カーブの手前)</strong>.',
+        kotoba: [
+          { kanji: '手前', hiragana: 'てまえ', arti: 'Sebelum memasuki titik' },
+          { kanji: '加速', hiragana: 'かそく', arti: 'Akselerasi / menambah kecepatan' }
+        ]
+      },
+      {
+        id: 38,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'no_overtaking',
+        svgCaption: 'Rambu Dilarang Menyalip Melewati Garis Tengah',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>部分にはみ出さなければ、<ruby>前<rt>まえ</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>を<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>すことができる。',
+        enText: 'At a location with this sign, you may overtake the vehicle ahead as long as you do not cross over onto the right half of the road.',
+        idText: 'Di tempat yang terdapat rambu ini, pengemudi boleh menyalip kendaraan di depan asalkan tidak melewati garis tengah ke sisi kanan jalan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Rambu tanpa papan tambahan「追越し禁止」berarti <strong>追越しのための右側部分はみ出し通行禁止</strong> (Dilarang menyalip <em>dengan melewati garis tengah ke jalur kanan</em>). Jika jalan cukup lebar dan bisa menyalip tanpa melewati garis tengah, hal tersebut diperbolehkan (kecuali jika ada papan tambahan tulisan「追越し禁止」).',
+        kotoba: [
+          { kanji: 'はみ出し', hiragana: 'はみだし', arti: 'Melewati batas / keluar garis' },
+          { kanji: '右側部分', hiragana: 'みぎがわぶぶん', arti: 'Bagian sisi kanan jalan' }
+        ]
+      },
+      {
+        id: 39,
+        type: 'tf',
+        category: 'Keselamatan Anak di Mobil (チャイルドシート)',
+        jpHtml: '6<ruby>歳<rt>さい</rt></ruby><ruby>未満<rt>みまん</rt></ruby>の<ruby>幼児<rt>ようじ</rt></ruby>を<ruby>乗車<rt>じょうしゃ</rt></ruby>させるときは、やむを<ruby>得<rt>え</rt></ruby>ない<ruby>場合<rt>ばあい</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>き、チャイルドシートを<ruby>使用<rt>しよう</rt></ruby>しなければならない。',
+        enText: 'When carrying a young child under 6 years of age in a car, you must use a child safety seat except in unavoidable circumstances.',
+        idText: 'Saat membawa anak kecil berusia di bawah 6 tahun di dalam mobil, pengemudi wajib menggunakan kursi khusus anak (child seat) kecuali dalam keadaan terpaksa.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Di Jepang, penggunaan <strong>チャイルドシート (Child Seat)</strong> adalah kewajiban hukum bagi anak berusia di bawah 6 tahun (6歳未満). Menggendong anak di pangkuan saat mobil berjalan sangat berbahaya dan melanggar hukum.',
+        kotoba: [
+          { kanji: '6歳未満', hiragana: 'ろくさいみまん', arti: 'Di bawah usia 6 tahun' },
+          { kanji: '乗車', hiragana: 'じょうしゃ', arti: 'Naik kendaraan' }
+        ]
+      },
+      {
+        id: 40,
+        type: 'tf',
+        category: 'Kelelahan Mengemudi (過労運転の禁止)',
+        jpHtml: '<ruby>睡眠不足<rt>すいみんぶそく</rt></ruby>や<ruby>過労<rt>かろう</rt></ruby>、病気などの<ruby>理由<rt>りゆう</rt></ruby>により<ruby>正常<rt>せいじょう</rt></ruby>な<ruby>運転<rt>うんてん</rt></ruby>ができないおそれがあるときは、<ruby>自動車<rt>じどうしゃ</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>してはならない。',
+        enText: 'You must not drive a motor vehicle when there is a risk that you cannot drive normally due to lack of sleep, overwork/fatigue, or illness.',
+        idText: 'Ketika terdapat risiko tidak dapat mengemudi secara normal akibat kurang tidur, kelelahan berat, atau sakit, pengemudi dilarang mengendarai mobil.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Mengemudi dalam keadaan sangat lelah atau mengantuk berat (<strong>過労運転 / Karou Unten</strong>) dilarang oleh UU Lalu Lintas Jepang. Jika merasa mengantuk saat menyetir, segera istirahat di tempat aman atau Service Area (SA/PA).',
+        kotoba: [
+          { kanji: '過労運転', hiragana: 'かろううんてん', arti: 'Mengemudi dalam keadaan kelelahan berat' },
+          { kanji: '睡眠不足', hiragana: 'すいみんぶそく', arti: 'Kurang tidur' }
+        ]
+      },
+      {
+        id: 41,
+        type: 'tf',
+        category: 'Parkir di Tanjakan (坂道での駐車措置)',
+        jpHtml: '<ruby>下<rt>くだ</rt></ruby>り<ruby>坂<rt>ざか</rt></ruby>で<ruby>駐車<rt>ちゅうしゃ</rt></ruby>するときは、ハンドブレーキをかけ、エンジンを<ruby>止<rt>と</rt></ruby>めた<ruby>後<rt>あと</rt></ruby>、チェンジレバーをバック（R）に<ruby>入<rt>い</rt></ruby>れておくと<ruby>安全<rt>あんぜん</rt></ruby>である。',
+        enText: 'When parking on a downhill slope, after applying the handbrake and stopping the engine, it is safe to put the gearshift lever into Reverse (R) (or P for automatic).',
+        idText: 'Saat parkir di jalan menurun, setelah menarik rem tangan dan mematikan mesin, memasukkan tuas persneling ke gigi mundur (R) (atau P untuk mobil matik) adalah tindakan yang aman.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Untuk mencegah mobil meluncur saat parkir di jalan menurun (下り坂), tarik rem tangan, matikan mesin, masukkan persneling ke posisi <strong>R (Mundur)</strong> pada mobil manual (atau <strong>P</strong> pada mobil matik), dan ganjal roda jika diperlukan.',
+        kotoba: [
+          { kanji: '下り坂', hiragana: 'くだりざか', arti: 'Jalan menurun' },
+          { kanji: '駐車措置', hiragana: 'ちゅうしゃそち', arti: 'Tindakan pengamanan saat parkir' }
+        ]
+      },
+      {
+        id: 42,
+        type: 'tf',
+        category: 'Jalan Berlumpur / Genangan Air (ぬかるみ・水たまり)',
+        jpHtml: '<ruby>ぬかるみ<rt></rt></ruby>や<ruby>水<rt>みず</rt></ruby>たまりのある<ruby>場所<rt>ばしょ</rt></ruby>を<ruby>通行<rt>つうこう</rt></ruby>するときは、<ruby>泥<rt>どろ</rt></ruby>や<ruby>水<rt>みず</rt></ruby>をはねて<ruby>他人<rt>たにん</rt></ruby>に<ruby>迷惑<rt>めいわく</rt></ruby>をかけないよう、<ruby>徐行<rt>じょこう</rt></ruby>しなければならない。',
+        enText: 'When driving through muddy areas or puddles, you must slow down (jokou) so as not to splash mud or water onto others.',
+        idText: 'Saat melintasi jalan berlumpur atau genangan air, pengemudi wajib melaju pelan (徐行) agar tidak memercikkan lumpur atau air ke orang lain.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Memercikkan air genangan atau lumpur ke pejalan kaki (泥はね運転) merupakan pelanggaran aturan lalu lintas di Jepang dan dikenai denda tilang.',
+        kotoba: [
+          { kanji: '水たまり', hiragana: 'みずたまり', arti: 'Genangan air' },
+          { kanji: '迷惑', hiragana: 'めいわく', arti: 'Gangguan / merugikan orang lain' }
+        ]
+      },
+      {
+        id: 43,
+        type: 'tf',
+        category: 'Persimpangan Macet (交差点内の進入禁止)',
+        jpHtml: '<ruby>進行<rt>しんこう</rt></ruby>する<ruby>方向<rt>ほうこう</rt></ruby>の<ruby>道路<rt>どうろ</rt></ruby>が<ruby>混雑<rt>こんざつ</rt></ruby>しているため、<ruby>交差点<rt>こうさてん</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>停止<rt>ていし</rt></ruby>することになるおそれがあるときは、<ruby>信号<rt>しんごう</rt></ruby>が<ruby>青<rt>あお</rt></ruby>であっても<ruby>交差点<rt>こうさてん</rt></ruby>に<ruby>入<rt>はい</rt></ruby>ってはならない。',
+        enText: 'When the road ahead is congested and there is a risk of stopping inside the intersection, you must not enter the intersection even if the traffic light is green.',
+        idText: 'Ketika jalan di depan macet sehingga berisiko berhenti di tengah persimpangan, pengemudi dilarang masuk ke persimpangan meskipun lampu lalu lintas menyala hijau.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'a',
+        explanation: '<strong>Benar (○ 正しい / True)</strong>. Berhenti di tengah persimpangan saat macet akan mengunci pergerakan kendaraan dari arah melintang ketika lampu berubah hijau. Tunggu di belakang garis berhenti sampai sisi seberang persimpangan memiliki ruang yang cukup.',
+        kotoba: [
+          { kanji: '混雑', hiragana: 'こんざつ', arti: 'Macet / padat' },
+          { kanji: 'おそれがある', hiragana: 'おそれがある', arti: 'Berisiko / ada kemungkinan terjadi' }
+        ]
+      },
+      {
+        id: 44,
+        type: 'tf',
+        category: 'Rambu Lalu Lintas (標識)',
+        svgKey: 'one_way',
+        svgCaption: 'Rambu Jalan Satu Arah (一方通行)',
+        jpHtml: 'この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では、<ruby>矢印<rt>やじるし</rt></ruby>の<ruby>反対<rt>はんたい</rt></ruby><ruby>方向<rt>ほうこう</rt></ruby>へ<ruby>進行<rt>しんこう</rt></ruby>することはできないが、<ruby>車<rt>くるま</rt></ruby>を<ruby>駐車<rt>ちゅうしゃ</rt></ruby>するときは<ruby>右側<rt>みぎがわ</rt></ruby>の<ruby>端<rt>はし</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>せて<ruby>駐車<rt>ちゅうしゃ</rt></ruby>する。',
+        enText: 'On a one-way road with this sign, you cannot drive against the arrow, and when parking, you should park along the right edge of the road.',
+        idText: 'Pada jalan satu arah dengan rambu ini, kendaraan dilarang melaju berlawanan arah panah, dan saat parkir harus merapat ke tepi kanan jalan.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Bahkan di jalan satu arah (一方通行), parkir tetap harus merapat ke <strong>sisi kiri jalan (道路の左側端)</strong>, bukan sisi kanan!',
+        kotoba: [
+          { kanji: '一方通行', hiragana: 'いっぽうつうこう', arti: 'Jalan satu arah' },
+          { kanji: '反対方向', hiragana: 'はんたいほうこう', arti: 'Arah berlawanan' }
+        ]
+      },
+      {
+        id: 45,
+        type: 'tf',
+        category: 'Klakson & Isyarat Suara (警音器の使用)',
+        jpHtml: '<ruby>前<rt>まえ</rt></ruby>を<ruby>走<rt>はし</rt></ruby>る<ruby>車<rt>くるま</rt></ruby>の<ruby>発進<rt>はっしん</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>いときは、クラクション（<ruby>警音器<rt>けいおんき</rt></ruby>）を<ruby>鳴<rt>な</rt></ruby>らして<ruby>注意<rt>ちゅうい</rt></ruby>を<ruby>促<rt>うなが</rt></ruby>してもよい。',
+        enText: 'When the car in front of you is slow to start moving, you may honk your horn (keionki) to urge them to move.',
+        idText: 'Ketika mobil di depan terlambat mulai berjalan saat lampu hijau, pengemudi boleh membunyikan klakson (警音器) untuk memperingatkannya.',
+        options: [
+          { key: 'a', jp: '○ <ruby>正<rt>ただ</rt></ruby>しい', en: '○ True', id: '○ Benar' },
+          { key: 'b', jp: '× <ruby>誤<rt>あやま</rt></ruby>り', en: '× False', id: '× Salah' }
+        ],
+        correct: 'b',
+        explanation: '<strong>Salah (× 誤り / False)</strong>. Di Jepang, membunyikan klakson (警音器) sembarangan dilarang oleh hukum. Klakson hanya boleh digunakan di tempat yang terdapat rambu perintah klakson (警笛鳴らせ) atau untuk mencegah bahaya mendesak yang tidak dapat dihindari.',
+        kotoba: [
+          { kanji: '警音器', hiragana: 'けいおんき', arti: 'Klakson' },
+          { kanji: '発進', hiragana: 'はっしん', arti: 'Mulai berjalan / start' }
+        ]
+      },
+      // ==================== 5 CASE STUDY QUESTIONS (46-50) ====================
+      {
+        id: 46,
+        type: 'mc',
+        category: 'Studi Kasus Prediksi Bahaya (危険予測)',
+        svgKey: 'left_turn_blindspot',
+        svgCaption: 'Situasi mobil biru hendak belok kiri sementara sepeda/motor melaju dari belakang kiri',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>左折<rt>させつ</rt></ruby>しようとしています。<ruby>左後方<rt>さこうほう</rt></ruby>から<ruby>自転車<rt>じてんしゃ</rt></ruby>やバイクが<ruby>走<rt>はし</rt></ruby>ってくるのが見えたとき、<ruby>最<rt>もっと</rt></ruby>も<ruby>適切<rt>てきせつ</rt></ruby>な<ruby>運転行動<rt>うんてんこうどう</rt></ruby>はどれですか。',
+        enText: 'You are about to turn left at an intersection. When you see a bicycle or motorcycle approaching from your rear left, what is the most appropriate driving action?',
+        idText: 'Anda hendak berbelok ke kiri di persimpangan. Ketika terlihat sepeda atau sepeda motor melaju dari arah belakang kiri, tindakan mengemudi manakah yang paling tepat?',
+        options: [
+          {
+            key: 'a',
+            jp: '<ruby>自転車<rt>じてんしゃ</rt></ruby>より<ruby>先<rt>さき</rt></ruby>に<ruby>素早<rt>すばや</rt></ruby>く<ruby>左折<rt>させつ</rt></ruby>して<ruby>通過<rt>つうか</rt></ruby>する。',
+            en: 'Turn left quickly ahead of the bicycle.',
+            id: 'Berbelok ke kiri dengan cepat mendahului sepeda tersebut.'
+          },
+          {
+            key: 'b',
+            jp: '<ruby>無理<rt>むり</rt></ruby>に<ruby>曲<rt>ま</rt></ruby>がらず、<ruby>一時停止<rt>いちじていし</rt></ruby>または<ruby>徐行<rt>じょこう</rt></ruby>して、<ruby>自転車<rt>じてんしゃ</rt></ruby>やバイクを<ruby>先<rt>さき</rt></ruby>に<ruby>行<rt>い</rt></ruby>かせる。',
+            en: 'Do not force the turn; stop or slow down and let the bicycle or motorcycle pass first.',
+            id: 'Tidak memaksakan belok, berhenti atau melambat, lalu membiarkan sepeda/motor lewat terlebih dahulu.'
+          },
+          {
+            key: 'c',
+            jp: 'クラクションを<ruby>鳴<rt>な</rt></ruby>らして<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>止<rt>と</rt></ruby>まらせてから<ruby>左折<rt>させつ</rt></ruby>する。',
+            en: 'Honk your horn to make the bicycle stop, then turn left.',
+            id: 'Membunyikan klakson agar sepeda berhenti lalu berbelok ke kiri.'
+          }
+        ],
+        correct: 'b',
+        explanation: '<strong>Jawaban Benar: b</strong>. Kecelakaan menyerempet sepeda/motor saat belok kiri (<strong>巻き込み事故 / Makikomi Jiko</strong>) adalah salah satu kecelakaan paling sering terjadi di Jepang. Anda harus mengecek titik buta (目視) dan mendahulukan sepeda/motor lurus sebelum berbelok.',
+        kotoba: [
+          { kanji: '巻き込み事故', hiragana: 'まきこみじこ', arti: 'Kecelakaan menyerempet saat berbelok' },
+          { kanji: '左後方', hiragana: 'さこうほう', arti: 'Arah belakang kiri' },
+          { kanji: '適切', hiragana: 'てきせつ', arti: 'Tepat / sesuai' }
+        ]
+      },
+      {
+        id: 47,
+        type: 'mc',
+        category: 'Studi Kasus Lampu Sinyal (信号機の意味)',
+        svgKey: 'flashing_yellow',
+        svgCaption: 'Lampu Lalu Lintas Kuning Berkedip (黄色点滅信号)',
+        jpHtml: '<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>信号機<rt>しんごうき</rt></ruby>が<ruby>黄色<rt>きいろ</rt></ruby>の<ruby>点滅<rt>てんめつ</rt></ruby>をしているとき、<ruby>自動車<rt>じどうしゃ</rt></ruby>はどのように<ruby>通行<rt>つうこう</rt></ruby>しなければなりませんか。',
+        enText: 'When a traffic light at an intersection is flashing yellow, how must motor vehicles proceed?',
+        idText: 'Ketika lampu lalu lintas di persimpangan berkedip kuning (黄色点滅), bagaimanakah mobil harus melintas?',
+        options: [
+          {
+            key: 'a',
+            jp: '<ruby>必<rt>かなら</rt></ruby>ず<ruby>停止線<rt>ていしせん</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>しなければならない。',
+            en: 'Must always come to a complete stop at the stop line.',
+            id: 'Wajib berhenti sejenak di garis berhenti (seperti lampu merah berkedip).'
+          },
+          {
+            key: 'b',
+            jp: '<ruby>他<rt>ほか</rt></ruby>の<ruby>交通<rt>こうつう</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>しながら<ruby>進行<rt>しんこう</rt></ruby>することができる。',
+            en: 'May proceed while paying careful attention to other traffic.',
+            id: 'Dapat terus melaju dengan tetap memperhatikan lalu lintas di sekitar.'
+          },
+          {
+            key: 'c',
+            jp: '<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいなければスピードを<ruby>上<rt>あ</rt></ruby>げて<ruby>通過<rt>つうか</rt></ruby>する。',
+            en: 'Speed up and pass through if no pedestrians are visible.',
+            id: 'Menaikkan kecepatan untuk melintas jika tidak ada pejalan kaki.'
+          }
+        ],
+        correct: 'b',
+        explanation: '<strong>Jawaban Benar: b</strong>. <strong>黄色点滅信号 (Kiiro Tenmetsu Shingou)</strong> berarti pengemudi diperbolehkan melaju sambil berhati-hati memperhatikan kendaraan dari arah lain dan pejalan kaki (tidak wajib berhenti total seperti lampu merah berkedip).',
+        kotoba: [
+          { kanji: '黄色点滅', hiragana: 'きいろてんめつ', arti: 'Kedipan warna kuning' },
+          { kanji: '停止線', hiragana: 'ていしせん', arti: 'Garis berhenti' },
+          { kanji: '注意', hiragana: 'ちゅうい', arti: 'Perhatian / hati-hati' }
+        ]
+      },
+      {
+        id: 48,
+        type: 'mc',
+        category: 'Studi Kasus Jalan Tol (高速道路の故障対応)',
+        jpHtml: '<ruby>高速道路<rt>こうそくどうろ</rt></ruby>を<ruby>走行中<rt>そうこうちゅう</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>が<ruby>故障<rt>こしょう</rt></ruby>して<ruby>路側帯<rt>ろそくたい</rt></ruby>に<ruby>停車<rt>ていしゃ</rt></ruby>しました。<ruby>安全<rt>あんぜん</rt></ruby>のためにとるべき<ruby>行動<rt>こうどう</rt></ruby>として<ruby>正<rt>ただ</rt></ruby>しいものはどれですか。',
+        enText: 'While driving on an expressway, your car breaks down and stops on the road shoulder. Which action is correct for ensuring safety?',
+        idText: 'Saat melaju di jalan tol, mobil mogok dan berhenti di bahu jalan. Manakah tindakan yang benar untuk menjaga keselamatan?',
+        options: [
+          {
+            key: 'a',
+            jp: '<ruby>車<rt>くるま</rt></ruby>の<ruby>後方<rt>こうほう</rt></ruby>に<ruby>停止表示器材<rt>ていしひょうじきざい</rt></ruby>（<ruby>三角表示板<rt>さんかくひょうじばん</rt></ruby>）を<ruby>置<rt>お</rt></ruby>き、<ruby>全員<rt>ぜんいん</rt></ruby>ガードレールの<ruby>外側<rt>そとがわ</rt></ruby>に<ruby>避難<rt>ひなん</rt></ruby>する。',
+            en: 'Place a warning triangle behind the car and have everyone evacuate outside the guardrail.',
+            id: 'Meletakkan segitiga pengaman di belakang mobil, lalu seluruh penumpang mengungsi ke luar pagar pembatas (guardrail).'
+          },
+          {
+            key: 'b',
+            jp: 'ハザードランプをつけて、<ruby>救助<rt>きゅうじょ</rt></ruby>が<ruby>来<rt>く</rt></ruby>るまで<ruby>全員<rt>ぜんいん</rt></ruby><ruby>車内<rt>しゃない</rt></ruby>で<ruby>待機<rt>たいき</rt></ruby>する。',
+            en: 'Turn on hazard lights and have everyone wait inside the vehicle until help arrives.',
+            id: 'Menyalakan lampu hazard dan semua orang menunggu di dalam mobil sampai bantuan datang.'
+          },
+          {
+            key: 'c',
+            jp: '<ruby>車<rt>くるま</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>立<rt>た</rt></ruby>って<ruby>手<rt>て</rt></ruby>を<ruby>振<rt>ふ</rt></ruby>り、<ruby>後続車<rt>こうぞくしゃ</rt></ruby>に<ruby>合図<rt>あいず</rt></ruby>を<ruby>送<rt>おく</rt></ruby>る。',
+            en: 'Stand in front of the vehicle waving your hands to signal following cars.',
+            id: 'Berdiri di depan mobil sambil melambaikan tangan memberi isyarat pada mobil di belakang.'
+          }
+        ],
+        correct: 'a',
+        explanation: '<strong>Jawaban Benar: a</strong>. Saat darurat di jalan tol Jepang: nyalakan hazard & menepi ke bahu jalan, pasang <strong>停止表示器材 (segitiga pengaman)</strong> di belakang mobil (wajib hukumnya), dan segera keluar ke balik guardrail (jangan menunggu di dalam mobil).',
+        kotoba: [
+          { kanji: '故障', hiragana: 'こしょう', arti: 'Kerusakan / mogok' },
+          { kanji: '停止表示器材', hiragana: 'ていしひょうじきざい', arti: 'Alat tanda berhenti (segitiga pengaman)' },
+          { kanji: '避難', hiragana: 'ひなん', arti: 'Mengungsi / menyelamatkan diri' }
+        ]
+      },
+      {
+        id: 49,
+        type: 'mc',
+        category: 'Studi Kasus Perlintasan Kereta (踏切でのエンスト)',
+        jpHtml: '<ruby>踏切内<rt>ふみきりない</rt></ruby>で<ruby>車<rt>くるま</rt></ruby>が<ruby>故障<rt>こしょう</rt></ruby>して<ruby>動<rt>うご</rt></ruby>かなくなったとき、<ruby>最<rt>もっと</rt></ruby>も<ruby>優先<rt>ゆうせん</rt></ruby>して行うべきことはどれですか。',
+        enText: 'When your car breaks down and becomes immobilized inside a railroad crossing, what should you do as your highest priority?',
+        idText: 'Ketika mobil mogok dan tidak bisa bergerak di dalam perlintasan kereta api, hal apakah yang paling utama harus segera dilakukan?',
+        options: [
+          {
+            key: 'a',
+            jp: 'JAFや<ruby>修理業者<rt>しゅうりぎょうしゃ</rt></ruby>に<ruby>電話<rt>でんわ</rt></ruby>をかけて<ruby>レッカー車<rt>レッカーしゃ</rt></ruby>を<ruby>呼<rt>よ</rt></ruby>ぶ。',
+            en: 'Call JAF or a repair shop to request a tow truck.',
+            id: 'Menelepon JAF atau bengkel untuk memanggil mobil derek.'
+          },
+          {
+            key: 'b',
+            jp: '<ruby>踏切<rt>ふみきり</rt></ruby>の<ruby>非常<rt>ひじょう</rt></ruby>ボタンを<ruby>押<rt>お</rt></ruby>すか、<ruby>発炎筒<rt>はつえんとう</rt></ruby>などで<ruby>列車<rt>れっしゃ</rt></ruby>に<ruby>異常<rt>いじょう</rt></ruby>を<ruby>知<rt>し</rt></ruby>らせる。',
+            en: 'Press the crossing emergency button or use a flare (hatsuentou) to alert approaching trains.',
+            id: 'Menekan tombol darurat (非常ボタン) di perlintasan atau menyalakan suar (発炎筒) untuk memberi tahu kereta.'
+          },
+          {
+            key: 'c',
+            jp: 'ヘッドライトを<ruby>点滅<rt>てんめつ</rt></ruby>させて<ruby>列車<rt>れっしゃ</rt></ruby>が<ruby>止<rt>と</rt></ruby>まるのを<ruby>待<rt>ま</rt></ruby>つ。',
+            en: 'Flash your headlights and wait inside the car for the train to stop.',
+            id: 'Mengedipkan lampu besar mobil dan menunggu kereta berhenti.'
+          }
+        ],
+        correct: 'b',
+        explanation: '<strong>Jawaban Benar: b</strong>. Jika kendaraan mogok di dalam perlintasan kereta api Jepang, prioritas nomor satu adalah menyelamatkan penumpang dan <strong>segera menekan tombol darurat perlintasan (踏切非常ボタン)</strong> di tiang perlintasan atau menggunakan suar darurat (発炎筒).',
+        kotoba: [
+          { kanji: '非常ボタン', hiragana: 'ひじょうボタン', arti: 'Tombol darurat' },
+          { kanji: '発炎筒', hiragana: 'はつえんとう', arti: 'Suar darurat (flare)' },
+          { kanji: '列車', hiragana: 'れっしゃ', arti: 'Kereta api' }
+        ]
+      },
+      {
+        id: 50,
+        type: 'mc',
+        category: 'Studi Kasus Marka Jalan (路面標示)',
+        jpHtml: '<ruby>進路<rt>しんろ</rt></ruby><ruby>変更<rt>へんこう</rt></ruby>をしようとするとき、<ruby>自分<rt>じぶん</rt></ruby>が<ruby>通行<rt>つうこう</rt></ruby>している<ruby>車線<rt>しゃせん</rt></ruby>の<ruby>境界線<rt>きょうかいせん</rt></ruby>が「<ruby>黄色<rt>きいろ</rt></ruby>の<ruby>実線<rt>じっせん</rt></ruby>」である<ruby>場合<rt>ばあい</rt></ruby>、どうすべきですか。',
+        enText: 'When you want to change lanes, if the boundary line of the lane you are driving in is a solid yellow line (kiiro no jissen), what should you do?',
+        idText: 'Ketika hendak berpindah lajur, jika garis pembatas lajur tempat Anda melaju berupa "garis lurus kuning tanpa putus (黄色の実線)", apa yang harus dilakukan?',
+        options: [
+          {
+            key: 'a',
+            jp: '<ruby>後方<rt>こうほう</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>がいなければ、合図を出して<ruby>進路<rt>しんろ</rt></ruby><ruby>変更<rt>へんこう</rt></ruby>してよい。',
+            en: 'If there are no cars behind you, signal and change lanes.',
+            id: 'Jika tidak ada mobil di belakang, boleh menyalakan sein dan berpindah lajur.'
+          },
+          {
+            key: 'b',
+            jp: '<ruby>進路<rt>しんろ</rt></ruby><ruby>変更<rt>へんこう</rt></ruby>は<ruby>禁止<rt>きんし</rt></ruby>されているので、その<ruby>車線<rt>しゃせん</rt></ruby>をそのまま<ruby>通行<rt>つうこう</rt></ruby>する。',
+            en: 'Changing lanes is prohibited, so continue driving in that lane.',
+            id: 'Pindah lajur dilarang, sehingga tetap melaju di lajur tersebut.'
+          },
+          {
+            key: 'c',
+            jp: 'ハザードランプをつければ<ruby>進路<rt>しんろ</rt></ruby><ruby>変更<rt>へんこう</rt></ruby>してもよい。',
+            en: 'You may change lanes as long as you turn on your hazard lights.',
+            id: 'Boleh pindah lajur asalkan menyalakan lampu hazard.'
+          }
+        ],
+        correct: 'b',
+        explanation: '<strong>Jawaban Benar: b</strong>. Garis pembatas lajur berwarna <strong>kuning lurus tanpa putus (黄色の実線)</strong> menandakan <strong>larangan berpindah lajur (進路変更禁止)</strong>, kecuali untuk menghindari pekerjaan jalan atau kendaraan darurat.',
+        kotoba: [
+          { kanji: '進路変更', hiragana: 'しんろへんこう', arti: 'Pindah lajur' },
+          { kanji: '車線', hiragana: 'しゃせん', arti: 'Lajur jalan' },
+          { kanji: '実線', hiragana: 'じっせん', arti: 'Garis lurus tanpa putus' }
+        ]
+      }
+    ];
+
+    // =========================================================================
+    // 4. APPLICATION STATE
+    // =========================================================================
+    let appState = {
+      currentView: 'home',
+      examMode: 'official', // 'official' | 'full' | 'study'
+      examLanguage: 'jp',   // 'jp' | 'en' | 'id'
+      questions: [],
+      currentIndex: 0,
+      userAnswers: {}, // { questionId: 'a' | 'b' | 'c' }
+      flagged: {},     // { questionId: true }
+      timerSeconds: 1800,
+      timerInterval: null,
+      showFurigana: true,
+      reviewFilter: 'all'
+    };
+
+    // =========================================================================
+    // 5. INITIALIZATION & NAVIGATION
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('total-bank-count').textContent = `${QUESTION_BANK.length} Soal Autentik`;
+      setExamLanguage('jp');
+      renderHomeSignsPreview();
+      renderDictionary();
+    });
+
+    function setExamLanguage(lang) {
+      appState.examLanguage = lang;
+
+      // Update all language selector buttons across Home & CBT views
+      document.querySelectorAll('.lang-select-btn').forEach(btn => {
+        const btnLang = btn.getAttribute('data-lang-btn');
+        if (btnLang === lang) {
+          btn.classList.add('bg-blue-600', 'text-white', 'shadow-xs');
+          btn.classList.remove('text-slate-700', 'hover:text-slate-900');
+        } else {
+          btn.classList.remove('bg-blue-600', 'text-white', 'shadow-xs');
+          btn.classList.add('text-slate-700', 'hover:text-slate-900');
+        }
+      });
+
+      // Show Furigana toggle only when active language is Japanese ('jp')
+      const furiWrapper = document.getElementById('furigana-toggle-wrapper');
+      if (furiWrapper) {
+        furiWrapper.classList.toggle('hidden', lang !== 'jp');
+      }
+
+      // If currently inside CBT exam view, re-render active question immediately
+      if (appState.currentView === 'exam' && appState.questions.length > 0) {
+        renderQuestion();
+      }
+    }
+
+    function navigateTo(view) {
+      if (appState.currentView === 'exam' && view !== 'exam') {
+        clearInterval(appState.timerInterval);
+      }
+
+      appState.currentView = view;
+
+      ['home', 'exam', 'result', 'dictionary'].forEach(v => {
+        document.getElementById(`view-${v}`).classList.add('hidden');
+      });
+
+      document.getElementById(`view-${view}`).classList.remove('hidden');
+
+      const homeBtn = document.getElementById('nav-home-btn');
+      const dictBtn = document.getElementById('nav-dict-btn');
+
+      if (view === 'dictionary') {
+        dictBtn.className = 'px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-blue-900 shadow-sm transition cursor-pointer';
+        homeBtn.className = 'px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-800/70 hover:bg-blue-700 text-white border border-blue-600/50 transition cursor-pointer';
+      } else {
+        homeBtn.className = 'px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white text-blue-900 shadow-sm transition cursor-pointer';
+        dictBtn.className = 'px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-blue-800/70 hover:bg-blue-700 text-white border border-blue-600/50 transition cursor-pointer';
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderHomeSignsPreview() {
+      const container = document.getElementById('home-signs-preview');
+      const previewSigns = TRAFFIC_SIGNS_DATA.slice(0, 6);
+      container.innerHTML = previewSigns.map(sign => `
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex flex-col items-center text-center hover:border-blue-400 transition">
+          <div class="w-16 h-16 flex items-center justify-center mb-2 [&>svg]:w-14 [&>svg]:h-14">
+            ${SVG_ILLUSTRATIONS[sign.svgKey]}
+          </div>
+          <div class="text-xs font-bold text-slate-900">${sign.kanji}</div>
+          <div class="text-[10px] text-blue-600 font-medium">${sign.hiragana}</div>
+          <div class="text-[11px] text-slate-600 mt-1 leading-tight">${sign.arti}</div>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================================
+    // 6. EXAM ENGINE (START, RENDER, ANSWER, TIMER, FINISH)
+    // =========================================================================
+    function shuffleArray(arr) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    function startExam(mode) {
+      appState.examMode = mode;
+      appState.currentIndex = 0;
+      appState.userAnswers = {};
+      appState.flagged = {};
+
+      if (mode === 'official') {
+        // 50 True/False questions (45 TF from bank + top up from remaining if needed, here we have 45 TF + 5 MC converted or 50 total)
+        const tfPool = QUESTION_BANK.filter(q => q.type === 'tf');
+        const extraPool = QUESTION_BANK.filter(q => q.type !== 'tf');
+        appState.questions = shuffleArray([...tfPool, ...extraPool]).slice(0, 50);
+        appState.timerSeconds = 30 * 60; // 30 minutes
+        document.getElementById('exam-mode-badge').textContent = 'Ujian Resmi Gaimen Kirikae (50 Soal • Lulus ≥ 45)';
+        document.getElementById('exam-mode-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800';
+      } else if (mode === 'full') {
+        appState.questions = shuffleArray(QUESTION_BANK).slice(0, 50);
+        appState.timerSeconds = 35 * 60; // 35 minutes
+        document.getElementById('exam-mode-badge').textContent = 'Latihan Lengkap SSW & Menkyo (50 Soal • Lulus ≥ 45)';
+        document.getElementById('exam-mode-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800';
+      } else {
+        appState.questions = [...QUESTION_BANK];
+        appState.timerSeconds = null;
+        document.getElementById('exam-mode-badge').textContent = 'Mode Belajar + Pembahasan 3 Bahasa';
+        document.getElementById('exam-mode-badge').className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800';
+      }
+
+      document.getElementById('total-q-num').textContent = appState.questions.length;
+
+      navigateTo('exam');
+      setupTimer();
+      renderQuestion();
+      renderNavGrid();
+    }
+
+    function retryCurrentMode() {
+      startExam(appState.examMode);
+    }
+
+    function setupTimer() {
+      clearInterval(appState.timerInterval);
+      const timerBox = document.getElementById('timer-box');
+      const timerDisplay = document.getElementById('timer-display');
+
+      if (appState.timerSeconds === null) {
+        timerBox.className = 'flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-emerald-700 text-white font-mono text-xs sm:text-sm font-bold shadow-sm';
+        timerDisplay.textContent = 'Tanpa Batas Waktu';
+        return;
+      }
+
+      timerBox.className = 'flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-900 text-white font-mono text-sm font-bold shadow-sm';
+      updateTimerUI();
+
+      appState.timerInterval = setInterval(() => {
+        appState.timerSeconds--;
+        updateTimerUI();
+
+        if (appState.timerSeconds <= 120) {
+          timerBox.className = 'flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-rose-600 text-white font-mono text-sm font-bold shadow-sm animate-pulse';
+        }
+
+        if (appState.timerSeconds <= 0) {
+          clearInterval(appState.timerInterval);
+          finishExam();
+        }
+      }, 1000);
+    }
+
+    function updateTimerUI() {
+      const mins = Math.max(0, Math.floor(appState.timerSeconds / 60));
+      const secs = Math.max(0, appState.timerSeconds % 60);
+      document.getElementById('timer-display').textContent =
+        `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function toggleLanguageHelpers() {
+      appState.showFurigana = document.getElementById('toggle-furigana').checked;
+      const container = document.getElementById('question-container');
+      container.classList.toggle('hide-furigana', !appState.showFurigana);
+    }
+
+    function renderQuestion() {
+      const q = appState.questions[appState.currentIndex];
+      const userAnswer = appState.userAnswers[q.id];
+      const lang = appState.examLanguage;
+
+      document.getElementById('current-q-num').textContent = appState.currentIndex + 1;
+      document.getElementById('q-category').textContent = `Kategori: ${q.category}`;
+      document.getElementById('q-type-label').textContent =
+        q.type === 'tf' ? 'Benar / Salah (○ / ×)' : 'Studi Kasus (a / b / c)';
+
+      const langLabels = {
+        jp: 'Bahasa Soal: 🇯🇵 日本語',
+        en: 'Exam Language: 🇬🇧 English',
+        id: 'Bahasa Soal: 🇮🇩 Indonesia'
+      };
+      document.getElementById('q-active-lang-pill').textContent = langLabels[lang];
+
+      // Illustration handling
+      const illusWrapper = document.getElementById('q-illustration-wrapper');
+      const illusSvg = document.getElementById('q-illustration-svg');
+      const illusCaption = document.getElementById('q-illustration-caption');
+
+      if (q.svgKey && SVG_ILLUSTRATIONS[q.svgKey]) {
+        illusWrapper.classList.remove('hidden');
+        illusSvg.innerHTML = SVG_ILLUSTRATIONS[q.svgKey];
+        illusCaption.textContent = q.svgCaption || '';
+      } else {
+        illusWrapper.classList.add('hidden');
+        illusSvg.innerHTML = '';
+      }
+
+      // Render ONLY the selected single language during exam
+      const qTextActive = document.getElementById('q-text-active');
+      if (lang === 'jp') {
+        qTextActive.className = 'jp-text text-lg sm:text-xl font-bold text-slate-900';
+        qTextActive.innerHTML = q.jpHtml;
+      } else if (lang === 'en') {
+        qTextActive.className = 'text-lg sm:text-xl font-bold text-slate-900 leading-relaxed';
+        qTextActive.textContent = q.enText;
+      } else {
+        qTextActive.className = 'text-lg sm:text-xl font-bold text-slate-900 leading-relaxed';
+        qTextActive.textContent = q.idText;
+      }
+
+      // Render Options in selected language only
+      const optionsContainer = document.getElementById('q-options');
+      optionsContainer.innerHTML = q.options.map(opt => {
+        const isSelected = userAnswer === opt.key;
+        const isStudyAnswered = appState.examMode === 'study' && userAnswer !== undefined;
+        const isCorrectOpt = opt.key === q.correct;
+
+        let cardStyle = 'border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50/30';
+        let badgeStyle = 'bg-slate-100 text-slate-700 border-slate-300';
+
+        if (isStudyAnswered) {
+          if (isCorrectOpt) {
+            cardStyle = 'border-emerald-500 bg-emerald-50/80 ring-1 ring-emerald-500';
+            badgeStyle = 'bg-emerald-600 text-white border-emerald-600';
+          } else if (isSelected && !isCorrectOpt) {
+            cardStyle = 'border-rose-500 bg-rose-50/80 ring-1 ring-rose-500';
+            badgeStyle = 'bg-rose-600 text-white border-rose-600';
+          }
+        } else if (isSelected) {
+          cardStyle = 'border-blue-600 bg-blue-50/70 ring-1 ring-blue-600';
+          badgeStyle = 'bg-blue-600 text-white border-blue-600';
+        }
+
+        const optContent = lang === 'jp'
+          ? `<div class="jp-text text-base sm:text-lg font-bold text-slate-900">${opt.jp}</div>`
+          : `<div class="text-base sm:text-lg font-bold text-slate-900">${lang === 'en' ? opt.en : opt.id}</div>`;
+
+        return `
+          <button
+            type="button"
+            onclick="selectOption('${opt.key}')"
+            class="w-full text-left p-4 rounded-xl border-2 transition flex items-center gap-3.5 cursor-pointer ${cardStyle}"
+          >
+            <span class="w-8 h-8 rounded-lg border font-bold text-sm flex items-center justify-center shrink-0 uppercase ${badgeStyle}">
+              ${opt.key}
+            </span>
+            <div class="flex-1">
+              ${optContent}
+            </div>
+          </button>
+        `;
+      }).join('');
+
+      // Study Mode Feedback Box: Reveals ALL 3 languages (JP + EN + ID) + Explanation + Kotoba
+      const studyBox = document.getElementById('study-feedback-box');
+      if (appState.examMode === 'study' && userAnswer !== undefined) {
+        studyBox.classList.remove('hidden');
+        const isCorrect = userAnswer === q.correct;
+        const banner = document.getElementById('study-status-banner');
+        if (isCorrect) {
+          banner.className = 'p-3.5 rounded-xl font-bold text-sm flex items-center gap-2 bg-emerald-100 text-emerald-900 border border-emerald-300';
+          banner.innerHTML = '<span>✅</span> <span>Jawaban Anda BENAR (正解 / Correct)!</span>';
+        } else {
+          banner.className = 'p-3.5 rounded-xl font-bold text-sm flex items-center gap-2 bg-rose-100 text-rose-900 border border-rose-300';
+          banner.innerHTML = `<span>❌</span> <span>Jawaban Anda Kurang Tepat. Kunci Jawaban: (${q.correct.toUpperCase()})</span>`;
+        }
+
+        document.getElementById('study-all-translations').innerHTML = `
+          <div class="bg-white rounded-lg p-3 border border-indigo-100">
+            <span class="text-[11px] font-bold uppercase text-indigo-700 block mb-0.5">🇯🇵 日本語 (Jepang):</span>
+            <div class="jp-text font-bold text-slate-900 text-base">${q.jpHtml}</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-indigo-100">
+            <span class="text-[11px] font-bold uppercase text-blue-700 block mb-0.5">🇬🇧 English:</span>
+            <div class="text-slate-800">${q.enText}</div>
+          </div>
+          <div class="bg-white rounded-lg p-3 border border-indigo-100">
+            <span class="text-[11px] font-bold uppercase text-emerald-700 block mb-0.5">🇮🇩 Bahasa Indonesia:</span>
+            <div class="text-slate-800">${q.idText}</div>
+          </div>
+        `;
+
+        document.getElementById('study-explanation-text').innerHTML = q.explanation;
+        document.getElementById('study-kotoba-list').innerHTML = q.kotoba.map(k => `
+          <div class="bg-white border border-slate-200 rounded-lg px-3 py-2 flex items-center justify-between gap-2 text-xs">
+            <div>
+              <span class="font-bold text-slate-900">${k.kanji}</span>
+              <span class="text-blue-600 ml-1">(${k.hiragana})</span>
+            </div>
+            <span class="text-slate-600 text-right">${k.arti}</span>
+          </div>
+        `).join('');
+      } else {
+        studyBox.classList.add('hidden');
+      }
+
+      // Prev / Next / Flag buttons state
+      document.getElementById('btn-prev').disabled = appState.currentIndex === 0;
+      const isLast = appState.currentIndex === appState.questions.length - 1;
+      document.getElementById('btn-next').classList.toggle('hidden', isLast);
+
+      const flagBtn = document.getElementById('btn-flag');
+      if (appState.flagged[q.id]) {
+        flagBtn.className = 'px-4 py-2.5 rounded-xl border border-amber-500 bg-amber-400 text-slate-900 font-bold text-xs sm:text-sm transition cursor-pointer';
+        flagBtn.textContent = '🚩 Ditandai Ragu-ragu';
+      } else {
+        flagBtn.className = 'px-4 py-2.5 rounded-xl border border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-800 font-semibold text-xs sm:text-sm transition cursor-pointer';
+        flagBtn.textContent = '🚩 Tandai Ragu-ragu';
+      }
+
+      toggleLanguageHelpers();
+      renderNavGrid();
+    }
+
+    function selectOption(optionKey) {
+      const q = appState.questions[appState.currentIndex];
+      appState.userAnswers[q.id] = optionKey;
+      renderQuestion();
+    }
+
+    function toggleFlag() {
+      const q = appState.questions[appState.currentIndex];
+      appState.flagged[q.id] = !appState.flagged[q.id];
+      renderQuestion();
+    }
+
+    function prevQuestion() {
+      if (appState.currentIndex > 0) {
+        appState.currentIndex--;
+        renderQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (appState.currentIndex < appState.questions.length - 1) {
+        appState.currentIndex++;
+        renderQuestion();
+      }
+    }
+
+    function jumpToQuestion(idx) {
+      appState.currentIndex = idx;
+      renderQuestion();
+    }
+
+    function renderNavGrid() {
+      const grid = document.getElementById('question-nav-grid');
+      const total = appState.questions.length;
+      const answeredCount = Object.keys(appState.userAnswers).length;
+      document.getElementById('answered-counter').textContent = `${answeredCount} / ${total} Terjawab`;
+
+      grid.innerHTML = appState.questions.map((q, idx) => {
+        const isCurrent = idx === appState.currentIndex;
+        const isAnswered = appState.userAnswers[q.id] !== undefined;
+        const isFlagged = !!appState.flagged[q.id];
+
+        let classes = 'h-8 rounded-lg text-xs font-bold transition flex items-center justify-center cursor-pointer ';
+        if (isFlagged) {
+          classes += 'bg-amber-400 text-slate-900 ';
+        } else if (isAnswered) {
+          classes += 'bg-blue-600 text-white ';
+        } else {
+          classes += 'bg-slate-100 text-slate-700 border border-slate-300 hover:bg-slate-200 ';
+        }
+
+        if (isCurrent) {
+          classes += 'ring-2 ring-slate-900 ring-offset-1 ';
+        }
+
+        return `<button type="button" onclick="jumpToQuestion(${idx})" class="${classes}">${idx + 1}</button>`;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 7. FINISH EXAM & RESULTS EVALUATION (PASSING REQUIREMENT: >= 45 / 50 = 90%)
+    // =========================================================================
+    function openConfirmFinishModal() {
+      const total = appState.questions.length;
+      const answered = Object.keys(appState.userAnswers).length;
+      const unanswered = total - answered;
+
+      const msg = unanswered > 0
+        ? `Anda telah menjawab <strong>${answered} dari ${total} soal</strong> (masih ada <strong>${unanswered} soal belum dijawab</strong>). Apakah Anda yakin ingin mengakhiri ujian dan melihat hasil penilaian?`
+        : `Anda telah menjawab seluruh <strong>${total} soal</strong>. Siap mengumpulkan jawaban dan melihat hasil kelulusan (syarat lulus minimal 45/50)?`;
+
+      document.getElementById('confirm-modal-message').innerHTML = msg;
+      const modal = document.getElementById('confirm-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeConfirmFinishModal() {
+      const modal = document.getElementById('confirm-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function finishExam() {
+      closeConfirmFinishModal();
+      clearInterval(appState.timerInterval);
+
+      let correctCount = 0;
+      appState.questions.forEach(q => {
+        if (appState.userAnswers[q.id] === q.correct) {
+          correctCount++;
+        }
+      });
+
+      const totalCount = appState.questions.length;
+      const wrongCount = totalCount - correctCount;
+      const percentage = Math.round((correctCount / totalCount) * 100);
+      const requiredCorrect = Math.ceil(totalCount * 0.9); // 45 out of 50 (90%)
+      const isPassed = correctCount >= requiredCorrect;
+
+      const heroCard = document.getElementById('result-hero-card');
+      const badge = document.getElementById('result-badge');
+      const title = document.getElementById('result-title');
+      const subtitle = document.getElementById('result-subtitle');
+      const percEl = document.getElementById('result-percentage');
+      const passReqEl = document.getElementById('result-passing-req');
+
+      passReqEl.textContent = `Syarat Lulus: ≥ ${requiredCorrect} / ${totalCount} (90%)`;
+
+      if (isPassed) {
+        heroCard.className = 'bg-white rounded-2xl shadow-sm border-2 border-emerald-400 p-6 sm:p-8';
+        badge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300';
+        badge.innerHTML = '🎉 STATUS: LULUS (合格 - GOUKAKU)';
+        title.textContent = 'Selamat! Anda Memenuhi Standar Kelulusan Chishiki Kakunin!';
+        subtitle.textContent = `Anda berhasil menjawab ${correctCount} dari ${totalCount} soal dengan benar (${percentage}%), memenuhi syarat kelulusan resmi minimal ${requiredCorrect}/${totalCount} soal (90%).`;
+        percEl.className = 'text-4xl sm:text-5xl font-black text-emerald-600 mt-1';
+      } else {
+        heroCard.className = 'bg-white rounded-2xl shadow-sm border-2 border-rose-300 p-6 sm:p-8';
+        badge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-extrabold bg-rose-100 text-rose-800 border border-rose-300';
+        badge.innerHTML = '⚠️ STATUS: BELUM LULUS (不合格 - FUGOUKAKU)';
+        title.textContent = `Terus Berlatih! Skor Anda ${correctCount}/${totalCount} (${percentage}%)`;
+        subtitle.textContent = `Standar kelulusan resmi Gaimen Kirikae terbaru mewajibkan minimal ${requiredCorrect} benar dari ${totalCount} soal (90%). Silakan pelajari terjemahan 3 bahasa dan pembahasan di bawah ini.`;
+        percEl.className = 'text-4xl sm:text-5xl font-black text-rose-600 mt-1';
+      }
+
+      percEl.textContent = `${percentage}%`;
+      document.getElementById('result-correct-count').textContent = `${correctCount} / ${totalCount}`;
+      document.getElementById('result-wrong-count').textContent = wrongCount;
+      document.getElementById('result-total-count').textContent = totalCount;
+
+      appState.reviewFilter = 'all';
+      navigateTo('result');
+      filterReview('all');
+    }
+
+    function filterReview(filterType) {
+      appState.reviewFilter = filterType;
+      ['all', 'wrong', 'correct'].forEach(f => {
+        const btn = document.getElementById(`rev-filter-${f}`);
+        if (f === filterType) {
+          btn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-900 text-white cursor-pointer';
+        } else {
+          btn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 cursor-pointer';
+        }
+      });
+      renderReviewList();
+    }
+
+    function renderReviewList() {
+      const container = document.getElementById('review-list-container');
+      const filtered = appState.questions
+        .map((q, idx) => ({ q, idx, userAns: appState.userAnswers[q.id], isCorrect: appState.userAnswers[q.id] === q.correct }))
+        .filter(item => {
+          if (appState.reviewFilter === 'wrong') return !item.isCorrect;
+          if (appState.reviewFilter === 'correct') return item.isCorrect;
+          return true;
+        });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="bg-white rounded-2xl border border-slate-200 p-8 text-center text-sm text-slate-500">
+            Tidak ada soal pada kategori filter ini.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(({ q, idx, userAns, isCorrect }) => {
+        const statusBadge = isCorrect
+          ? '<span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">✅ Benar</span>'
+          : '<span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-100 text-rose-800">❌ Salah</span>';
+
+        const userOptObj = q.options.find(o => o.key === userAns);
+        const correctOptObj = q.options.find(o => o.key === q.correct);
+
+        return `
+          <div class="bg-white rounded-2xl shadow-sm border ${isCorrect ? 'border-slate-200' : 'border-rose-200'} p-5 sm:p-6 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="font-extrabold text-sm text-slate-900">Soal #${idx + 1}</span>
+                <span class="text-xs px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-600">${q.category}</span>
+              </div>
+              ${statusBadge}
+            </div>
+
+            ${q.svgKey && SVG_ILLUSTRATIONS[q.svgKey] ? `
+              <div class="flex flex-col items-center bg-slate-50 rounded-xl p-3 border border-slate-200/70 max-w-xs mx-auto">
+                ${SVG_ILLUSTRATIONS[q.svgKey]}
+                <span class="text-[11px] text-slate-500 mt-1">${q.svgCaption || ''}</span>
+              </div>
+            ` : ''}
+
+            <!-- Full Trilingual Question Display (JP + EN + ID) -->
+            <div class="space-y-2.5">
+              <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-700 block mb-0.5">🇯🇵 日本語 (Jepang):</span>
+                <div class="jp-text text-base sm:text-lg font-bold text-slate-900">${q.jpHtml}</div>
+              </div>
+              <div class="bg-blue-50/40 p-3.5 rounded-xl border-l-4 border-blue-500">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-blue-700 block mb-0.5">🇬🇧 English:</span>
+                <div class="text-sm text-slate-800 leading-relaxed">${q.enText}</div>
+              </div>
+              <div class="bg-emerald-50/40 p-3.5 rounded-xl border-l-4 border-emerald-500">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 block mb-0.5">🇮🇩 Bahasa Indonesia:</span>
+                <div class="text-sm text-slate-800 leading-relaxed">${q.idText}</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+              <div class="p-3 rounded-xl border ${isCorrect ? 'bg-emerald-50/70 border-emerald-200' : 'bg-rose-50/70 border-rose-200'}">
+                <div class="font-bold text-slate-500 text-xs mb-1">Jawaban Anda:</div>
+                <div class="font-bold ${isCorrect ? 'text-emerald-800' : 'text-rose-800'}">
+                  ${userOptObj ? `(${userOptObj.key.toUpperCase()}) ${userOptObj.jp} / ${userOptObj.en} / ${userOptObj.id}` : 'Tidak Dijawab'}
+                </div>
+              </div>
+              <div class="p-3 rounded-xl border bg-emerald-50/70 border-emerald-200">
+                <div class="font-bold text-slate-500 text-xs mb-1">Kunci Jawaban Benar:</div>
+                <div class="font-bold text-emerald-800">
+                  (${correctOptObj.key.toUpperCase()}) ${correctOptObj.jp} / ${correctOptObj.en} / ${correctOptObj.id}
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-blue-50/50 border border-blue-100 rounded-xl p-4 space-y-2">
+              <div class="text-xs font-bold uppercase tracking-wider text-blue-800">Pembahasan:</div>
+              <p class="text-sm text-slate-700 leading-relaxed">${q.explanation}</p>
+            </div>
+
+            <div>
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Kosakata Kunci (単語 / Kotoba):</div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                ${q.kotoba.map(k => `
+                  <div class="bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs">
+                    <div class="font-bold text-slate-900">${k.kanji} <span class="text-blue-600 font-normal">(${k.hiragana})</span></div>
+                    <div class="text-slate-600 mt-0.5">${k.arti}</div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // =========================================================================
+    // 8. KOTOBA & SIGNS DICTIONARY VIEW
+    // =========================================================================
+    function clearDictionarySearch() {
+      const input = document.getElementById('kotoba-search-input');
+      if (input) {
+        input.value = '';
+        renderDictionary();
+      }
+    }
+
+    function renderDictionary() {
+      const inputEl = document.getElementById('kotoba-search-input');
+      const clearBtn = document.getElementById('clear-search-btn');
+      const query = (inputEl?.value || '').trim().toLowerCase();
+
+      if (clearBtn) {
+        clearBtn.classList.toggle('hidden', query.length === 0);
+      }
+
+      // Render Signs Grid
+      const signsGrid = document.getElementById('dict-signs-grid');
+      const filteredSigns = TRAFFIC_SIGNS_DATA.filter(s =>
+        s.kanji.toLowerCase().includes(query) ||
+        s.hiragana.toLowerCase().includes(query) ||
+        s.arti.toLowerCase().includes(query) ||
+        s.desc.toLowerCase().includes(query)
+      );
+
+      signsGrid.innerHTML = filteredSigns.map(sign => `
+        <div class="border border-slate-200 rounded-2xl p-4 flex flex-col items-center text-center bg-slate-50/50 hover:bg-white hover:shadow-sm transition">
+          <div class="w-24 h-24 flex items-center justify-center mb-3 [&>svg]:w-20 [&>svg]:h-20">
+            ${SVG_ILLUSTRATIONS[sign.svgKey]}
+          </div>
+          <div class="text-base font-extrabold text-slate-900">${sign.kanji}</div>
+          <div class="text-xs font-semibold text-blue-600">${sign.hiragana}</div>
+          <div class="text-xs font-bold text-slate-800 mt-1.5">${sign.arti}</div>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">${sign.desc}</p>
+        </div>
+      `).join('') || '<p class="text-sm text-slate-500 col-span-full">Tidak ada rambu yang cocok dengan pencarian.</p>';
+
+      // Render Kotoba Table
+      const tbody = document.getElementById('kotoba-table-body');
+      const filteredKotoba = KOTOBA_LIST.filter(k =>
+        k.kanji.toLowerCase().includes(query) ||
+        k.hiragana.toLowerCase().includes(query) ||
+        k.arti.toLowerCase().includes(query) ||
+        k.category.toLowerCase().includes(query)
+      );
+
+      document.getElementById('kotoba-count-label').textContent = `Menampilkan ${filteredKotoba.length} dari ${KOTOBA_LIST.length} kosakata`;
+
+      tbody.innerHTML = filteredKotoba.map(k => `
+        <tr class="hover:bg-blue-50/40 transition">
+          <td class="py-3 px-4 font-bold text-slate-900 jp-text text-base">${k.kanji}</td>
+          <td class="py-3 px-4 font-medium text-blue-700">${k.hiragana}</td>
+          <td class="py-3 px-4 text-slate-700">${k.arti}</td>
+          <td class="py-3 px-4">
+            <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700">${k.category}</span>
+          </td>
+        </tr>
+      `).join('') || `
+        <tr>
+          <td colspan="4" class="py-6 text-center text-sm text-slate-500">Kosakata tidak ditemukan.</td>
+        </tr>
+      `;
+    }
+  </script>
+</body>
+</html>
