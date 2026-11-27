@@ -297,5 +297,959 @@
       { "kanji": "飲酒運転", "hiragana": "いんしゅうんてん", "arti": "Mengemudi sambil mabuk/minum alkohol" },
       { "kanji": "少量", "hiragana": "しょうりょう", "arti": "Jumlah sedikit" }
     ]
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>道路工事<rt>どうろこうじ</rt></ruby>などで<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側部分<rt>みぎがわぶぶん</rt></ruby>に<ruby>出<rt>で</rt></ruby>る<ruby>時<rt>とき</rt></ruby>は、あまりたくさん<ruby>出<rt>で</rt></ruby>ないように<ruby>気<rt>き</rt></ruby>をつける。",
+    "enText": "When moving into the right side of the road due to road construction or similar reasons, be careful not to move out too far.",
+    "idText": "Saat keluar ke bagian kanan jalan karena ada pekerjaan jalan dan sebagainya, hati-hati agar tidak keluar terlalu jauh.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Ketika sisi kiri jalan terhalang oleh pekerjaan jalan (道路工事), kendaraan diperbolehkan keluar ke bagian sisi kanan jalan secukupnya dengan tetap berhati-hati agar tidak keluar terlalu jauh.",
+    "kotoba": [
+      {
+        "kanji": "道路工事",
+        "hiragana": "どうろこうじ",
+        "arti": "Pekerjaan jalan / perbaikan jalan"
+      },
+      {
+        "kanji": "右側部分",
+        "hiragana": "みぎがわぶぶん",
+        "arti": "Bagian sisi kanan jalan"
+      },
+      {
+        "kanji": "気をつける",
+        "hiragana": "きをつける",
+        "arti": "Berhati-hati"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>車<rt>くるま</rt></ruby>は、どんな<ruby>時<rt>とき</rt></ruby>でも<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>に<ruby>出<rt>で</rt></ruby>て<ruby>走<rt>はし</rt></ruby>ってはいけない。",
+    "enText": "Vehicles must never cross over to the right side of the road and drive there under any circumstances.",
+    "idText": "Mobil tidak boleh keluar ke sisi kanan jalan lalu melaju di sana, dalam keadaan apa pun.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Terdapat beberapa pengecualian yang memperbolehkan kendaraan keluar ke sisi kanan jalan, seperti saat menyalip (追い越し), menghindari pekerjaan jalan atau mobil parkir, maupun saat melintasi jalan satu arah (一方通行).",
+    "kotoba": [
+      {
+        "kanji": "右側",
+        "hiragana": "みぎがわ",
+        "arti": "Sisi kanan"
+      },
+      {
+        "kanji": "走る",
+        "hiragana": "はしる",
+        "arti": "Melaju / berkendara"
+      },
+      {
+        "kanji": "道路",
+        "hiragana": "どうろ",
+        "arti": "Jalan raya"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>左側<rt>ひだりがわ</rt></ruby>が6メートル<ruby>未満<rt>みまん</rt></ruby>で<ruby>前<rt>まえ</rt></ruby>が<ruby>見<rt>み</rt></ruby>やすい<ruby>道路<rt>どうろ</rt></ruby>。<ruby>反対<rt>はんたい</rt></ruby>からくる<ruby>車<rt>くるま</rt></ruby>の<ruby>邪魔<rt>じゃま</rt></ruby>をしなければ、<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>しのために<ruby>右側<rt>みぎがわ</rt></ruby>に<ruby>出<rt>で</rt></ruby>て<ruby>走<rt>はし</rt></ruby>ってもいい。",
+    "enText": "On a road where the left side is less than 6 meters wide and visibility ahead is clear, you may cross into the right side to overtake as long as you do not obstruct oncoming traffic.",
+    "idText": "Di jalan yang lebar sisi kirinya kurang dari 6 meter dan pandangan ke depan jelas, selama tidak mengganggu mobil dari arah berlawanan, boleh keluar ke sisi kanan untuk menyalip dan melaju di sana.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Jika lebar bagian kiri jalan kurang dari 6 meter (6メートル未満), pandangan ke depan jelas, dan aman dari lalu lintas arah berlawanan, kendaraan diperbolehkan keluar ke sisi kanan untuk menyalip.",
+    "kotoba": [
+      {
+        "kanji": "左側",
+        "hiragana": "ひだりがわ",
+        "arti": "Sisi kiri"
+      },
+      {
+        "kanji": "未満",
+        "hiragana": "みまん",
+        "arti": "Kurang dari (tidak termasuk angkanya)"
+      },
+      {
+        "kanji": "追い越し",
+        "hiragana": "おいこし",
+        "arti": "Menyalip kendaraan lain"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>車両通行帯<rt>しゃりょうつうこうたい</rt></ruby>から<ruby>出<rt>で</rt></ruby>たり、2つの<ruby>車両通行帯<rt>しゃりょうつうこうたい</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>を<ruby>走<rt>はし</rt></ruby>ってはいけない。（<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>しなど、しかたがない<ruby>時<rt>とき</rt></ruby>はOK）",
+    "enText": "You must not leave a vehicular lane or straddle across two vehicular lanes (except when unavoidable, such as when overtaking).",
+    "idText": "Tidak boleh keluar dari lajur kendaraan, atau melaju di atas dua lajur sekaligus. (Boleh jika terpaksa, misalnya saat menyalip.)",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Pada jalan yang memiliki lajur kendaraan (車両通行帯), pengemudi wajib melaju di dalam satu lajur dan tidak boleh memakan dua lajur sekaligus, kecuali saat berpindah lajur karena menyalip atau kondisi darurat.",
+    "kotoba": [
+      {
+        "kanji": "車両通行帯",
+        "hiragana": "しゃりょうつうこうたい",
+        "arti": "Lajur kendaraan (jalur yang dibagi marka garis)"
+      },
+      {
+        "kanji": "出る",
+        "hiragana": "でる",
+        "arti": "Keluar"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>駐車<rt>ちゅうしゃ</rt></ruby>している<ruby>車<rt>くるま</rt></ruby>があって<ruby>道路<rt>どうろ</rt></ruby>の<ruby>左側<rt>ひだりがわ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>れない<ruby>時<rt>とき</rt></ruby>でも、<ruby>右側<rt>みぎがわ</rt></ruby>の<ruby>道<rt>みち</rt></ruby>に<ruby>出<rt>で</rt></ruby>て<ruby>走<rt>はし</rt></ruby>ることはできない。",
+    "enText": "Even when the left side of the road is blocked by a parked car, you cannot move into the right side of the road to pass it.",
+    "idText": "Meskipun sisi kiri jalan tidak bisa dilewati karena ada mobil yang parkir, tetap tidak boleh keluar ke jalan sisi kanan dan melaju di sana.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Jika sisi kiri jalan terhalang oleh mobil yang sedang parkir (駐車している車) atau pekerjaan jalan, pengemudi diperbolehkan keluar ke sisi kanan jalan dengan hati-hati untuk melewatinya.",
+    "kotoba": [
+      {
+        "kanji": "駐車",
+        "hiragana": "ちゅうしゃ",
+        "arti": "Parkir"
+      },
+      {
+        "kanji": "通る",
+        "hiragana": "とおる",
+        "arti": "Melewati / melintas"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>車両通行帯<rt>しゃりょうつうこうたい</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>で<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>しをする。<ruby>走<rt>はし</rt></ruby>っている<ruby>道<rt>みち</rt></ruby>のすぐ<ruby>右側<rt>みぎがわ</rt></ruby>の<ruby>道<rt>みち</rt></ruby>を<ruby>走<rt>はし</rt></ruby>らなければならない。",
+    "enText": "When overtaking on a road with vehicular lanes, you must drive in the lane immediately to the right of the lane you are currently traveling in.",
+    "idText": "Saat menyalip di jalan yang punya lajur kendaraan, harus melaju di lajur yang tepat berada di sebelah kanan lajur yang sedang dilalui.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Di jalan yang memiliki lajur kendaraan (車両通行帯), manuver menyalip harus dilakukan melalui lajur yang berada tepat di sebelah kanan (すぐ右側) dari lajur yang sedang dilalui.",
+    "kotoba": [
+      {
+        "kanji": "車両通行帯",
+        "hiragana": "しゃりょうつうこうたい",
+        "arti": "Lajur kendaraan"
+      },
+      {
+        "kanji": "追い越し",
+        "hiragana": "おいこし",
+        "arti": "Menyalip"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": "fig1_heavy_truck_lane",
+    "svgCaption": "Gambar 1: Rambu Lajur Khusus Kendaraan Berat (特定の種類の車両の通行区分)",
+    "jpHtml": "<ruby>図<rt>ず</rt></ruby>1の<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>。<ruby>総重量<rt>そうじゅうりょう</rt></ruby>8,000kg<ruby>以上<rt>いじょう</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>・<ruby>最大積載量<rt>さいだいせきさいりょう</rt></ruby>5,000kg<ruby>以上<rt>いじょう</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>・<ruby>乗車定員<rt>じょうしゃていいん</rt></ruby>11<ruby>人以上<rt>にんいじょう</rt></ruby>の<ruby>中型貨物自動車<rt>ちゅうがたかもつじどうしゃ</rt></ruby>、これらは<ruby>一番左側<rt>いちばんひだりがわ</rt></ruby>を<ruby>走<rt>はし</rt></ruby>らなければならない。",
+    "enText": "On a road with the sign shown in Figure 1, vehicles with a gross weight of 8,000 kg or more, maximum load capacity of 5,000 kg or more, and medium-sized cargo trucks with a seating capacity of 11 or more must drive in the leftmost lane.",
+    "idText": "Di jalan yang ada rambu gambar 1: kendaraan dengan berat total 8.000 kg ke atas, muatan maksimum 5.000 kg ke atas, dan truk sedang (kapasitas penumpang 11 orang ke atas). Semua ini harus melaju di lajur paling kiri.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu pada Gambar 1 mewajibkan truk barang besar maupun truk barang sedang tertentu (berat total ≥ 8.000 kg, muatan maksimum ≥ 5.000 kg, atau kapasitas ≥ 11 orang) untuk melaju di lajur paling kiri (一番左側).",
+    "kotoba": [
+      {
+        "kanji": "総重量",
+        "hiragana": "そうじゅうりょう",
+        "arti": "Berat total kendaraan"
+      },
+      {
+        "kanji": "最大積載量",
+        "hiragana": "さいだいせきさいりょう",
+        "arti": "Kapasitas muatan maksimum"
+      },
+      {
+        "kanji": "乗車定員",
+        "hiragana": "じょうしゃていいん",
+        "arti": "Kapasitas penumpang"
+      },
+      {
+        "kanji": "中型貨物自動車",
+        "hiragana": "ちゅうがたかもつじどうしゃ",
+        "arti": "Truk barang ukuran sedang"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>同<rt>おな</rt></ruby>じ<ruby>方向<rt>ほうこう</rt></ruby>に3つ<ruby>以上<rt>いじょう</rt></ruby>の<ruby>車両通行帯<rt>しゃりょうつうこうたい</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では、<ruby>車<rt>くるま</rt></ruby>が<ruby>少<rt>すく</rt></ruby>ない<ruby>道<rt>みち</rt></ruby>を<ruby>走<rt>はし</rt></ruby>る。",
+    "enText": "On a road with three or more vehicular lanes in the same direction, you should drive in whichever lane has the fewest cars.",
+    "idText": "Di jalan yang punya tiga lajur kendaraan atau lebih dalam arah yang sama, melajulah di lajur yang kendaraannya sedikit.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Di jalan dengan 3 lajur atau lebih searah, lajur paling kanan dikhususkan untuk menyalip (追い越し). Kendaraan melaju di lajur sebelah kiri, dan jika ada 3 lajur atau lebih, kendaraan yang lebih cepat melaju di lajur yang lebih kanan (kecuali lajur paling kanan).",
+    "kotoba": [
+      {
+        "kanji": "同じ方向",
+        "hiragana": "おなじほうこう",
+        "arti": "Arah yang sama"
+      },
+      {
+        "kanji": "以上",
+        "hiragana": "いじょう",
+        "arti": "Lebih dari atau sama dengan"
+      },
+      {
+        "kanji": "少ない",
+        "hiragana": "すくない",
+        "arti": "Sedikit"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>中央線<rt>ちゅうおうせん</rt></ruby>は、いつも<ruby>道路<rt>どうろ</rt></ruby>の<ruby>真<rt>ま</rt></ruby>ん<ruby>中<rt>なか</rt></ruby>にあるわけではない。（<ruby>真<rt>ま</rt></ruby>ん<ruby>中<rt>なか</rt></ruby>にない<ruby>場合<rt>ばあい</rt></ruby>もある）",
+    "enText": "The center line is not always in the exact middle of the road (there are cases where it is off-center).",
+    "idText": "Garis tengah tidak selalu berada di tengah-tengah jalan. (Ada juga kasus saat garis itu tidak berada di tengah.)",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Garis tengah jalan (中央線) tidak selalu tepat di tengah lebar jalan; posisinya dapat digeser sesuai kepadatan arus lalu lintas atau jumlah lajur di masing-masing arah.",
+    "kotoba": [
+      {
+        "kanji": "中央線",
+        "hiragana": "ちゅうおうせん",
+        "arti": "Garis tengah jalan"
+      },
+      {
+        "kanji": "真ん中",
+        "hiragana": "まんなか",
+        "arti": "Tengah-tengah"
+      },
+      {
+        "kanji": "場合",
+        "hiragana": "ばあい",
+        "arti": "Kasus / keadaan"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>一方通行<rt>いっぽうつうこう</rt></ruby>の<ruby>道路<rt>どうろ</rt></ruby>は、<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側部分<rt>みぎがわぶぶん</rt></ruby>を<ruby>通<rt>とお</rt></ruby>ることができる。",
+    "enText": "On a one-way road, vehicles are permitted to travel on the right side of the road.",
+    "idText": "Di jalan satu arah, kendaraan boleh melewati bagian kanan jalan.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Pada jalan satu arah (一方通行), tidak ada lalu lintas dari arah berlawanan sehingga kendaraan diperbolehkan melewati bagian sisi kanan jalan.",
+    "kotoba": [
+      {
+        "kanji": "一方通行",
+        "hiragana": "いっぽうつうこう",
+        "arti": "Jalan satu arah"
+      },
+      {
+        "kanji": "右側部分",
+        "hiragana": "みぎがわぶぶん",
+        "arti": "Bagian sisi kanan jalan"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>側車付<rt>そくしゃつき</rt></ruby>の<ruby>二輪車<rt>にりんしゃ</rt></ruby>をエンジンを<ruby>止<rt>と</rt></ruby>めて<ruby>押<rt>お</rt></ruby>して歩いているときは、<ruby>歩行者<rt>ほこうしゃ</rt></ruby>と<ruby>同<rt>おな</rt></ruby>じだ。",
+    "enText": "When pushing a motorcycle with a sidecar on foot with the engine turned off, you are treated the same as a pedestrian.",
+    "idText": "Saat mendorong sepeda motor bersespan (sidecar) dengan mesin dimatikan sambil berjalan, statusnya sama dengan pejalan kaki.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Sepeda motor biasa yang didorong dengan mesin mati dianggap sebagai pejalan kaki, tetapi sepeda motor bersespan/sidecar (側車付二輪車) tetap tidak diperlakukan sebagai pejalan kaki.",
+    "kotoba": [
+      {
+        "kanji": "側車付二輪車",
+        "hiragana": "そくしゃつきにりんしゃ",
+        "arti": "Sepeda motor bersespan (dengan kereta samping / sidecar)"
+      },
+      {
+        "kanji": "押す",
+        "hiragana": "おす",
+        "arti": "Mendorong"
+      },
+      {
+        "kanji": "歩行者",
+        "hiragana": "ほこうしゃ",
+        "arti": "Pejalan kaki"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>道路<rt>どうろ</rt></ruby>ではない<ruby>場所<rt>ばしょ</rt></ruby>（<ruby>店<rt>みせ</rt></ruby>、<ruby>駐車場<rt>ちゅうしゃじょう</rt></ruby>、<ruby>家<rt>いえ</rt></ruby>など）に<ruby>車<rt>くるま</rt></ruby>で<ruby>入<rt>はい</rt></ruby>るために<ruby>歩道<rt>ほどう</rt></ruby>などを<ruby>通<rt>とお</rt></ruby>る<ruby>場合<rt>ばあい</rt></ruby>、<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいなくても<ruby>歩道<rt>ほどう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>しなければならない。",
+    "enText": "When crossing a sidewalk to enter a non-road area (such as a shop, parking lot, or house) by car, you must come to a complete stop before the sidewalk even if no pedestrians are present.",
+    "idText": "Saat melewati trotoar dan sejenisnya dengan mobil untuk masuk ke tempat yang bukan jalan (toko, tempat parkir, rumah, dll.), kendaraan harus berhenti sejenak di depan trotoar, walaupun tidak ada pejalan kaki.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Sebelum melintasi trotoar (歩道) atau jalur pinggir (路側帯) untuk masuk/keluar garasi, toko, atau area parkir, kendaraan wajib melakukan berhenti sejenak (一時停止) tepat sebelum trotoar meskipun tidak terlihat ada pejalan kaki.",
+    "kotoba": [
+      {
+        "kanji": "歩道",
+        "hiragana": "ほどう",
+        "arti": "Trotoar"
+      },
+      {
+        "kanji": "駐車場",
+        "hiragana": "ちゅうしゃじょう",
+        "arti": "Tempat parkir"
+      },
+      {
+        "kanji": "一時停止",
+        "hiragana": "いちじていし",
+        "arti": "Berhenti sejenak (roda berhenti penuh)"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>自動車<rt>じどうしゃ</rt></ruby>で<ruby>歩道<rt>ほどう</rt></ruby>や<ruby>路側帯<rt>ろそくたい</rt></ruby>がない<ruby>道路<rt>どうろ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>る。<ruby>路肩<rt>ろかた</rt></ruby>（<ruby>道路<rt>どうろ</rt></ruby>の<ruby>端<rt>はし</rt></ruby>から0.5mの<ruby>部分<rt>ぶぶん</rt></ruby>）に<ruby>出<rt>で</rt></ruby>て<ruby>走<rt>はし</rt></ruby>ってはいけない。（<ruby>二輪<rt>にりん</rt></ruby>はOK）",
+    "enText": "When driving a car on a road without a sidewalk or roadside strip, you must not drive onto the road shoulder (the 0.5 m section from the edge of the road). (Two-wheeled vehicles are permitted.)",
+    "idText": "Saat mengendarai mobil di jalan yang tidak ada trotoar atau jalur pinggir, tidak boleh keluar ke bahu jalan (bagian 0,5 m dari tepi jalan) lalu melaju di sana. (Kendaraan roda dua boleh.)",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Mobil dilarang keluar dan melaju di bahu jalan (路肩 — bagian 0,5 meter dari tepi jalan), sedangkan kendaraan roda dua (二輪車) diperbolehkan melewatinya.",
+    "kotoba": [
+      {
+        "kanji": "路側帯",
+        "hiragana": "ろそくたい",
+        "arti": "Jalur pinggir pejalan kaki"
+      },
+      {
+        "kanji": "路肩",
+        "hiragana": "ろかた",
+        "arti": "Bahu jalan (0,5 m dari tepi)"
+      },
+      {
+        "kanji": "二輪",
+        "hiragana": "にりん",
+        "arti": "Kendaraan roda dua"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "70<ruby>歳以上<rt>さいいじょう</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>・<ruby>幼児<rt>ようじ</rt></ruby>・<ruby>児童<rt>じどう</rt></ruby>、これらが<ruby>運転<rt>うんてん</rt></ruby>する<ruby>普通自転車<rt>ふつうじてんしゃ</rt></ruby>は、<ruby>歩道<rt>ほどう</rt></ruby>を<ruby>通<rt>とお</rt></ruby>ることができる。",
+    "enText": "Ordinary bicycles ridden by people aged 70 or older, young children, or elementary school children are allowed to travel on the sidewalk.",
+    "idText": "Orang berusia 70 tahun ke atas, anak balita, dan anak-anak (usia SD): sepeda biasa yang dikendarai mereka boleh melewati trotoar.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Pengendara sepeda biasa (普通自転車) yang berusia 70 tahun ke atas, balita (幼児), maupun anak usia SD (児童) diberikan pengecualian untuk melintas di trotoar.",
+    "kotoba": [
+      {
+        "kanji": "幼児",
+        "hiragana": "ようじ",
+        "arti": "Anak balita"
+      },
+      {
+        "kanji": "児童",
+        "hiragana": "じどう",
+        "arti": "Anak-anak (usia SD)"
+      },
+      {
+        "kanji": "普通自転車",
+        "hiragana": "ふつうじてんしゃ",
+        "arti": "Sepeda biasa"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>歩行者専用道路<rt>ほこうしゃせんようどうろ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>が<ruby>通<rt>とお</rt></ruby>ることはできない。だから、エンジンを<ruby>止<rt>と</rt></ruby>めて<ruby>普通自動二輪車<rt>ふつうじどうにりんしゃ</rt></ruby>を<ruby>押<rt>お</rt></ruby>して<ruby>歩<rt>ある</rt></ruby>くこともできない。",
+    "enText": "Vehicles cannot pass through pedestrian-only roads; therefore, you also cannot push a standard motorcycle on foot with its engine turned off there.",
+    "idText": "Mobil tidak boleh melewati jalan khusus pejalan kaki. Karena itu, mendorong sepeda motor biasa sambil berjalan dengan mesin dimatikan juga tidak boleh.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Sepeda motor biasa (tanpa sidecar) yang didorong sambil berjalan dengan mesin dimatikan dianggap sebagai pejalan kaki (歩行者), sehingga diperbolehkan melewati jalan khusus pejalan kaki (歩行者専用道路).",
+    "kotoba": [
+      {
+        "kanji": "歩行者専用道路",
+        "hiragana": "ほこうしゃせんようどうろ",
+        "arti": "Jalan khusus pejalan kaki"
+      },
+      {
+        "kanji": "普通自動二輪車",
+        "hiragana": "ふつうじどうにりんしゃ",
+        "arti": "Sepeda motor biasa"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>次<rt>つぎ</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>は<ruby>歩行者専用道路<rt>ほこうしゃせんようどうろ</rt></ruby>を<ruby>走<rt>はし</rt></ruby>ることができる。・<ruby>小型特殊自動車<rt>こがたとくしゅじどうしゃ</rt></ruby>・<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>・<ruby>軽車両<rt>けいしゃりょう</rt></ruby>",
+    "enText": "The following vehicles are allowed to drive on pedestrian-only roads: small special-purpose vehicles, motorized bicycles (mopeds), and light vehicles.",
+    "idText": "Kendaraan berikut boleh melaju di jalan khusus pejalan kaki: kendaraan khusus kecil, sepeda bermotor (moped), dan kendaraan ringan.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Tanpa izin khusus dari kepala kantor polisi setempat, kendaraan khusus kecil (小型特殊自動車), moped (原動機付自転車), maupun kendaraan ringan (軽車両) tetap tidak diperbolehkan melaju di jalan khusus pejalan kaki.",
+    "kotoba": [
+      {
+        "kanji": "小型特殊自動車",
+        "hiragana": "こがたとくしゅじどうしゃ",
+        "arti": "Kendaraan bermotor khusus ukuran kecil"
+      },
+      {
+        "kanji": "原動機付自転車",
+        "hiragana": "げんどうきつきじてんしゃ",
+        "arti": "Sepeda motor kecil (moped ≤ 50 cc)"
+      },
+      {
+        "kanji": "軽車両",
+        "hiragana": "けいしゃりょう",
+        "arti": "Kendaraan ringan (sepeda, becak)"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>許可<rt>きょか</rt></ruby>をもらって<ruby>歩行者専用道路<rt>ほこうしゃせんようどうろ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>る<ruby>車<rt>くるま</rt></ruby>は、<ruby>歩行者<rt>ほこうしゃ</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>して<ruby>徐行<rt>じょこう</rt></ruby>しなければならない。",
+    "enText": "Vehicles that have obtained permission to pass through a pedestrian-only road must pay close attention to pedestrians and proceed at a slow speed (jokou).",
+    "idText": "Kendaraan yang mendapat izin dan melewati jalan khusus pejalan kaki harus berhati-hati terhadap pejalan kaki dan melaju pelan.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Kendaraan yang mendapat izin melintas di jalan khusus pejalan kaki (歩行者専用道路) wajib memprioritaskan pejalan kaki dan melaju pelan (徐行) agar dapat berhenti seketika.",
+    "kotoba": [
+      {
+        "kanji": "許可",
+        "hiragana": "きょか",
+        "arti": "Izin"
+      },
+      {
+        "kanji": "注意",
+        "hiragana": "ちゅうい",
+        "arti": "Perhatian / waspada"
+      },
+      {
+        "kanji": "徐行",
+        "hiragana": "じょこう",
+        "arti": "Melaju pelan (siap berhenti)"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": "fig2_no_stopping_zone",
+    "svgCaption": "Gambar 2: Marka Jalan Bagian Dilarang Berhenti (停止禁止部分)",
+    "jpHtml": "<ruby>図<rt>ず</rt></ruby>2の<ruby>標示<rt>ひょうじ</rt></ruby>は「<ruby>停止禁止部分<rt>ていしきんしぶぶん</rt></ruby>」だ。",
+    "enText": "The road marking shown in Figure 2 indicates a 'No Stopping Zone' (Teishi Kinshi Bubun).",
+    "idText": "Marka pada gambar 2 adalah \"bagian dilarang berhenti\".",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Marka kotak bergaris miring putih pada Gambar 2 adalah <strong>停止禁止部分 (Bagian Dilarang Berhenti)</strong> yang biasa terdapat di depan kantor polisi atau pemadam kebakaran agar kendaraan darurat tidak terhalang saat macet.",
+    "kotoba": [
+      {
+        "kanji": "標示",
+        "hiragana": "ひょうじ",
+        "arti": "Marka jalan"
+      },
+      {
+        "kanji": "停止禁止部分",
+        "hiragana": "ていしきんしぶぶん",
+        "arti": "Marka bagian dilarang berhenti"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "「<ruby>立ち入り禁止部分<rt>たちいりきんしぶぶん</rt></ruby>」のサインがある<ruby>場所<rt>ばしょ</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>は<ruby>入<rt>はい</rt></ruby>ってはいけない。",
+    "enText": "Vehicles must not enter an area marked as a 'No Entry Zone' (Tachiiri Kinshi Bubun).",
+    "idText": "Mobil tidak boleh masuk ke tempat yang ada tanda \"bagian dilarang masuk\".",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Area <strong>立ち入り禁止部分 (Bagian Dilarang Masuk)</strong> ditandai dengan marka garis miring kuning berbingkai putih; kendaraan dilarang keras masuk atau melintasinya.",
+    "kotoba": [
+      {
+        "kanji": "立ち入り禁止部分",
+        "hiragana": "たちいりきんしぶぶん",
+        "arti": "Marka bagian dilarang masuk"
+      },
+      {
+        "kanji": "場所",
+        "hiragana": "ばしょ",
+        "arti": "Tempat / lokasi"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "「<ruby>安全地帯<rt>あんぜんちたい</rt></ruby>」や「<ruby>立ち入り禁止部分<rt>たちいりきんしぶぶん</rt></ruby>」を<ruby>通<rt>とお</rt></ruby>っても<ruby>危険<rt>きけん</rt></ruby>を<ruby>防<rt>ふせ</rt></ruby>ぐ<ruby>方法<rt>ほうほう</rt></ruby>が<ruby>他<rt>ほか</rt></ruby>にないときは<ruby>通<rt>とお</rt></ruby>ってもいい。",
+    "enText": "If there is no other way to avoid danger, you are permitted to drive through a 'Safety Zone' or a 'No Entry Zone'.",
+    "idText": "Kalau tidak ada cara lain untuk menghindari bahaya, boleh melewati \"zona aman\" dan \"bagian dilarang masuk\".",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Baik <strong>安全地帯 (Zona Aman)</strong> maupun <strong>立ち入り禁止部分 (Bagian Dilarang Masuk)</strong> dilarang keras untuk dimasuki atau dilewati kendaraan dalam kondisi apa pun, sekalipun untuk menghindari bahaya.",
+    "kotoba": [
+      {
+        "kanji": "安全地帯",
+        "hiragana": "あんぜんちたい",
+        "arti": "Zona aman penumpang trem"
+      },
+      {
+        "kanji": "危険",
+        "hiragana": "きけん",
+        "arti": "Bahaya"
+      },
+      {
+        "kanji": "防ぐ",
+        "hiragana": "ふせぐ",
+        "arti": "Mencegah / menghindari"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>自分<rt>じぶん</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>やバイクがたくさんある<ruby>時<rt>とき</rt></ruby>は、<ruby>横断歩道<rt>おうだんほどう</rt></ruby>や<ruby>自転車横断帯<rt>じてんしゃおうだんたい</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>車<rt>くるま</rt></ruby>を<ruby>止<rt>と</rt></ruby>めることができる。",
+    "enText": "When there are many cars and motorcycles ahead of your vehicle, you may stop your car inside a pedestrian crosswalk or bicycle crossing zone.",
+    "idText": "Kalau di depan mobilmu ada banyak mobil dan motor, boleh menghentikan mobil di dalam penyeberangan pejalan kaki atau jalur penyeberangan sepeda.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Jika lalu lintas di depan macet sehingga berisiko terjebak berhenti di atas <strong>横断歩道 (zebra cross)</strong> atau <strong>自転車横断帯 (jalur penyeberangan sepeda)</strong>, pengemudi dilarang memasuki area tersebut dan harus berhenti sebelum garis.",
+    "kotoba": [
+      {
+        "kanji": "横断歩道",
+        "hiragana": "おうだんほどう",
+        "arti": "Penyeberangan pejalan kaki (zebra cross)"
+      },
+      {
+        "kanji": "自転車横断帯",
+        "hiragana": "じてんしゃおうだんたい",
+        "arti": "Jalur penyeberangan sepeda"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>軌道敷<rt>きどうしき</rt></ruby>を<ruby>走<rt>はし</rt></ruby>っている<ruby>時<rt>とき</rt></ruby>に<ruby>後<rt>うし</rt></ruby>ろから<ruby>路面電車<rt>ろめんでんしゃ</rt></ruby>がきた<ruby>時<rt>とき</rt></ruby>は、<ruby>次<rt>つぎ</rt></ruby>のどちらかをする。・<ruby>軌道敷<rt>きどうしき</rt></ruby>の<ruby>外<rt>そと</rt></ruby>に<ruby>出<rt>で</rt></ruby>る・<ruby>十分<rt>じゅうぶん</rt></ruby>な<ruby>距離<rt>きょり</rt></ruby>を<ruby>空<rt>あ</rt></ruby>ける",
+    "enText": "When driving on tram tracks and a streetcar approaches from behind, you must either move out of the tram tracks or maintain a sufficient distance ahead of it.",
+    "idText": "Saat melaju di jalur rel dan ada trem jalan raya datang dari belakang, lakukan salah satu dari berikut: keluar dari jalur rel, atau beri jarak yang cukup.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Apabila sedang melaju di dalam jalur rel trem (軌道敷) dan ada trem jalan raya (路面電車) mendekat dari belakang, pengemudi wajib segera keluar dari jalur rel atau menjaga jarak yang cukup agar tidak menghalangi laju trem.",
+    "kotoba": [
+      {
+        "kanji": "軌道敷",
+        "hiragana": "きどうしき",
+        "arti": "Jalur rel trem di jalan raya"
+      },
+      {
+        "kanji": "路面電車",
+        "hiragana": "ろめんでんしゃ",
+        "arti": "Trem jalan raya"
+      },
+      {
+        "kanji": "距離",
+        "hiragana": "きょり",
+        "arti": "Jarak"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "tf",
+    "category": "Area yang Boleh Dilewati Kendaraan (通行区分)",
+    "svgKey": null,
+    "svgCaption": null,
+    "jpHtml": "<ruby>左折<rt>させつ</rt></ruby>や<ruby>右折<rt>うせつ</rt></ruby>する<ruby>時<rt>とき</rt></ruby>は、<ruby>車<rt>くるま</rt></ruby>で<ruby>軌道敷<rt>きどうしき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>を<ruby>通<rt>とお</rt></ruby>ることができる。",
+    "enText": "When turning left or right, vehicles are allowed to pass through the inside of the tram tracks.",
+    "idText": "Saat berbelok kiri atau kanan, mobil boleh melewati bagian dalam jalur rel trem.",
+    "options": [
+      {
+        "key": "a",
+        "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい",
+        "en": "○ True",
+        "id": "○ Benar"
+      },
+      {
+        "key": "b",
+        "jp": "× <ruby>誤<rt>あやま</rt></ruby>り",
+        "en": "× False",
+        "id": "× Salah"
+      }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Pada dasarnya kendaraan tidak boleh melaju di dalam jalur rel trem (軌道敷), namun dikecualikan dan diperbolehkan melintasinya saat akan berbelok kiri (左折), berbelok kanan (右折), memutar balik, atau menghindari bahaya.",
+    "kotoba": [
+      {
+        "kanji": "左折",
+        "hiragana": "させつ",
+        "arti": "Belok kiri"
+      },
+      {
+        "kanji": "右折",
+        "hiragana": "うせつ",
+        "arti": "Belok kanan"
+      },
+      {
+        "kanji": "軌道敷",
+        "hiragana": "きどうしき",
+        "arti": "Jalur rel trem di jalan raya"
+      }
+    ]
   }
 ]
