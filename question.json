@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "stop",
+    "svgCaption": "Rambu Lalu Lintas Jepang (一時停止 / STOP)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>周囲<rt>しゅうい</rt></ruby>に<ruby>車<rt>くるま</rt></ruby>や<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいなければ、<ruby>徐行<rt>じょこう</rt></ruby>して<ruby>通過<rt>つうか</rt></ruby>してもよい。",
+    "enText": "At a place with this sign, if there are no cars or pedestrians around, you may pass through by slowing down (jokou) without coming to a complete stop.",
+    "idText": "Di tempat yang terdapat rambu ini, jika di sekitar tidak ada mobil maupun pejalan kaki, pengemudi boleh melintas hanya dengan melaju pelan (徐行 / jokou) tanpa berhenti.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Rambu segitiga terbalik merah bertuliskan「止まれ」adalah rambu <strong>一時停止 (Ichiji Teishi / Berhenti Sejenak)</strong>. Pengemudi wajib menghentikan roda kendaraan sepenuhnya (0 km/jam) tepat sebelum garis berhenti (停止線).",
+    "kotoba": [
+      { "kanji": "一時停止", "hiragana": "いちじていし", "arti": "Berhenti sejenak sepenuhnya" },
+      { "kanji": "徐行", "hiragana": "じょこう", "arti": "Melaju sangat pelan" },
+      { "kanji": "通過", "hiragana": "つうか", "arti": "Melintas / melewati" }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "no_entry",
+    "svgCaption": "Rambu Lalu Lintas Jepang (車両進入禁止)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>には、<ruby>自転車<rt>じてんしゃ</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>き、<ruby>自動車<rt>じどうしゃ</rt></ruby>や<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>は<ruby>進入<rt>しんにゅう</rt></ruby>できない。",
+    "enText": "On a road with this sign, automobiles and motorized bicycles (mopeds) are prohibited from entering, except bicycles when indicated.",
+    "idText": "Pada jalan yang memiliki rambu ini, kecuali sepeda (jika ada papan tambahan), mobil dan motor dilarang masuk.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran merah dengan garis putih horizontal di tengah adalah <strong>車両進入禁止 (Sharyou Shinnyuu Kinshi / Kendaraan Dilarang Masuk)</strong>.",
+    "kotoba": [
+      { "kanji": "車両進入禁止", "hiragana": "しゃりょうしんにゅうきんし", "arti": "Kendaraan dilarang masuk" },
+      { "kanji": "原動機付自転車", "hiragana": "げんどうきつきじてんしゃ", "arti": "Sepeda motor kecil (≤ 50cc)" }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "category": "Prioritas Pejalan Kaki (歩行者優先)",
+    "svgKey": "crosswalk",
+    "svgCaption": "Rambu Zebra Cross (横断歩道)",
+    "jpHtml": "<ruby>信号機<rt>しんごうき</rt></ruby>のない<ruby>横断歩道<rt>おうだんほどう</rt></ruby>に<ruby>近<rt>ちか</rt></ruby>づいたとき、<ruby>横断<rt>おうだん</rt></ruby>しようとしている<ruby>歩行者<rt>ほこうしゃ</rt></ruby>がいる<ruby>場合<rt>ばあい</rt></ruby>は、<ruby>横断歩道<rt>おうだんほどう</rt></ruby>の<ruby>直前<rt>ちょくぜん</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>しなければならない。",
+    "enText": "When approaching a pedestrian crosswalk without traffic lights, if there is a pedestrian about to cross, you must come to a complete stop just before the crosswalk.",
+    "idText": "Ketika mendekati zebra cross tanpa lampu lalu lintas, jika terdapat pejalan kaki yang hendak menyeberang, pengemudi wajib berhenti sejenak tepat sebelum zebra cross.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Di Jepang, aturan <strong>歩行者優先 (Prioritas Pejalan Kaki)</strong> mewajibkan pengemudi berhenti tepat sebelum garis zebra cross jika ada pejalan kaki yang hendak menyeberang.",
+    "kotoba": [
+      { "kanji": "横断歩道", "hiragana": "おうだんほどう", "arti": "Zebra cross / penyeberangan" },
+      { "kanji": "歩行者", "hiragana": "ほこうしゃ", "arti": "Pejalan kaki" }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "category": "Perlintasan Kereta Api (踏切)",
+    "svgKey": "railroad",
+    "svgCaption": "Rambu Perlintasan Kereta Api (踏切あり)",
+    "jpHtml": "<ruby>踏切<rt>ふみきり</rt></ruby>を<ruby>通過<rt>つうか</rt></ruby>するときは、<ruby>信号機<rt>しんごうき</rt></ruby>が<ruby>青色<rt>あおいろ</rt></ruby>に<ruby>従<rt>したが</rt></ruby>う<ruby>場合<rt>ばあい</rt></ruby>を<ruby>除<rt>のぞ</rt></ruby>き、<ruby>必<rt>かなら</rt></ruby>ず<ruby>踏切<rt>ふみきり</rt></ruby>の<ruby>直前<rt>ちょくぜん</rt></ruby>で<ruby>一時停止<rt>いちじていし</rt></ruby>し、<ruby>安全<rt>あんぜん</rt></ruby>を<ruby>確<rt>たし</rt></ruby>かめなければならない。",
+    "enText": "When crossing a railroad crossing, except when following a green traffic light, you must always stop just before the crossing and check for safety.",
+    "idText": "Saat melewati perlintasan kereta api, kecuali jika mengikuti lampu lalu lintas yang menyala hijau, pengemudi wajib berhenti sejenak tepat sebelum perlintasan dan memastikan keamanan.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Pengemudi <strong>wajib berhenti sejenak (一時停止)</strong> sebelum perlintasan kereta api meskipun palang pintu terbuka.",
+    "kotoba": [
+      { "kanji": "踏切", "hiragana": "ふみきり", "arti": "Perlintasan kereta api" },
+      { "kanji": "確かめる", "hiragana": "たしかめる", "arti": "Memastikan / mengecek" }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "category": "Lampu Lalu Lintas (信号)",
+    "svgKey": "flashing_red",
+    "svgCaption": "Lampu Lalu Lintas Merah Berkedip (赤色点滅信号)",
+    "jpHtml": "<ruby>交差点<rt>こうさてん</rt></ruby>で<ruby>対面<rt>たいめん</rt></ruby>する<ruby>信号機<rt>しんごうき</rt></ruby>が<ruby>赤色<rt>あかいろ</rt></ruby>の<ruby>点滅<rt>てんめつ</rt></ruby>をしているときは、<ruby>他<rt>ほか</rt></ruby>の<ruby>交通<rt>こうつう</rt></ruby>に<ruby>注意<rt>ちゅうい</rt></ruby>しながら<ruby>徐行<rt>じょこう</rt></ruby>して<ruby>進<rt>すす</rt></ruby>むことができる。",
+    "enText": "When the traffic light facing you at an intersection is flashing red, you may proceed slowly (jokou) without stopping while paying attention to other traffic.",
+    "idText": "Ketika lampu lalu lintas yang menghadap kita di persimpangan berkedip merah (赤色点滅), kendaraan boleh terus melaju pelan (徐行) sambil memperhatikan lalu lintas lain.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Lampu <strong>merah berkedip (赤色点滅信号)</strong> memiliki arti yang sama dengan rambu <strong>一時停止 (Berhenti Sejenak / STOP)</strong>.",
+    "kotoba": [
+      { "kanji": "赤色点滅", "hiragana": "あかいろてんめつ", "arti": "Kedipan warna merah" },
+      { "kanji": "交差点", "hiragana": "こうさてん", "arti": "Persimpangan jalan" }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "no_parking_stopping",
+    "svgCaption": "Rambu Dilarang Parkir & Berhenti (駐停車禁止)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>人<rt>ひと</rt></ruby>の<ruby>乗<rt>の</rt></ruby>り<ruby>降<rt>お</rt></ruby>りのために<ruby>車<rt>くるま</rt></ruby>を<ruby>止<rt>と</rt></ruby>めることも<ruby>禁止<rt>きんし</rt></ruby>されている。",
+    "enText": "At a location with this sign, stopping a vehicle even briefly to pick up or drop off passengers is prohibited.",
+    "idText": "Di tempat yang terdapat rambu ini, menghentikan mobil sekadar untuk menaikkan atau menurunkan penumpang pun dilarang.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru dengan garis silang merah (×) adalah <strong>駐停車禁止 (Dilarang Parkir dan Berhenti)</strong>.",
+    "kotoba": [
+      { "kanji": "駐停車禁止", "hiragana": "ちゅうていしゃきんし", "arti": "Dilarang parkir dan berhenti" },
+      { "kanji": "乗り降り", "hiragana": "のりおり", "arti": "Naik dan turun (kendaraan)" }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "category": "Lampu Lalu Lintas (信号)",
+    "svgKey": "green_arrow",
+    "svgCaption": "Lampu Merah dengan Panah Hijau ke Kanan (右折矢印信号)",
+    "jpHtml": "<ruby>赤色<rt>あかいろ</rt></ruby>の<ruby>灯火<rt>とうか</rt></ruby>と<ruby>同時<rt>どうじ</rt></ruby>に<ruby>右向<rt>みぎむ</rt></ruby>きの<ruby>青色<rt>あおいろ</rt></ruby>の<ruby>矢印<rt>やじるし</rt></ruby>が<ruby>点灯<rt>てんとう</rt></ruby>しているときは、<ruby>自動車<rt>じどうしゃ</rt></ruby>は<ruby>右折<rt>うせつ</rt></ruby>することができるが、<ruby>転回<rt>てんかい</rt></ruby>（Uターン）はできない。",
+    "enText": "When a green right-turn arrow is lit together with a red traffic light, cars may turn right, but making a U-turn (tenkai) is prohibited.",
+    "idText": "Ketika lampu merah menyala bersamaan dengan panah hijau ke arah kanan, mobil dapat berbelok ke kanan, tetapi tidak diperbolehkan melakukan putar balik (U-turn).",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Ketika panah hijau ke kanan menyala, mobil diperbolehkan belok kanan <strong>DAN juga diperbolehkan melakukan U-turn (転回)</strong> kecuali ada rambu larangan putar balik.",
+    "kotoba": [
+      { "kanji": "矢印", "hiragana": "やじるし", "arti": "Tanda panah" },
+      { "kanji": "転回", "hiragana": "てんかい", "arti": "Putar balik (U-turn)" }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "slow_down",
+    "svgCaption": "Rambu Pelan-pelan (徐行)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>車<rt>くるま</rt></ruby>がすぐに<ruby>停止<rt>ていし</rt></ruby>できるような<ruby>速度<rt>そくど</rt></ruby>（<ruby>徐行<rt>じょこう</rt></ruby>）で<ruby>進行<rt>しんこう</rt></ruby>しなければならない。",
+    "enText": "At a place with this sign, you must proceed at a slow speed (jokou) that allows your vehicle to stop immediately.",
+    "idText": "Di tempat yang terdapat rambu ini, pengemudi harus melaju dengan kecepatan yang memungkinkan mobil berhenti seketika (徐行 / jokou).",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu segitiga terbalik putih berbingkai merah dengan tulisan「徐行」berarti <strong>Jokou (Pelan-pelan)</strong>.",
+    "kotoba": [
+      { "kanji": "徐行", "hiragana": "じょこう", "arti": "Melaju pelan-pelan" },
+      { "kanji": "進行", "hiragana": "しんこう", "arti": "Melaju / bergerak maju" }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "no_parking",
+    "svgCaption": "Rambu Dilarang Parkir (駐車禁止)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>駐車<rt>ちゅうしゃ</rt></ruby>は<ruby>禁止<rt>きんし</rt></ruby>されているが、5分<ruby>以内<rt>いない</rt></ruby>の<ruby>荷物<rt>にもつ</rt></ruby>の<ruby>積<rt>つ</rt></ruby>み<ruby>下<rt>お</rt></ruby>ろしや<ruby>人<rt>ひと</rt></ruby>の<ruby>乗<rt>の</rt></ruby>り<ruby>降<rt>お</rt></ruby>りのための<ruby>停車<rt>ていしゃ</rt></ruby>はできる。",
+    "enText": "At a place with this sign, parking is prohibited, but stopping (teisha) within 5 minutes for loading/unloading cargo or picking up/dropping off passengers is permitted.",
+    "idText": "Di tempat yang terdapat rambu ini, parkir dilarang, tetapi berhenti sebentar (停車) untuk bongkar muat barang maksimal 5 menit atau menaikkan/menurunkan penumpang diperbolehkan.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru dengan satu garis miring merah (／) adalah <strong>駐車禁止 (Dilarang Parkir)</strong>, sehingga berhenti sebentar (停車) masih diperbolehkan.",
+    "kotoba": [
+      { "kanji": "駐車禁止", "hiragana": "ちゅうしゃきんし", "arti": "Dilarang parkir" },
+      { "kanji": "停車", "hiragana": "ていしゃ", "arti": "Berhenti sementara" }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "pedestrian_zone",
+    "svgCaption": "Rambu Khusus Pejalan Kaki (歩行者専用)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>は<ruby>歩行者<rt>ほこうしゃ</rt></ruby><ruby>専用<rt>せんよう</rt></ruby>であるため、<ruby>自動車<rt>じどうしゃ</rt></ruby>や<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>は<ruby>通行<rt>つうこう</rt></ruby>できない。",
+    "enText": "Because a road with this sign is exclusively for pedestrians, automobiles and motorized bicycles are prohibited from driving on it.",
+    "idText": "Karena jalan yang memiliki rambu ini khusus untuk pejalan kaki, mobil dan motor dilarang melintas di jalan tersebut.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu lingkaran biru bergambar pejalan kaki adalah <strong>歩行者専用 (Khusus Pejalan Kaki)</strong>.",
+    "kotoba": [
+      { "kanji": "歩行者専用", "hiragana": "ほこうしゃせんよう", "arti": "Khusus pejalan kaki" },
+      { "kanji": "通行", "hiragana": "つうこう", "arti": "Melintas / lalu lintas" }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "no_u_turn",
+    "svgCaption": "Rambu Dilarang Putar Balik (転回禁止)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>転回<rt>てんかい</rt></ruby>（Uターン）は<ruby>禁止<rt>きんし</rt></ruby>されているが、<ruby>後退<rt>こうたい</rt></ruby>（バック）は<ruby>禁止<rt>きんし</rt></ruby>されていない。",
+    "enText": "At a location with this sign, making a U-turn (tenkai) is prohibited, but reversing (backing up) is not prohibited by this sign.",
+    "idText": "Di tempat yang terdapat rambu ini, putar balik (U-turn) dilarang, tetapi mundur (backing) tidak dilarang oleh rambu ini.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu ini adalah <strong>転回禁止 (Dilarang Putar Balik)</strong> dan tidak melarang mundur (後退).",
+    "kotoba": [
+      { "kanji": "転回禁止", "hiragana": "てんかいきんし", "arti": "Dilarang putar balik (U-turn)" },
+      { "kanji": "後退", "hiragana": "こうたい", "arti": "Mundur" }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "speed_limit_40",
+    "svgCaption": "Rambu Batas Kecepatan 40 km/jam (最高速度)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では、<ruby>原動機付自転車<rt>げんどうきつきじてんしゃ</rt></ruby>（50cc<ruby>以下<rt>いか</rt></ruby>）も<ruby>時速<rt>じそく</rt></ruby>40キロメートルまで<ruby>出<rt>だ</rt></ruby>すことができる。",
+    "enText": "On a road with this sign, motorized bicycles (50cc or less) may also travel up to 40 km/h.",
+    "idText": "Di jalan yang terdapat rambu ini, sepeda motor kecil (≤ 50cc / Gentsuki) juga boleh melaju hingga kecepatan 40 km/jam.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Batas kecepatan hukum untuk sepeda motor kecil ≤ 50cc (原付) tetap <strong>30 km/jam</strong> meskipun rambu bertuliskan 40 km/jam.",
+    "kotoba": [
+      { "kanji": "最高速度", "hiragana": "さいこうそくど", "arti": "Kecepatan maksimum" },
+      { "kanji": "時速", "hiragana": "じそく", "arti": "Kecepatan per jam (km/h)" }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "no_overtaking",
+    "svgCaption": "Rambu Dilarang Menyalip Melewati Garis Tengah",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>場所<rt>ばしょ</rt></ruby>では、<ruby>道路<rt>どうろ</rt></ruby>の<ruby>右側<rt>みぎがわ</rt></ruby>部分にはみ出さなければ、<ruby>前<rt>まえ</rt></ruby>の<ruby>車<rt>くるま</rt></ruby>を<ruby>追<rt>お</rt></ruby>い<ruby>越<rt>こ</rt></ruby>すことができる。",
+    "enText": "At a location with this sign, you may overtake the vehicle ahead as long as you do not cross over onto the right half of the road.",
+    "idText": "Di tempat yang terdapat rambu ini, pengemudi boleh menyalip kendaraan di depan asalkan tidak melewati garis tengah ke sisi kanan jalan.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "a",
+    "explanation": "<strong>Benar (○ 正しい / True)</strong>. Rambu ini melarang menyalip <em>dengan melewati garis tengah ke jalur kanan</em>. Jika bisa menyalip tanpa melewati garis tengah, hal tersebut diperbolehkan.",
+    "kotoba": [
+      { "kanji": "はみ出し", "hiragana": "はみだし", "arti": "Melewati batas / keluar garis" },
+      { "kanji": "右側部分", "hiragana": "みぎがわぶぶん", "arti": "Bagian sisi kanan jalan" }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "category": "Rambu Lalu Lintas (標識)",
+    "svgKey": "one_way",
+    "svgCaption": "Rambu Jalan Satu Arah (一方通行)",
+    "jpHtml": "この<ruby>標識<rt>ひょうしき</rt></ruby>がある<ruby>道路<rt>どうろ</rt></ruby>では、<ruby>矢印<rt>やじるし</rt></ruby>の<ruby>反対<rt>はんたい</rt></ruby><ruby>方向<rt>ほうこう</rt></ruby>へ<ruby>進行<rt>しんこう</rt></ruby>することはできないが、<ruby>車<rt>くるま</rt></ruby>を<ruby>駐車<rt>ちゅうしゃ</rt></ruby>するときは<ruby>右側<rt>みぎがわ</rt></ruby>の<ruby>端<rt>はし</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>せて<ruby>駐車<rt>ちゅうしゃ</rt></ruby>する。",
+    "enText": "On a one-way road with this sign, you cannot drive against the arrow, and when parking, you should park along the right edge of the road.",
+    "idText": "Pada jalan satu arah dengan rambu ini, kendaraan dilarang melaju berlawanan arah panah, dan saat parkir harus merapat ke tepi kanan jalan.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Bahkan di jalan satu arah (一方通行), parkir tetap harus merapat ke <strong>sisi kiri jalan (道路の左側端)</strong>, bukan sisi kanan!",
+    "kotoba": [
+      { "kanji": "一方通行", "hiragana": "いっぽうつうこう", "arti": "Jalan satu arah" },
+      { "kanji": "反対方向", "hiragana": "はんたいほうこう", "arti": "Arah berlawanan" }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "tf",
+    "category": "Larangan Keras (飲酒運転)",
+    "jpHtml": "お<ruby>酒<rt>さけ</rt></ruby>を<ruby>飲<rt>の</rt></ruby>んだ<ruby>後<rt>あと</rt></ruby>でも、<ruby>少量<rt>しょうりょう</rt></ruby>であれば<ruby>酔<rt>よ</rt></ruby>いを感じていないので、<ruby>自動車<rt>じどうしゃ</rt></ruby>を<ruby>運転<rt>うんてん</rt></ruby>してもよい。",
+    "enText": "Even after drinking alcohol, if the amount is small and you do not feel intoxicated, it is permissible to drive a car.",
+    "idText": "Meskipun setelah minum minuman beralkohol, jika jumlahnya sedikit dan tidak merasa mabuk, pengemudi boleh mengendarai mobil.",
+    "options": [
+      { "key": "a", "jp": "○ <ruby>正<rt>ただ</rt></ruby>しい", "en": "○ True", "id": "○ Benar" },
+      { "key": "b", "jp": "× <ruby>誤<rt>あやま</rt></ruby>り", "en": "× False", "id": "× Salah" }
+    ],
+    "correct": "b",
+    "explanation": "<strong>Salah (× 誤り / False)</strong>. Jepang menerapkan kebijakan <strong>Zero Tolerance</strong> terhadap <strong>飲酒運転 (Mengemudi di bawah pengaruh alkohol)</strong>.",
+    "kotoba": [
+      { "kanji": "飲酒運転", "hiragana": "いんしゅうんてん", "arti": "Mengemudi sambil mabuk/minum alkohol" },
+      { "kanji": "少量", "hiragana": "しょうりょう", "arti": "Jumlah sedikit" }
+    ]
+  }
+]
